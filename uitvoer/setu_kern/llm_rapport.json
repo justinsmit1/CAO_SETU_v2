@@ -2,71 +2,57 @@
   "blokken": [
     {
       "blok": "05 Vakantiebijslag",
-      "ingevuld": [
-        {
-          "pad": "ja_nee",
-          "waarde": "ja",
-          "onderbouwing": {
-            "pad": "ja_nee",
-            "document": "demo_cao.pdf",
-            "pagina": 14,
-            "artikel": "Artikel 12 lid 1",
-            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
-          }
-        },
-        {
-          "pad": "bedrag.soort",
-          "waarde": "percentage",
-          "onderbouwing": {
-            "pad": "bedrag",
-            "document": "demo_cao.pdf",
-            "pagina": 14,
-            "artikel": "Artikel 12 lid 1",
-            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
-          }
-        },
-        {
-          "pad": "bedrag.percentage.percentage",
-          "waarde": 8,
-          "onderbouwing": {
-            "pad": "bedrag",
-            "document": "demo_cao.pdf",
-            "pagina": 14,
-            "artikel": "Artikel 12 lid 1",
-            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
-          }
-        },
-        {
-          "pad": "bedrag.percentage.basis",
-          "waarde": "YearlyRate",
-          "onderbouwing": {
-            "pad": "bedrag",
-            "document": "demo_cao.pdf",
-            "pagina": 14,
-            "artikel": "Artikel 12 lid 1",
-            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
-          }
-        },
-        {
-          "pad": "bedrag.percentage.per",
-          "waarde": "Year",
-          "onderbouwing": {
-            "pad": "bedrag",
-            "document": "demo_cao.pdf",
-            "pagina": 14,
-            "artikel": "Artikel 12 lid 1",
-            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
-          }
-        }
+      "ingevuld": [],
+      "niet_gevonden": [
+        "bedrag.percentage.basis"
       ],
-      "niet_gevonden": [],
-      "weggegooid": [],
-      "meldingen": [],
-      "aanroepen": 1
+      "weggegooid": [
+        [
+          "ja_nee",
+          "onderbouwing telt niet: het citaat staat niet in de fragmenten"
+        ],
+        [
+          "bedrag.soort",
+          "onderbouwing telt niet: het citaat staat niet in de fragmenten"
+        ],
+        [
+          "bedrag.percentage.per",
+          "onderbouwing telt niet: het citaat staat niet in de fragmenten"
+        ],
+        [
+          "bedrag.percentage.grondslag",
+          "onderbouwing telt niet: het citaat staat niet in de fragmenten"
+        ],
+        [
+          "ja_nee",
+          "geen onderbouwing (waarde was 'ja')"
+        ],
+        [
+          "bedrag.soort",
+          "geen onderbouwing (waarde was 'percentage')"
+        ],
+        [
+          "bedrag.percentage.per",
+          "geen onderbouwing (waarde was 'Year')"
+        ],
+        [
+          "bedrag.percentage.grondslag",
+          "geen onderbouwing (waarde was 'GrossSalary')"
+        ],
+        [
+          "bedrag",
+          "voldoet niet aan het formulier: bedrag: Value error, Bedragregel.percentage mag alleen ingevuld worden als soort = percentage"
+        ]
+      ],
+      "meldingen": [
+        "herkansing na 1 fout(en): bedrag: Value error, Bedragregel.percentage mag alleen ingevuld worden als soort = percentage"
+      ],
+      "aanroepen": 2
     }
   ],
   "uit_parameters": [],
   "niet_ondersteund": [
+    "beloning",
     "functiegroepen",
     "toeslagen",
     "vergoedingen",
@@ -80,10 +66,6 @@
     "overig",
     "grondslagen"
   ],
-  "uit_basis": [
-    "algemeen",
-    "beloning",
-    "ondertekenen"
-  ],
+  "uit_basis": [],
   "controle": []
 }

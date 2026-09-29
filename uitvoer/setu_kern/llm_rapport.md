@@ -2,18 +2,31 @@
 
 ## 05 Vakantiebijslag
 
-Aanroepen: 1
+Aanroepen: 2
 
-| Veld | Waarde | Bron | Citaat |
-|---|---|---|---|
-| `ja_nee` | ja | demo_cao.pdf, p. 14, Artikel 12 lid 1 | De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon. |
-| `bedrag.soort` | percentage | demo_cao.pdf, p. 14, Artikel 12 lid 1 | De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon. |
-| `bedrag.percentage.percentage` | 8 | demo_cao.pdf, p. 14, Artikel 12 lid 1 | De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon. |
-| `bedrag.percentage.basis` | YearlyRate | demo_cao.pdf, p. 14, Artikel 12 lid 1 | De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon. |
-| `bedrag.percentage.per` | Year | demo_cao.pdf, p. 14, Artikel 12 lid 1 | De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon. |
+**Niet gevonden**
+
+- bedrag.percentage.basis
+
+**Weggegooid**
+
+- ja_nee: onderbouwing telt niet: het citaat staat niet in de fragmenten
+- bedrag.soort: onderbouwing telt niet: het citaat staat niet in de fragmenten
+- bedrag.percentage.per: onderbouwing telt niet: het citaat staat niet in de fragmenten
+- bedrag.percentage.grondslag: onderbouwing telt niet: het citaat staat niet in de fragmenten
+- ja_nee: geen onderbouwing (waarde was 'ja')
+- bedrag.soort: geen onderbouwing (waarde was 'percentage')
+- bedrag.percentage.per: geen onderbouwing (waarde was 'Year')
+- bedrag.percentage.grondslag: geen onderbouwing (waarde was 'GrossSalary')
+- bedrag: voldoet niet aan het formulier: bedrag: Value error, Bedragregel.percentage mag alleen ingevuld worden als soort = percentage
+
+**Meldingen**
+
+- herkansing na 1 fout(en): bedrag: Value error, Bedragregel.percentage mag alleen ingevuld worden als soort = percentage
 
 ## Nog niet ondersteund
 
+- beloning
 - functiegroepen
 - toeslagen
 - vergoedingen
@@ -26,9 +39,3 @@ Aanroepen: 1
 - aanvullende_regelingen
 - overig
 - grondslagen
-
-## Uit het basisformulier (niet uit de cao)
-
-- algemeen
-- beloning
-- ondertekenen

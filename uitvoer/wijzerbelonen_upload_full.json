@@ -539,7 +539,7 @@
     "value": "Volledig voorbeeld 2026",
     "schemeAgencyId": "Customer"
   },
-  "issued": "2026-09-29T08:07:43.103Z",
+  "issued": "2026-09-29T09:07:28.337Z",
   "effectivePeriod": {
     "validFrom": "2026-01-01",
     "validTo": "2026-12-31"
@@ -3836,7 +3836,7 @@
     "appVersion": "2.1.0",
     "note": "Generated with Wijzerbelonen UGB webformulier v2.1.0. Powered by SETU",
     "localStorageDataVersion": 4,
-    "date": 1790669263103,
+    "date": 1790672848337,
     "activeSectionIndex": 0,
     "activeSubSectionIndex": 0,
     "answers": {
