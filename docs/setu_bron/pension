@@ -1,0 +1,64 @@
+pension
+InquiryPayEquity
+/
+pension
+Definition
+The employer's contribution to a pension plan.
+Type
+PensionArrangement
+https://ontology.setu.nl/inquiry-pay-equity#PensionArrangement
+Usage notes
+This pension information refers specifically to the portion of pension funding paid by the employer, not the employee’s own contributions
+
+Example data
+Example JSON message
+Expand
+Copy
+{
+  "pension": [
+    {
+      "origin": {
+        /* Source of the pension agreement, usually a Sector CLA */
+        "type": "CollectiveLabourAgreement"
+      },
+      "line": [
+        {
+          "lineId": {
+            /* Unique identifier for the employer contribution line */
+            "value": "PENS-ER-001"
+          },
+          "amount": {
+            /* The employer's contribution rate, e.g., 12% */
+            "value": 12.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              /* Calculated over the annual pensionable salary */
+              "unitCode": "YearlyRate",
+              "baseType": "Pension",
+            },
+            "proportional": {
+              /* Mandatory v2.0 field: Pension accrual follows salary/hours worked */
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Contribution is proportional to the actual pensionable earnings."
+            }
+          },
+          "intervalCode": {
+            /* Pension calculations are typically determined on an annual basis */
+            "value": "1",
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..."
+            }
+          ]
+        }
+      ],
+      "franchise": {
+        /* ndicator whether an employer makes use of a franchise. */
+        "description": "...."
+      }
+    }
+  ]
+}

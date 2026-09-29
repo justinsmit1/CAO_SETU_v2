@@ -1,0 +1,17 @@
+effective period
+InquiryPayEquity
+/
+effective period
+Definition
+The overall period during which the information in this document is valid. The period is from the start date up to and including the end date.
+Type
+EffectivePeriod
+https://ontology.setu.nl#EffectivePeriod
+Example data
+Example JSON message
+Expand
+Copy
+    "effectivePeriod": { // The overall period during which the information in this document is valid.
+        "validFrom": "2025-05-09", // Start date of the validity period.
+        "validTo": "2026-05-09" // End date of the validity period.
+    },

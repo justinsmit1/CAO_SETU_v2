@@ -1,0 +1,89 @@
+{
+  "algemeen": {
+    "naam_regeling": "Voorbeeld Bouw 2026",
+    "geldig_van": "2026-01-01",
+    "geldig_tot": "2026-12-31",
+    "opdrachtgever_naam": "Voorbeeld Bouw B.V.",
+    "opdrachtgever_kvk": "12345678",
+    "opdrachtgever_kvk_type": "KvK",
+    "sector": "Bouw en infra",
+    "cao_of_regeling": "cao-van-toepassing",
+    "cao_naam": "Cao Bouw & Infra",
+    "cao_nummer": "1496",
+    "cao_van_toepassing_omdat": "algemeen-verbindend",
+    "cao_van": "2025-06-01",
+    "cao_tot": "2027-05-31"
+  },
+  "beloning": {
+    "beloningen": [
+      {
+        "naam": "Salaristabel 2026",
+        "geldig_vanaf": "2026-01-01",
+        "normale_arbeidsduur": 40,
+        "beloning_vastgesteld": "per-maand",
+        "uurlonen_vastgelegd": "nee",
+        "salarisschalen": [
+          {
+            "naam": "A",
+            "stappen": [
+              {
+                "naam": "0",
+                "bedrag": 2450.0
+              },
+              {
+                "naam": "1",
+                "bedrag": 2525.0
+              }
+            ]
+          },
+          {
+            "naam": "B",
+            "stappen": [
+              {
+                "naam": "0",
+                "bedrag": 2800.0
+              },
+              {
+                "naam": "1",
+                "bedrag": 2890.0
+              }
+            ]
+          }
+        ],
+        "werkervaring_inschaling": "nee",
+        "periodieke_verhogingen": "ja",
+        "minimale_duur_dienstverband": {
+          "aangevinkt": true,
+          "wanneer": "gewerkt-jaar",
+          "berekening": "treden",
+          "berekening_treden": 1.0
+        },
+        "initiele_eenmalige_verhogingen": "nee",
+        "afwijkende_arbeidsduur": "nee"
+      }
+    ],
+    "betaalde_rusttijden_en_pauzes": "nee"
+  },
+  "vakantiebijslag": {
+    "ja_nee": "ja",
+    "bedrag": {
+      "soort": "percentage",
+      "percentage": {
+        "percentage": 8.0,
+        "basis": "YearlyRate",
+        "per": "Year"
+      }
+    }
+  },
+  "ondertekenen": {
+    "contactpersonen": [
+      {
+        "naam": "J. Jansen",
+        "email": "hr@voorbeeld.nl",
+        "telefoon": "+31201234567",
+        "functie": "HR-adviseur"
+      }
+    ],
+    "akkoord": true
+  }
+}

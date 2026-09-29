@@ -1,0 +1,807 @@
+{
+  "documentId": {
+    "value": "Voorbeeld Bouw 2026",
+    "schemeAgencyId": "Customer"
+  },
+  "issued": "2026-09-28T09:27:05.208000Z",
+  "effectivePeriod": {
+    "validFrom": "2026-01-01",
+    "validTo": "2026-12-31"
+  },
+  "customer": {
+    "name": "Voorbeeld Bouw B.V.",
+    "legalId": [
+      {
+        "value": "12345678",
+        "schemeAgencyId": "KvK"
+      }
+    ],
+    "personContacts": [
+      {
+        "name": {
+          "formattedName": "J. Jansen"
+        },
+        "communication": {
+          "phone": [
+            {
+              "formattedNumber": "+31201234567"
+            }
+          ],
+          "email": [
+            {
+              "address": "hr@voorbeeld.nl"
+            }
+          ]
+        },
+        "positionTitle": "HR-adviseur"
+      }
+    ]
+  },
+  "baseDefinition": [
+    {
+      "baseType": "GrossSalary",
+      "remunerationIndicator": true,
+      "holidayAllowanceIndicator": false,
+      "paidLeaveDayIndicator": true,
+      "allAllowancesIndicator": false,
+      "allowances": [
+        {
+          "typeCode": "HT320"
+        }
+      ],
+      "referenceDate": {
+        "occurrenceType": "Recurring",
+        "recurringInterval": "R/2026-06-01/P1Y",
+        "interval": "R/2026-06-01/P1Y"
+      }
+    }
+  ],
+  "labourAgreements": {
+    "industryIdentifier": [
+      {
+        "value": "Bouw en infra"
+      }
+    ],
+    "collectiveLabourAgreement": {
+      "name": "Cao Bouw & Infra",
+      "id": {
+        "value": "1496"
+      },
+      "effectivePeriod": {
+        "validFrom": "2025-06-01",
+        "validTo": "2027-05-31"
+      },
+      "basedOn": "algemeen-verbindend"
+    },
+    "customLabourAgreement": false
+  },
+  "positionProfile": [
+    {
+      "positionId": {
+        "value": "TIM"
+      },
+      "positionTitle": "Timmerman",
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "positionId": {
+        "value": "UITV"
+      },
+      "positionTitle": "Uitvoerder",
+      "origin": {
+        "type": "Unknown"
+      }
+    }
+  ],
+  "remuneration": [
+    {
+      "origin": {
+        "type": "Unknown"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01"
+      },
+      "workDuration": {
+        "amount": {
+          "value": 1.0,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1.0,
+          "unitCode": "Week"
+        },
+        "valuePerWeek": 40.0
+      },
+      "interval": {
+        "value": 1.0,
+        "unitCode": "Month"
+      },
+      "salaryScale": [
+        {
+          "name": "A",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2450.0
+            },
+            {
+              "name": "1",
+              "value": 2525.0
+            }
+          ],
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "TIM"
+              }
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2800.0
+            },
+            {
+              "name": "1",
+              "value": 2890.0
+            }
+          ],
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "UITV"
+              }
+            }
+          ]
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "line": {
+            "amount": {
+              "value": 1.0,
+              "unitCode": "SalaryStep",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            },
+            "interval": {
+              "value": 1.0,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van een minimale duur dienstverband"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "allowance": [
+    {
+      "name": "Vergoeding voor bedrijfskleding of schoenen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA100",
+      "line": [
+        {
+          "amount": {
+            "value": 150.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor veiligheidsschoenen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Onregelmatigheids- toeslagen (waaronder feestdagen)",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "HT320",
+      "period": [
+        {
+          "timePeriod": {
+            "start": "00:00:00",
+            "end": "23:59:00"
+          },
+          "weekday": [
+            {
+              "value": "Saturday"
+            }
+          ]
+        }
+      ],
+      "line": [
+        {
+          "amount": {
+            "value": 50.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Werken op zaterdag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Overwerk",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "HT200",
+      "line": [
+        {
+          "amount": {
+            "value": 125.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor elk uur boven de 40 uur per week"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer eigen auto / fiets / bromfiets / anders.",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA103",
+      "line": [
+        {
+          "amount": {
+            "value": 0.23,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij een enkele reis van meer dan 10 km"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vaste uitkering: Eindejaarsuitkering",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA801",
+      "line": [
+        {
+          "amount": {
+            "value": 4.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-12-15"
+      }
+    },
+    {
+      "name": "Jubileumuitkering: 25-jarig dienstjubileum",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA903",
+      "line": [
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "conditions": [
+            {
+              "conditionType": "EmploymentDuration",
+              "operator": "eq",
+              "duration": "P25Y",
+              "referenceDateType": "HireDate"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "holidayAllowance": [
+    {
+      "name": "Vakantiebijslag",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 8.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate",
+              "baseType": "GrossSalary"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    }
+  ],
+  "sickPay": [
+    {
+      "name": "Loondoorbetaling bij ziekte",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Eerste ziektejaar"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Tweede ziektejaar"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "leave": [
+    {
+      "name": "ADV / ATV regeling: null",
+      "origin": {
+        "type": "Unknown"
+      },
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 13.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vakantiedagen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "paidLeave": [
+        {
+          "amount": {
+            "value": 25.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        },
+        {
+          "amount": {
+            "value": 2.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Age",
+              "operator": "gte",
+              "age": 55.0
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 4.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Age",
+              "operator": "gte",
+              "age": 60.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Verplichte aanwending verlof",
+      "origin": {
+        "type": "Unknown"
+      },
+      "mandatoryLeaveAllocation": {
+        "description": "Periode/dagen/uren:Drie weken zomervakantie (bouwvak)\n\nWelk verlof:Vakantiedagen"
+      }
+    },
+    {
+      "name": "Feestdagen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "holidays": [
+        {
+          "name": "Nieuwjaarsdag, Tweede paasdag, Koningsdag, Bevrijdingsdag (lustrumjaren), Hemelvaartsdag, Tweede pinksterdag, Eerste kerstdag, Tweede kerstdag",
+          "amount": {
+            "value": 8.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Bij verhuizing",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij verhuizing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 2 dagen in het geval van: Bij eigen huwelijk",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 2.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij eigen huwelijk"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "individualChoiceBudget": [
+    {
+      "name": "Individueel keuze budget",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 1200.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ],
+      "option": [
+        {
+          "description": "Eindejaarsuitkering voor 3% van maandloon"
+        }
+      ]
+    }
+  ],
+  "pension": [
+    {
+      "name": "bpfBOUW",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 14.5,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate",
+              "baseType": "Pension"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "contributionSource": "Employer"
+        }
+      ],
+      "franchise": {
+        "description": "Franchise volgens het pensioenreglement"
+      }
+    }
+  ],
+  "sustainableEmployability": [
+    {
+      "name": "Opleidingen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "Education",
+      "line": [
+        {
+          "amount": {
+            "value": 500.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Verplichte scholing: VCA-basis",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "Other",
+      "line": [
+        {
+          "amount": {
+            "value": 8.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Item"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Tijdens werktijd, namelijk: Tijdens werktijd, met doorbetaling van loon"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 250.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Item"
+          }
+        }
+      ]
+    }
+  ],
+  "supplementaryArrangement": [
+    {
+      "name": "PAWW regeling",
+      "description": "Private aanvulling WW volgens de cao",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "PAWW",
+      "line": [
+        {
+          "contributionSource": "Employer"
+        },
+        {
+          "amount": {
+            "value": 0.4,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employee"
+        }
+      ]
+    }
+  ],
+  "otherArrangement": [
+    {
+      "name": "Gereedschapsvergoeding",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 5.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Week"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor timmerlieden die eigen gereedschap gebruiken"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

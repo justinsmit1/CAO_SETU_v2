@@ -1,0 +1,416 @@
+allowance
+InquiryPayEquity
+/
+allowance
+Definition
+A container element that includes various allowances that can be granted to an employee.
+Type
+AllowanceArrangement
+https://ontology.setu.nl/inquiry-pay-equity#AllowanceArrangement
+Example data
+Example JSON message Overtime Compensation (combined money and time)
+Collapse
+Copy
+{
+  "allowance": [
+    {
+      "id": {
+        /* Unique identifier for this specific allowance regulation */
+        "value": "23asdfva32e",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Overtime Compensation (Money and Time)",
+      "origin": {
+        /* Specifies the legal source of the arrangement, e.g., a CLA (CAO) */
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        /* Overall validity period for this allowance rule */
+        "validFrom": "2025-01-01",
+        "validTo": "2025-12-31"
+      },
+      "typeCode": {
+        /* Standardized classification code for overtime */
+        "value": "HT200"
+      },
+      "period": [
+        {
+          /* Window of applicability: Date range, time range, and specific weekdays */
+          "datePeriod": [
+            {
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            }
+          ],
+          "timePeriod": {
+            /* Overtime window: from 6:00 PM until 6:00 AM the next morning */
+            "start": "18:00:00",
+            "end": "06:00:00"
+          },
+          "weekday": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ]
+        }
+      ],
+      "line": [
+        {
+          /* Method 1: Monetary compensation (150% surcharge) */
+          "lineId": {
+            "value": "LINE-OT-MONEY"
+          },
+          "amount": {
+            "value": 150.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              /* The 150% is calculated over the Gross Hourly Rate */
+              "unitCode": "HourlyRate",
+              "baseType": "GrossSalary"
+            },
+            "proportional": {
+              /* Mandatory v2.0 field: indicates the rate isn't adjusted based on part-time factor */
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "intervalCode": {
+            /* Rate is applied for every 1 hour of overtime worked */
+            "value": "1",
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              /* Functional filter: this monetary line only applies to TeamLeads */
+              "conditionType": "PositionProfile",
+              "operator": "in",
+              "positionProfileIds": ["TeamLead"]
+            }
+          ]
+        },
+        {
+          /* Method 2: Time-for-time compensation (1 hour worked = 1 hour leave) */
+          "lineId": {
+            "value": "LINE-OT-TIME"
+          },
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              /* Indicates a fixed ratio (1:1) rather than a percentage calculation */
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "intervalCode": {
+            "value": "1",
+            "unitCode": "Hour"
+          }
+        }
+      ]
+    }
+  ]
+}
+Example JSON message for Travel Allowance with distance brackets
+Collapse
+Copy
+{
+  "allowance": [
+    {
+      "id": {
+        /* Unique identifier for this bracket-based travel regulation */
+        "value": "TRAV-KM-BRACKET-40",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Travel Allowance (Kilometer Rate with Distance Limit)",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2026-12-31"
+      },
+      "typeCode": {
+        /* EA103 is the standard code for mileage allowance */
+        "value": "EA103"
+      },
+      "line": [
+        {
+          "lineId": {
+            /* Unique ID for this specific distance bracket line */
+            "value": "LINE-KM-UPTO-40"
+          },
+          "amount": {
+            /* The rate: € 0.23 per kilometer */
+            "value": 0.23,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false,
+              "description": "Rate is per actual kilometer traveled."
+            }
+          },
+          "intervalCode": {
+            /* Calculated per 1 Kilometer */
+            "value": "1",
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+          {
+            "conditionType": "Text", // Fallback for unstructured conditions.
+            "description": "tot en met 40 KM" // Human-readable explanation.
+           }
+        ]
+        }
+      ]
+    }
+  ]
+}
+Example JSON message Travel Mileage allowance
+Collapse
+Copy
+{
+  "allowance": [
+    {
+      "id": {
+        /* Unique identifier for this travel expense regulation */
+        "value": "KM-VERG-2025",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Mileage Allowance (Home-Work)",
+      "origin": {
+        /* Usually defined in a CLA (CAO) or a specific company regulation */
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2025-01-01",
+        "validTo": "2025-12-31"
+      },
+      "typeCode": {
+        /* EA103 is often used for travel expenses per kilometer */
+        "value": "EA103"
+      },
+      "line": [
+        {
+          "lineId": {
+            "value": "LINE-KM-01"
+          },
+          "amount": {
+            /* The value in Euro: 0.23 */
+            "value": 0.23,
+            "unitCode": "Euro",
+            "baseAmount": {
+              /* Fixed means it is not calculated as a percentage of something else */
+              "unitCode": "Fixed"
+            }
+          },
+          "intervalCode": {
+            /* Applied for every 1 unit of Kilometer */
+            "value": "1",
+            "unitCode": "Kilometer"
+          }
+        }
+      ]
+    }
+  ]
+}
+Example JSON message public holiday surcharge
+Collapse
+Copy
+{
+  "allowance": [
+    {
+        "id": {
+            /* Unique identifier for this holiday regulation */
+            "value": "2b497d33fs",
+            "schemeAgencyId": "Customer"
+        },
+        "name": "Public Holiday Surcharge",
+        "origin": {
+            /* Source of the arrangement, e.g., a Sector CLA */
+            "type": "CollectiveLabourAgreement"
+        },
+        "effectivePeriod": {
+            "validFrom": "2026-01-01",
+            "validTo": "2027-12-31"
+        },
+        "typeCode": {
+            /* HT340 is the standard code for Public Holiday surcharges */
+            "value": "HT340"
+        },
+        "period": [
+            {
+                /* You can define specific dates and the time on that date for the holidays */
+                "timePeriod": {
+                    "start": "00:00:00",
+                    "end": "23:59:59"
+                },
+                /* IMPORTANT: The 'Holiday' enum allows logic based on a holiday calendar. These are the holidays specified under Leave */
+                "weekday": [ "Holiday" ]
+            }
+        ],
+        "line": [
+            {
+                "lineId": {
+                    "value": "LINE-HOL-001"
+                },
+                "amount": {
+                    "value": 200.0,
+                    "unitCode": "Percentage",
+                    "baseAmount": {
+                        /* 200% charge calculated over the standard Hourly Rate */
+                        "unitCode": "HourlyRate",
+                        "baseType": "RegularWage"
+                    }
+                },
+                "intervalCode": {
+                    /* Applied for every 1 hour worked on the holiday */
+                    "value": "1",
+                    "unitCode": "Hour"
+                }
+            }
+        ],
+        "reference": [
+            {
+                "typeCode": "HT320",
+                "description": "Calculated cumulatively with shift allowances (percentages are added up)",
+                "relationType": "Cumulative"
+            }
+        ]
+    }
+  ]
+}
+Example JSON message BONUS based on evaluation
+Collapse
+Copy
+{
+  "allowance": [
+    {
+      "id": {
+        /* Unique identifier for this specific bonus regulation */
+        "value": "ANNUAL-BONUS-2025",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Annual Performance Bonus",
+      "origin": {
+        /* Bonuses can originate from a CLA or a custom company agreement */
+        "type": "CustomLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2025-01-01",
+        "validTo": "2025-12-31"
+      },
+      "typeCode": {
+        /* EA300 is the classification for Bonus / Gratification */
+        "value": "EA300"
+      },
+      "line": [
+        {
+          "lineId": {
+            /* Unique ID for this bonus line */
+            "value": "LINE-BONUS-01"
+          },
+          "amount": {
+            /* The target bonus amount in Euro */
+            "value": 1000.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              /* Fixed means it's a lump sum, not a percentage of salary */
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              /* Often bonuses are paid out proportionally to the contract size */
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Bonus is calculated based on part-time factor and months active in service."
+            }
+          },
+          "intervalCode": {
+            /* This bonus is determined/applied once per Year */
+            "value": "1",
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+            "conditionType": "Occurrence", // Condition based on a time or event.
+            "occurrence": {
+                "occurrenceType": "Relative", // Timing relative to an event.
+                "event": "EvaluationDate", // The triggering event (e.g., start of illness).
+                "offset": "P0Y0M" // The relative time offset (0 years and 0 months, so immediate at the evaluation date).
+            }
+          }
+      ]
+    }
+  ]
+}
+Example JSON message for a 25% surcharge for work during irregular hours.
+Collapse
+Copy
+"allowance": [
+    {
+        "id": { // Unique ID for this specific allowance regulation.
+            "value": "2b497da74f7",
+            "schemeAgencyId": "Customer"
+        },
+        "name": "Special Event Surcharge (e.g. Major Sporting Event)", // Descriptive name of the allowance.
+        "origin": { // Specifies the origin of the arrangement.
+            "type": "CollectiveLabourAgreement"
+        },
+        "effectivePeriod": { // Validity period for this allowance rule.
+            "validFrom": "2025-01-01",
+            "validTo": "2025-12-31"
+        },
+        "typeCode": { // Code identifying the type of allowance.
+            "value": "HT320"
+        },
+        "period": [ // Defines when this allowance is applicable.
+            {
+                "datePeriod": [
+                    {
+                        "start": "2025-07-26",
+                        "end": "2025-08-11"
+                    }
+                ],
+                "timePeriod": {
+                    "start": "00:00:00",
+                    "end": "23:59:59"
+                },
+                "weekday": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]
+            }
+        ],
+        "line": [ // Defines the rate(s) for this allowance.
+            {
+                "lineId": { // A unique identifier of this specific line element.
+                    "value": "LINE-SES-01"
+                },
+                "amount": {
+                    "value": 25.0,
+                    "unitCode": "Percentage", // Capitalized mandatory enumeration.
+                    "baseAmount": {
+                        "unitCode": "HourlyRate", // The type code of the base (e.g., HourlyRate).
+                        "baseType": ""
+                    }
+                },
+                "intervalCode": {
+                    "value": "1.0",
+                    "unitCode": "Hour" // Capitalized mandatory enumeration.
+                }
+            }
+        ],
+        "reference": [ // Defines relationships with other elements (e.g., for compounding).
+            {
+                "typeCode": "AP002", // Refers to the type code of the target allowance/component.
+                "description": "special event compounding", // Description of the nature of the relation.
+                "relationType": "Compounding" // Allowed: Compounding, Cumulative, or Subtractive.
+            }
+        ]
+    }
+]

@@ -1,0 +1,75 @@
+individual choice budget
+InquiryPayEquity
+/
+individual choice budget
+Definition
+Individual choice budget (Dutch: IKB) is used if the employer has an individual choice budget. It's elements are used for the different options an employee has regarding this budget as well as its costs.
+Type
+IndividualChoiceBudgetArrangement
+https://ontology.setu.nl/inquiry-pay-equity#IndividualChoiceBudgetArrangement
+Example data
+Example JSON message
+Expand
+Copy
+{
+  "individualChoiceBudget": [
+    {
+      "id": {
+        /* Unique identifier for this IKB regulation */
+        "value": "f8b0c203a3d",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Individual Choice Budget (IKB) - All Employees",
+      "origin": {
+        /* Origin of the arrangement, typically a CLA or custom agreement */
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        /* The overall validity period for this specific scheme */
+        "validFrom": "2026-01-01",
+        "validTo": "2028-01-01"
+      },
+      "line": [
+        {
+          /* Mandatory unique ID for this accrual line */
+          "lineId": { "value": "LINE-IKB-01" },
+          "amount": {
+            /* The accrual rate: e.g., 5% */
+            "value": 5.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              /* The base over which the percentage is calculated */
+              "unitCode": "YearlyRate",
+              "baseType": "GrossSalary",
+            },
+            "proportional": {
+              /* IKB accrual is usually proportional to part-time factor and duration */
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Budget accrual is based on actual hours worked and time in service."
+            }
+          },
+          "intervalCode": {
+            /* Applied or determined over a 1 Year interval */
+            "value": "1",
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..."
+            }
+          ]
+        }
+      ],
+      "option": [
+        {
+          /* Description of how the employee can spend the budget */
+          "description": "Paid out with monthly or annual salary"
+        },
+        {
+          "description": "Tax-benefit purchase of a bicycle (Fietsplan)"
+        }
+      ]
+    }
+  ]
+}

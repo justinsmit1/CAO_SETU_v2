@@ -1,0 +1,32 @@
+labour agreements
+InquiryPayEquity
+/
+labour agreements
+Definition
+This container indicates in which sector the staffing customer works and which specific collective labour agreement (CLA) and/or the own employment conditions scheme is leading for the provision of remuneration information.
+Type
+LabourAgreements
+https://ontology.setu.nl/inquiry-pay-equity#LabourAgreements
+Example data
+Example JSON message of labour agreements.
+Expand
+Copy
+"labourAgreements": { // Information about the collective labour agreement (CAO) or other agreements governing remuneration.
+    "industryIdentifier": [
+
+    { // Identifiers for the industry the customer operates in.
+      "value": "Code from 'standaard bedrijfsindeling' (SBI) 2008" // Standard Business Classification code (SBI).
+    },
+    "collectiveLabourAgreement": { // Details of the applicable CAO.
+      "name": "Collective labour agreement for construction sector", // Name of the CAO.
+      "id": {
+        "value": "1496" // Unique identifier for the CAO (e.g., from CBS).
+      },
+      "effectivePeriod": { // Validity period of this specific CAO version.
+        "validFrom": "2024-01-01",
+        "validTo": "2026-01-01"
+      },
+      "basedOn": "The CLA has been declared generally binding from ... till ..." // Reason why this CAO applies (e.g., generally binding declaration).
+    },
+    "customLabourAgreement": false // Boolean that indicates if a custom labour agreement is used
+  },

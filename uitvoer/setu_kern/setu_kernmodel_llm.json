@@ -1,0 +1,164 @@
+{
+  "documentId": {
+    "value": "Voorbeeld Bouw 2026",
+    "schemeAgencyId": "Customer"
+  },
+  "issued": "2026-09-29T08:48:08.283000Z",
+  "effectivePeriod": {
+    "validFrom": "2026-01-01",
+    "validTo": "2026-12-31"
+  },
+  "customer": {
+    "name": "Voorbeeld Bouw B.V.",
+    "legalId": [
+      {
+        "value": "12345678",
+        "schemeAgencyId": "KvK"
+      }
+    ],
+    "personContacts": [
+      {
+        "name": {
+          "formattedName": "J. Jansen"
+        },
+        "communication": {
+          "phone": [
+            {
+              "formattedNumber": "+31201234567"
+            }
+          ],
+          "email": [
+            {
+              "address": "hr@voorbeeld.nl"
+            }
+          ]
+        },
+        "positionTitle": "HR-adviseur"
+      }
+    ]
+  },
+  "labourAgreements": {
+    "industryIdentifier": [
+      {
+        "value": "Bouw en infra"
+      }
+    ],
+    "collectiveLabourAgreement": {
+      "name": "Cao Bouw & Infra",
+      "id": {
+        "value": "1496"
+      },
+      "effectivePeriod": {
+        "validFrom": "2025-06-01",
+        "validTo": "2027-05-31"
+      },
+      "basedOn": "algemeen-verbindend"
+    },
+    "customLabourAgreement": false
+  },
+  "remuneration": [
+    {
+      "origin": {
+        "type": "Unknown"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01"
+      },
+      "workDuration": {
+        "amount": {
+          "value": 1.0,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1.0,
+          "unitCode": "Week"
+        },
+        "valuePerWeek": 40.0
+      },
+      "interval": {
+        "value": 1.0,
+        "unitCode": "Month"
+      },
+      "salaryScale": [
+        {
+          "name": "A",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2450.0
+            },
+            {
+              "name": "1",
+              "value": 2525.0
+            }
+          ]
+        },
+        {
+          "name": "B",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2800.0
+            },
+            {
+              "name": "1",
+              "value": 2890.0
+            }
+          ]
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "line": {
+            "amount": {
+              "value": 1.0,
+              "unitCode": "SalaryStep",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            },
+            "interval": {
+              "value": 1.0,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van een minimale duur dienstverband"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "holidayAllowance": [
+    {
+      "name": "Vakantiebijslag",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 8.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    }
+  ]
+}

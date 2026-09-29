@@ -1,0 +1,89 @@
+{
+  "blokken": [
+    {
+      "blok": "05 Vakantiebijslag",
+      "ingevuld": [
+        {
+          "pad": "ja_nee",
+          "waarde": "ja",
+          "onderbouwing": {
+            "pad": "ja_nee",
+            "document": "demo_cao.pdf",
+            "pagina": 14,
+            "artikel": "Artikel 12 lid 1",
+            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
+          }
+        },
+        {
+          "pad": "bedrag.soort",
+          "waarde": "percentage",
+          "onderbouwing": {
+            "pad": "bedrag",
+            "document": "demo_cao.pdf",
+            "pagina": 14,
+            "artikel": "Artikel 12 lid 1",
+            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
+          }
+        },
+        {
+          "pad": "bedrag.percentage.percentage",
+          "waarde": 8,
+          "onderbouwing": {
+            "pad": "bedrag",
+            "document": "demo_cao.pdf",
+            "pagina": 14,
+            "artikel": "Artikel 12 lid 1",
+            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
+          }
+        },
+        {
+          "pad": "bedrag.percentage.basis",
+          "waarde": "YearlyRate",
+          "onderbouwing": {
+            "pad": "bedrag",
+            "document": "demo_cao.pdf",
+            "pagina": 14,
+            "artikel": "Artikel 12 lid 1",
+            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
+          }
+        },
+        {
+          "pad": "bedrag.percentage.per",
+          "waarde": "Year",
+          "onderbouwing": {
+            "pad": "bedrag",
+            "document": "demo_cao.pdf",
+            "pagina": 14,
+            "artikel": "Artikel 12 lid 1",
+            "citaat": "De werknemer ontvangt jaarlijks een vakantiebijslag van 8% van het jaarloon."
+          }
+        }
+      ],
+      "niet_gevonden": [],
+      "weggegooid": [],
+      "meldingen": [],
+      "aanroepen": 1
+    }
+  ],
+  "uit_parameters": [],
+  "niet_ondersteund": [
+    "functiegroepen",
+    "toeslagen",
+    "vergoedingen",
+    "bijzondere_uitkeringen",
+    "loondoorbetaling_bij_ziekte",
+    "verlof",
+    "individueel_keuzebudget",
+    "pensioen",
+    "duurzaam_werken_en_leven",
+    "aanvullende_regelingen",
+    "overig",
+    "grondslagen"
+  ],
+  "uit_basis": [
+    "algemeen",
+    "beloning",
+    "ondertekenen"
+  ],
+  "controle": []
+}

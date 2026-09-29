@@ -1,0 +1,708 @@
+InquiryPayEquity
+InquiryPayEquity
+Definition
+The Inquiry Pay Equity message is used by the staffing customer to exchange remuneration information with the staffing supplier in order to accurately apply equal pay for flex workers according to the staffing customer's collective labor agreement.
+Type
+InquiryPayEquity
+https://ontology.setu.nl/inquiry-pay-equity#InquiryPayEquity
+Example data
+Inquiry Pay Equity example
+Expand
+Copy
+{
+  "documentId": {
+    "value": "233a94d5d8c",
+    "schemeAgencyId": "Customer"
+  },
+  "versionId": {
+    "value": "f5afe7a19d0"
+  },
+  "issued": "2025-05-09T18:25:43.511Z",
+  "effectivePeriod": {
+    "validFrom": "2025-05-09",
+    "validTo": "2026-05-09"
+  },
+  "customer": {
+    "id": [
+      {
+        "value": "9b184323200",
+        "schemeAgencyId": "Customer"
+      }
+    ],
+    "name": "ABC Staffing Solutions",
+    "legalId": [
+      {
+        "value": "35fe8a245e3",
+        "schemeAgencyId": "KvK"
+      }
+    ],
+    "personContacts": [
+      {
+        "name": {
+          "formattedName": "John Doe"
+        },
+        "communication": {
+          "phone": [
+            {
+              "formattedNumber": "+31201234567"
+            }
+          ],
+          "email": [
+            {
+              "address": "john.doe@abcstaffing.com"
+            }
+          ]
+        },
+        "roleCode": "Authorized by",
+        "positionTitle": "Recruitment Specialist"
+      }
+    ]
+  },
+  "baseDefinition": [
+    {
+      "baseType": "BaseWage",
+      "remunerationIndicator": true,
+      "holidayAllowanceIndicator": true,
+      "paidLeaveDayIndicator": true,
+      "allAllowancesIndicator": false,
+      "allowances": [
+        {
+          "typeCode": "ORT"
+        }
+      ],
+      "referenceDate": {
+        "occurrenceType": "Recurring",
+        "date": "2026-06-02"
+      }
+    }
+  ],
+  "labourAgreements": {
+    "industryIdentifier": [
+      {
+        "value": "Code from 'standaard bedrijfsindeling' (SBI) 2008"
+      }
+    ],
+    "collectiveLabourAgreement": {
+      "name": "Collective labour agreement for construction sector",
+      "id": {
+        "value": "1496"
+      },
+      "effectivePeriod": {
+        "validFrom": "2024-01-01",
+        "validTo": "2026-01-01"
+      },
+      "basedOn": "The CLA has been declared generally binding from ... till ..."
+    },
+    "customLabourAgreement": false
+  },
+  "positionProfile": [
+    {
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "positionId": {
+        "value": "POS123"
+      },
+      "positionTitle": "Recruitment Specialist",
+      "referenceTitle": "HR Functions",
+      "workDescription": "Responsible for sourcing and hiring candidates."
+    }
+  ],
+  "remuneration": [
+    {
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2025-05-09",
+        "validTo": "2026-05-09"
+      },
+      "workDuration": {
+        "amount": {
+          "value": 40.0,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1.0,
+          "unitCode": "Week"
+        },
+        "valuePerWeek": 40.0
+      },
+      "interval": {
+        "value": 1.0,
+        "unitCode": "Month"
+      },
+      "hourlyWageConversion": {
+        "hourlyWageFactor": 173.33
+      },
+      "salaryScale": [
+        {
+          "name": "Scale 1",
+          "maxValue": 2500.0,
+          "minValue": 2000.0,
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "Stap 1",
+              "value": 2000.0
+            },
+            {
+              "name": "Stap 2",
+              "value": 2150.0
+            },
+            {
+              "name": "Stap 3",
+              "value": 2300.0
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Based on years of relevant experience."
+          },
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "POS-MAGAZIJN"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Scale 2",
+          "minValue": 2400.0,
+          "maxValue": 3100.0,
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "Stap 1",
+              "value": 2400.0
+            },
+            {
+              "name": "Stap 2",
+              "value": 2650.0
+            },
+            {
+              "name": "Stap 3",
+              "value": 2900.0
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Ervaring in senioriteit meegewogen."
+          },
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "POS-TEAMLEIDER"
+              }
+            }
+          ]
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "effectiveDate": {
+            "occurrenceType": "Recurring",
+            "date": "R/2026-01-01/P1Y"
+          },
+          "line": {
+            "lineId": {
+              "value": "INC-001"
+            },
+            "amount": {
+              "value": 1,
+              "unitCode": "SalaryStep",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            },
+            "interval": {
+              "value": 1.0,
+              "unitCode": "Year"
+            },
+            "conditions": [
+                {
+                "conditionType": "Text",
+                "description": "Based on individual performance review results."
+                }
+            ]
+          }
+        }
+      ],
+      "generalSalaryIncrease": [
+        {
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-01-01"
+          },
+          "amount": {
+            "value": 200.0,
+            "unitCode": "Euro"
+          },
+          "description": "Initial increase applicable to the entire table."
+        }
+      ]
+    }
+  ],
+  "allowance": [
+    {
+      "id": {
+        "value": "KM-VERG-2025",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Mileage Allowance (Home-Work)",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2025-01-01",
+        "validTo": "2025-12-31"
+      },
+      "typeCode": "EA103",
+      "line": [
+        {
+          "lineId": {
+            "value": "LINE-KM-01"
+          },
+          "amount": {
+            "value": 0.23,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Kilometer"
+          }
+        }
+      ]
+    }
+  ],
+  "holidayAllowance": [
+    {
+      "id": {
+        "value": "sadf3dvaa3",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Standard Holiday Allowance (8%)",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2027-12-31"
+      },
+      "line": [
+        {
+          "lineId": {
+            "value": "LINE-HOL-01"
+          },
+          "amount": {
+            "value": 8.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate",
+              "baseType": "GrossSalary"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Accrual is proportional to actual hours worked."
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Recurring",
+        "recurringInterval": "R/2026-5/P1Y"
+      }
+    }
+  ],
+  "sickPay": [
+    {
+      "id": {
+        "value": "9c36cb78897",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Continued sick pay - First Year",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2027-01-01"
+      },
+      "waitingDays": {
+        "value": 1.0,
+        "unitCode": "Day",
+        "conditions": [
+          {
+            "conditionType": "Text",
+            "description": "..."
+          }
+        ]
+      },
+      "line": [
+        {
+          "lineId": {
+            "value": "LINE-SICK-01"
+          },
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate",
+              "baseType": "RegularSalary"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Payment based on contracted hours."
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Occurrence",
+              "occurrence": {
+                "occurrenceType": "Relative",
+                "event": "SickLeave",
+                "offset": "P1Y"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "leave": [
+    {
+      "id": {
+        "value": "37605f8e84f",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Standard Leave & ADV Policy 2026",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2023-01-01",
+        "validTo": "2028-01-01"
+      },
+      "paidLeave": [
+        {
+          "amount": {
+            "value": 200.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Vacation hours are calculated based on contract hours."
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..."
+            }
+        ],
+          "leaveDayValue": {
+            "value": 133.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          }
+        }
+      ],
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 4.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Week"
+          },
+         "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Full time only"
+            }
+          ]
+        }
+      ],
+      "holidays": [
+        {
+          "name": " All Public Holidays",
+          "amount": {
+            "value": 7.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "List of all the public holidays: ...."
+          }
+          ]
+        },
+        {
+          "name": "Liberation day",
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+          {
+              "conditionType": "Occurrence",
+              "occurrence": {
+                  "occurrenceType": "Recurring",
+                  "recurringInterval": "R/2026-5/P1Y"
+              }
+          }
+    ]
+        }
+      ],
+      "specialLeave": [
+        {
+          "name": "Bereavement Leave",
+          "amount": {
+            "value": 2.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Occurrence"
+          }
+        }
+      ],
+      "additionalParentalLeave": [
+        {
+          "name": "Extra Parental Leave",
+          "amount": {
+            "value": 9.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ],
+      "mandatoryLeaveAllocation": {
+        "description": "Statutory leave days must be used within 6 months after the accrual year."
+      }
+    }
+  ],
+  "individualChoiceBudget": [
+    {
+      "id": {
+        "value": "f8b0c203a3d",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Individual Choice Budget (IKB) - All Employees",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2028-01-01"
+      },
+      "line": [
+        {
+          "lineId": {
+            "value": "LINE-IKB-01"
+          },
+          "amount": {
+            "value": 5.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate",
+              "baseType": "GrossSalary"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Budget accrual is based on actual hours worked and time in service."
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..."
+            }
+          ]
+        }
+      ],
+      "option": [
+        {
+          "description": "Paid out with monthly or annual salary"
+        },
+        {
+          "description": "Tax-benefit purchase of a bicycle (Fietsplan)"
+        }
+      ]
+    }
+  ],
+  "pension": [
+    {
+      "name": "Standard Pension Plan",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "line": [
+        {
+          "lineId": {
+            "value": "PENS-ER-001"
+          },
+          "amount": {
+            "value": 12.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate",
+              "baseType": "Pension"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Contribution is proportional to the actual pensionable earnings."
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..."
+            }
+          ]
+        }
+      ],
+      "franchise": {
+        "description": "...."
+      }
+    }
+  ],
+  "sustainableEmployability": [
+    {
+      "id": {
+        "value": "4ea88b6d2d6",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Personal Development Budget",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2026-12-31"
+      },
+      "typeCode": "Education",
+      "line": [
+        {
+          "lineId": {
+            "value": "LINE-SUST-01"
+          },
+          "amount": {
+            "value": 10,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "supplementaryArrangement": [
+    {
+      "name": "Generatiepact 80-90-100",
+      "description": "Scheme for older employees to work 80%, receive 90% salary, and build 100% pension.",
+      "typeCode": "Generationpact"
+    }
+  ],
+  "otherArrangement": [
+    {
+      "name": "Tijd voor tijd",
+      "description": "....",
+      "id": {
+        "value": "OTHER-001",
+        "schemeAgencyId": "Customer"
+      },
+      "origin": {
+        "type": "CustomLabourAgreement"
+      }
+    }
+  ]
+}

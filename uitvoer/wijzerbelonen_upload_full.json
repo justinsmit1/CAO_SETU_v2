@@ -1,0 +1,4857 @@
+{
+  "leave": [
+    {
+      "name": "ADV / ATV regeling: ADV volgens de cao",
+      "origin": {
+        "type": "Unknown"
+      },
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 13,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Aanvullende ADV / ATV regeling voor ouderen: Vanaf 60 jaar",
+      "origin": {
+        "type": "Unknown"
+      },
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 4,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Aanvullende ADV / ATV regeling voor duur dienstverband: Na 10 jaar dienstverband",
+      "origin": {
+        "type": "Unknown"
+      },
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 2,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Aanvullende ADV / ATV regeling voor anders: null",
+      "origin": {
+        "type": "Unknown"
+      },
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 2,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vakantiedagen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "paidLeave": [
+        {
+          "amount": {
+            "value": 25,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          }
+        },
+        {
+          "amount": {
+            "value": 27,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Age",
+              "operator": "gte",
+              "age": "55"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 29,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Age",
+              "operator": "gte",
+              "age": "60"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 26,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "EmploymentDuration",
+              "operator": "gte"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 28,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "EmploymentDuration",
+              "operator": "gte"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 26,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Totaal extra aantal vakantiedagen voor: Werknemers in de volcontinudienst"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Een aanvulling op het betaalde ouderschapsverlof van",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "name": "Namelijk: Aanvulling tot 90% van het loon"
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Een aanvulling op het onbetaalde ouderschapsverlof van",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "name": "Namelijk: 25% doorbetaling gedurende 6 weken"
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Een aanvulling op het aanvullend geboorteverlof",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "name": "Namelijk: Aanvulling tot 100% van het loon"
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Een aanvulling op het kortdurend zorgverlof",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "name": "Namelijk: Aanvulling tot 100% van het loon"
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Een tegemoetkoming bij langdurend zorgverlof",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "name": "Namelijk: 50% doorbetaling gedurende 2 weken"
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Een langere verlofduur:",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "name": "Namelijk: 2 extra weken geboorteverlof"
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Anders, namelijk:",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "name": "Namelijk: Adoptieverlof: 1 extra week"
+        }
+      ]
+    },
+    {
+      "name": "Verplichte aanwending verlof",
+      "origin": {
+        "type": "Unknown"
+      },
+      "mandatoryLeaveAllocation": {
+        "description": "Periode/dagen/uren:Collectieve vrije dagen tussen kerst en oud en nieuw\n\nWelk verlof:ADV-dagen, en anders vakantiedagen"
+      }
+    },
+    {
+      "name": "Feestdagen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "holidays": [
+        {
+          "amount": {
+            "value": 9,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voorwaarden voor het genieten van een feestdag: Als de feestdag op een roostervrije dag valt, vervalt de dag"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Feestdagen die niet elk jaar worden toegekend, en hun voorwaarden: Bevrijdingsdag alleen in lustrumjaren"
+            }
+          ],
+          "name": "Nieuwjaarsdag, Goede Vrijdag, Tweede paasdag, Koningsdag, Bevrijdingsdag, Hemelvaartsdag, Tweede pinksterdag, Eerste kerstdag, Tweede kerstdag"
+        }
+      ]
+    },
+    {
+      "name": "Persoonlijke feestdagen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "holidays": [
+        {
+          "amount": {
+            "value": 1,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voorwaarden voor het genieten van een persoonlijke feestdag: Minimaal 4 weken van tevoren aanvragen"
+            }
+          ],
+          "name": "Een zelf te kiezen religieuze feestdag"
+        }
+      ]
+    },
+    {
+      "name": "Waarde van een (verlof)dag",
+      "origin": {
+        "type": "Unknown"
+      },
+      "paidLeave": [
+        {
+          "amount": {
+            "value": 0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "leaveDayValue": {
+            "value": 0.44,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "DailyRate"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Bij verhuizing",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij verhuizing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 2 dagen in het geval van: Bij eigen huwelijk",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 2,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij eigen huwelijk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 4 uren in het geval van: Bij bezoek aan huisarts of tandarts",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 4,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij bezoek aan huisarts of tandarts"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "documentId": {
+    "value": "Volledig voorbeeld 2026",
+    "schemeAgencyId": "Customer"
+  },
+  "issued": "2026-09-29T08:07:43.103Z",
+  "effectivePeriod": {
+    "validFrom": "2026-01-01",
+    "validTo": "2026-12-31"
+  },
+  "customer": {
+    "name": "Voorbeeld Techniek B.V.",
+    "legalId": [
+      {
+        "value": "87654321",
+        "schemeAgencyId": "KvK"
+      }
+    ],
+    "personContacts": [
+      {
+        "name": {
+          "formattedName": "J. Jansen"
+        },
+        "communication": {
+          "email": [
+            {
+              "address": "hr@voorbeeld.nl"
+            }
+          ],
+          "phone": [
+            {
+              "formattedNumber": "+31201234567"
+            }
+          ]
+        },
+        "positionTitle": "HR-adviseur"
+      },
+      {
+        "name": {
+          "formattedName": "P. de Vries"
+        },
+        "communication": {
+          "email": [
+            {
+              "address": "salaris@voorbeeld.nl"
+            }
+          ],
+          "phone": [
+            {
+              "formattedNumber": "+31207654321"
+            }
+          ]
+        },
+        "positionTitle": "Salarisadministrateur"
+      }
+    ]
+  },
+  "labourAgreements": {
+    "industryIdentifier": [
+      {
+        "value": "Metaal en techniek"
+      }
+    ],
+    "customLabourAgreement": true,
+    "collectiveLabourAgreement": {
+      "name": "Cao Metaal & Techniek",
+      "id": {
+        "value": "1234"
+      },
+      "basedOn": "algemeen-verbindend",
+      "effectivePeriod": {
+        "validFrom": "2025-06-01",
+        "validTo": "2027-05-31"
+      }
+    }
+  },
+  "allowance": [
+    {
+      "name": "Betaalde rusttijden en pauzes",
+      "typeCode": "HT400",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "15 minuten betaalde pauze per 4 uur werk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer OV",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Op basis van het tweede-klas-tarief"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding werk-werk verkeer OV",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 0.15,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Tussen projectlocaties"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Andere reiskostenvergoedingen, namelijk: Parkeerkosten bij projectlocaties worden vergoed op declaratiebasis",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Reisuren: percentage",
+      "typeCode": "HT600",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Reistijd boven 1 uur per dag naar een projectlocatie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vergoeding voor stand-by-, piket-, consignatie- of bereikbaarheidsdiensten: vergoeding per tijdvak",
+      "typeCode": "HT602",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 35,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Shift"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Per piketdienst van 24 uur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vergoeding voor de (aanvullende) zorgverzekering",
+      "typeCode": "EA604",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 10,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "minValue": 5,
+            "maxValue": 15
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Alleen bij deelname aan de collectieve zorgverzekering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Thuiswerkvergoeding",
+      "typeCode": "EA605",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 2.35,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Per volledige thuiswerkdag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Internetvergoeding",
+      "typeCode": "EA608",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 20,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij minimaal 2 thuiswerkdagen per week"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tijd voor tijd regeling: Overuren kunnen worden opgenomen als vrije tijd, 1 op 1",
+      "typeCode": "HT500",
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Koffiegeld",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 1.5,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Op werkdagen buiten kantoor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Maaltijdvergoeding",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 15,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Item"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij overwerk van meer dan 2 uur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wasvergoeding",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 5,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Week"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor werkkleding"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vergoeding voor bedrijfskleding of schoenen",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 150,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Veiligheidsschoenen S3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Arbo-vergoeding",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 250,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor een ergonomische werkplek thuis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BYOD (Bring Your Own Device) vergoeding",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 15,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Gebruik van eigen telefoon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kostenvergoeding anders: Vergoeding voor het behalen van een rijbewijs C",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Mobiliteitsvergoeding",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 100,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Vrij te besteden aan vervoer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regeling leaseauto",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 550,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Vanaf functiegroep Werkvoorbereider"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 400,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Alternatieve vergoeding voor Regeling leaseauto"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Bruto vergoeding bij afzien van een leaseauto"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regeling leasefiets",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 40,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Via fietsleasepartner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regeling OV vergoeding",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 90,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "NS-Business Card"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fietsregeling",
+      "typeCode": "EA100",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 750,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Once"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Eens per 3 jaar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wachtdagcompensatie",
+      "typeCode": "EA600",
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Day"
+          },
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "DailyRate"
+            }
+          }
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Onregelmatigheids- toeslagen (waaronder feestdagen)",
+      "description": "Avond en nacht",
+      "typeCode": "HT320",
+      "line": [
+        {
+          "amount": {
+            "value": 25,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Werken tussen 20:00 en 06:00"
+            }
+          ]
+        }
+      ],
+      "reference": [
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "HT300"
+        },
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "HT101"
+        },
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "EA301"
+        },
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "HT602"
+        },
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "HT200"
+        },
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "EA300"
+        },
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "EA300"
+        },
+        {
+          "relationType": "Cumulative",
+          "description": "Deze toeslag wordt opgeteld bij de andere toeslag, zie typeCode. (Toelichting: Opgeteld bij een eventuele ploegentoeslag)",
+          "typeCode": "EA300"
+        }
+      ],
+      "period": [
+        {
+          "timePeriod": {
+            "start": "20:00:00",
+            "end": "23:59:00"
+          },
+          "weekday": [
+            {
+              "value": "Monday"
+            },
+            {
+              "value": "Tuesday"
+            },
+            {
+              "value": "Wednesday"
+            },
+            {
+              "value": "Thursday"
+            },
+            {
+              "value": "Friday"
+            }
+          ]
+        },
+        {
+          "timePeriod": {
+            "start": "00:00:00",
+            "end": "06:00:00"
+          },
+          "weekday": [
+            {
+              "value": "Monday"
+            },
+            {
+              "value": "Tuesday"
+            },
+            {
+              "value": "Wednesday"
+            },
+            {
+              "value": "Thursday"
+            },
+            {
+              "value": "Friday"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Onregelmatigheids- toeslagen (waaronder feestdagen)",
+      "description": "Zon- en feestdagen",
+      "typeCode": "HT320",
+      "line": [
+        {
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          }
+        }
+      ],
+      "period": [
+        {
+          "timePeriod": {
+            "start": "00:00:00",
+            "end": "23:59:00"
+          },
+          "weekday": [
+            {
+              "value": "Saturday"
+            },
+            {
+              "value": "Sunday"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Ploegentoeslagen",
+      "typeCode": "HT300",
+      "line": [
+        {
+          "amount": {
+            "value": 12.5,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Shift"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Drieploegendienst volgens rooster: vroege, late en nachtdienst"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      },
+      "phaseOutScheme": "Bij stoppen met ploegendienst na 5 jaar: 2 jaar lang 50% van de toeslag"
+    },
+    {
+      "name": "Toeslagen voor verschoven diensten",
+      "typeCode": "HT101",
+      "line": [
+        {
+          "amount": {
+            "value": 10,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Als de dienst meer dan 2 uur verschoven wordt"
+            }
+          ]
+        }
+      ],
+      "reference": [
+        {
+          "relationType": "Compounding",
+          "description": "Deze toeslag wordt berekend over het resultaat na andere toeslagen, namelijk:",
+          "typeCode": "HT320"
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Toeslagen voor (fysieke) belasting",
+      "typeCode": "EA301",
+      "line": [
+        {
+          "amount": {
+            "value": 0.5,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Werken in de koelcel of bij extreme hitte"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Toeslagen voor werken tijdens stand-by-, consignatie- of bereik- baarheidsdiensten",
+      "typeCode": "HT602",
+      "line": [
+        {
+          "amount": {
+            "value": 20,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Werken tijdens een bereikbaarheidsdienst"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Overwerk",
+      "typeCode": "HT200",
+      "line": [
+        {
+          "amount": {
+            "value": 125,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor elk uur boven de 38 uur per week"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Waarnemingstoeslag",
+      "typeCode": "EA300",
+      "line": [
+        {
+          "amount": {
+            "value": 150,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij waarneming van een hogere functie langer dan 2 weken"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Performancetoeslag",
+      "typeCode": "EA300",
+      "line": [
+        {
+          "amount": {
+            "value": 5,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij een beoordeling 'goed' of hoger"
+            }
+          ]
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Vuilwerktoeslag",
+      "typeCode": "EA300",
+      "line": [
+        {
+          "amount": {
+            "value": 2,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Werkzaamheden in sterk vervuilde ruimtes"
+            }
+          ]
+        }
+      ],
+      "period": [
+        {
+          "datePeriod": [
+            {
+              "start": "2026-03-01",
+              "end": "2026-10-31"
+            }
+          ],
+          "timePeriod": {
+            "start": "00:00:00",
+            "end": "23:59:00"
+          }
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer eigen auto / fiets / bromfiets / anders.",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 0.23,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Auto, vanaf 10 km enkele reis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer eigen auto / fiets / bromfiets / anders.",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 0.19,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Fiets"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer eigen auto / fiets / bromfiets / anders.",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 60,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bromfiets"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer eigen auto / fiets / bromfiets / anders. Anders, namelijk: Carpoolvergoeding volgens regeling",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij carpoolen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding zakelijke kilometers (werk – werk) eigen vervoer",
+      "typeCode": "EA103",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 0.25,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Met eigen auto voor klantbezoek"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eenmalige uitkering: Eenmalige cao-uitkering",
+      "typeCode": "EA801",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Once"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Minimaal 3 maanden in dienst"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Afhankelijk van dienstverband op bepaalde datum, namelijk: In dienst op 1 juni 2026"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Niet voor stagiairs"
+            }
+          ],
+          "amount": {
+            "value": 500,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": false
+            },
+            "minValue": 250,
+            "maxValue": 500
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-06-30"
+      }
+    },
+    {
+      "name": "Eenmalige uitkering: Koopkrachtuitkering",
+      "typeCode": "EA801",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Once"
+          },
+          "amount": {
+            "value": 1,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-12-01"
+      }
+    },
+    {
+      "name": "Eenmalige uitkering: Uitkering bij afronden project: Bedrag afhankelijk van de projectomvang",
+      "typeCode": "EA801",
+      "origin": {
+        "type": "Unknown"
+      },
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-09-01"
+      }
+    },
+    {
+      "name": "Vaste uitkering: Dertiende maand",
+      "typeCode": "EA801",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-12-15"
+      }
+    },
+    {
+      "name": "Vaste uitkering: Eindejaarsuitkering",
+      "typeCode": "EA801",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Minimaal 1 jaar in dienst"
+            }
+          ],
+          "amount": {
+            "value": 750,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": false
+            }
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-12-15"
+      }
+    },
+    {
+      "name": "Vaste uitkering: Vakantie-extra",
+      "typeCode": "EA801",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Afhankelijk van dienstverband op bepaalde datum, namelijk: In dienst op 1 mei"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Niet tijdens onbetaald verlof"
+            }
+          ],
+          "amount": {
+            "value": 1,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-05-31"
+      }
+    },
+    {
+      "name": "Vaste uitkering: Kerstpakket: Kerstpakket ter waarde van ongeveer € 75",
+      "typeCode": "EA801",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-12-20"
+      }
+    },
+    {
+      "name": "Jubileumuitkering: 12,5-jarig dienstjubileum",
+      "typeCode": "EA903",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "conditions": [
+            {
+              "conditionType": "EmploymentDuration",
+              "operator": "eq",
+              "duration": "P12Y6M",
+              "referenceDateType": "HireDate"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Onafgebroken dienstverband"
+            }
+          ],
+          "amount": {
+            "value": 500,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jubileumuitkering: 25-jarig dienstjubileum",
+      "typeCode": "EA903",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "conditions": [
+            {
+              "conditionType": "EmploymentDuration",
+              "operator": "eq",
+              "duration": "P25Y",
+              "referenceDateType": "SeniorityDate"
+            }
+          ],
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-01-01"
+      }
+    },
+    {
+      "name": "Jubileumuitkering: 40-jarig dienstjubileum",
+      "typeCode": "EA903",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Anders toegekend, namelijk: Een extra vrije week en een cadeaubon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Variabele uitkering: winst",
+      "typeCode": "EA903",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bepaald resultaat (winst), namelijk: Bij een nettowinst boven 1 miljoen euro"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Afhankelijk van dienstverband op bepaalde datum, namelijk: In dienst op 31 december"
+            }
+          ],
+          "amount": {
+            "value": 2,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            },
+            "minValue": 500,
+            "maxValue": 2500
+          }
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-04-01"
+      }
+    },
+    {
+      "name": "Variabele uitkering: performance",
+      "typeCode": "EA903",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bepaalde prestatie (performance), namelijk: Bij het behalen van de persoonlijke doelen"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Afhankelijk minimale duur dienstverband, namelijk: Minimaal 6 maanden in dienst"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Anders, namelijk: Vast te stellen door de directie"
+            }
+          ],
+          "amount": {
+            "value": 1000,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Variabele uitkering: Aanbrengpremie voor nieuwe collega's: € 500 na afloop van de proeftijd van de nieuwe collega",
+      "typeCode": "EA903",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          }
+        }
+      ]
+    }
+  ],
+  "remuneration": [
+    {
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2026-12-31"
+      },
+      "workDuration": {
+        "valuePerWeek": 38,
+        "amount": {
+          "value": 1,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1,
+          "unitCode": "Week"
+        }
+      },
+      "interval": {
+        "value": 1,
+        "unitCode": "Month"
+      },
+      "hourlyWageConversion": {
+        "hourlyWagePercentage": 0.6
+      },
+      "salaryScale": [
+        {
+          "name": "A",
+          "minValue": 2300,
+          "maxValue": 2600,
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2300
+            },
+            {
+              "name": "1",
+              "value": 2450
+            },
+            {
+              "name": "2",
+              "value": 2600
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring in de sector wordt als volgt meegenomen: Per 2 jaar relevante ervaring in de sector 1 trede hoger, maximaal 3 treden"
+          },
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "MON"
+              }
+            }
+          ],
+          "currency": "EUR"
+        },
+        {
+          "name": "B",
+          "minValue": 2700,
+          "maxValue": 3100,
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2700
+            },
+            {
+              "name": "1",
+              "value": 2900
+            },
+            {
+              "name": "2",
+              "value": 3100
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring in de sector wordt als volgt meegenomen: Per 2 jaar relevante ervaring in de sector 1 trede hoger, maximaal 3 treden"
+          },
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "WVB"
+              }
+            }
+          ],
+          "currency": "EUR"
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van een minimale duur dienstverband"
+              }
+            ],
+            "amount": {
+              "value": 1,
+              "unitCode": "SalaryStep",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            }
+          },
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-07-01T00:00:00+02:00"
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van de beoordeling van de werknemer"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ],
+            "amount": {
+              "value": 2.5,
+              "unitCode": "Percentage",
+              "baseAmount": {
+                "unitCode": "YearlyRate"
+              }
+            }
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: Na de jaarlijkse beoordeling in januari"
+              }
+            ],
+            "amount": {
+              "value": 50,
+              "unitCode": "Euro",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            }
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Nee, maar wij geven wel andere verhogingen (niet zijnde initiële / eenmalige verhogingen) aan onze werknemers: Naar beoordeling van de leidinggevende"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ]
+          }
+        }
+      ],
+      "generalSalaryIncrease": [
+        {
+          "amount": {
+            "value": 3,
+            "unitCode": "Percentage"
+          },
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-04-01T00:00:00+02:00"
+          },
+          "description": "Structurele loonsverhoging volgens de cao"
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "effectivePeriod": {
+        "validFrom": "2026-01-01"
+      },
+      "conditions": [
+        {
+          "conditionType": "Text",
+          "description": "Voor oproepkrachten zonder vaste arbeidsduur"
+        }
+      ],
+      "workDuration": {
+        "valuePerWeek": 24,
+        "amount": {
+          "value": 1,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1,
+          "unitCode": "Week"
+        }
+      },
+      "interval": {
+        "value": 1,
+        "unitCode": "Hour"
+      },
+      "salaryScale": [
+        {
+          "name": "O1",
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 14.5
+            },
+            {
+              "name": "1",
+              "value": 15.25
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring wordt als volgt meegenomen: Ervaring wordt niet meegeteld bij oproepkrachten"
+          },
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "Oproepkracht productie"
+              }
+            }
+          ],
+          "currency": "EUR"
+        }
+      ],
+      "generalSalaryIncrease": [
+        {
+          "amount": {
+            "value": 250,
+            "unitCode": "Euro"
+          },
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-07-01T00:00:00+02:00"
+          },
+          "description": "Eenmalige uitkering bij de start"
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "conditionType": "Text",
+          "description": "Voor stagiairs en leerlingen (BBL)"
+        }
+      ],
+      "workDuration": {
+        "valuePerWeek": 36,
+        "amount": {
+          "value": 1,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1,
+          "unitCode": "Week"
+        }
+      },
+      "interval": {
+        "value": 4,
+        "unitCode": "Week"
+      },
+      "salaryScale": [
+        {
+          "name": "S1",
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 1400
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring bij onze onderneming wordt als volgt meegenomen: Eerdere stages bij onze onderneming tellen mee"
+          },
+          "currency": "EUR"
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "conditions": [
+        {
+          "conditionType": "Text",
+          "description": "Voor werknemers met een weekloon"
+        }
+      ],
+      "workDuration": {
+        "valuePerWeek": 40,
+        "amount": {
+          "value": 1,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1,
+          "unitCode": "Week"
+        }
+      },
+      "interval": {
+        "value": 1,
+        "unitCode": "Week"
+      },
+      "salaryScale": [
+        {
+          "name": "W1",
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 650
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring in dezelfde functie (ongeacht de sector) wordt als volgt meegenomen: Ervaring in dezelfde functie telt volledig mee"
+          },
+          "currency": "EUR"
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2026-12-31"
+      },
+      "workDuration": {
+        "valuePerWeek": 36,
+        "amount": {
+          "value": 36,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1,
+          "unitCode": "Week"
+        }
+      },
+      "interval": {
+        "value": 1,
+        "unitCode": "Month"
+      },
+      "hourlyWageConversion": {
+        "hourlyWagePercentage": 0.65
+      },
+      "salaryScale": [
+        {
+          "name": "A",
+          "minValue": 2300,
+          "maxValue": 2600,
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2300
+            },
+            {
+              "name": "1",
+              "value": 2450
+            },
+            {
+              "name": "2",
+              "value": 2600
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring in de sector wordt als volgt meegenomen: Per 2 jaar relevante ervaring in de sector 1 trede hoger, maximaal 3 treden"
+          },
+          "currency": "EUR"
+        },
+        {
+          "name": "B",
+          "minValue": 2700,
+          "maxValue": 3100,
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2700
+            },
+            {
+              "name": "1",
+              "value": 2900
+            },
+            {
+              "name": "2",
+              "value": 3100
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring in de sector wordt als volgt meegenomen: Per 2 jaar relevante ervaring in de sector 1 trede hoger, maximaal 3 treden"
+          },
+          "currency": "EUR"
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van een minimale duur dienstverband"
+              }
+            ],
+            "amount": {
+              "value": 1,
+              "unitCode": "SalaryStep",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            }
+          },
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-07-01T00:00:00+02:00"
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van de beoordeling van de werknemer"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ],
+            "amount": {
+              "value": 2.5,
+              "unitCode": "Percentage",
+              "baseAmount": {
+                "unitCode": "YearlyRate"
+              }
+            }
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: Na de jaarlijkse beoordeling in januari"
+              }
+            ],
+            "amount": {
+              "value": 50,
+              "unitCode": "Euro",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            }
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Nee, maar wij geven wel andere verhogingen (niet zijnde initiële / eenmalige verhogingen) aan onze werknemers: Naar beoordeling van de leidinggevende"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ]
+          }
+        }
+      ],
+      "generalSalaryIncrease": [
+        {
+          "amount": {
+            "value": 3,
+            "unitCode": "Percentage"
+          },
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-04-01T00:00:00+02:00"
+          },
+          "description": "Structurele loonsverhoging volgens de cao"
+        }
+      ],
+      "conditions": [
+        {
+          "conditionType": "Text",
+          "description": "Vijfploegendienst"
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2026-12-31"
+      },
+      "workDuration": {
+        "valuePerWeek": 152,
+        "amount": {
+          "value": 152,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 4,
+          "unitCode": "Week"
+        }
+      },
+      "interval": {
+        "value": 1,
+        "unitCode": "Month"
+      },
+      "hourlyWageConversion": {
+        "hourlyWagePercentage": 0.6
+      },
+      "salaryScale": [
+        {
+          "name": "A",
+          "minValue": 2300,
+          "maxValue": 2600,
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2300
+            },
+            {
+              "name": "1",
+              "value": 2450
+            },
+            {
+              "name": "2",
+              "value": 2600
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring in de sector wordt als volgt meegenomen: Per 2 jaar relevante ervaring in de sector 1 trede hoger, maximaal 3 treden"
+          },
+          "currency": "EUR"
+        },
+        {
+          "name": "B",
+          "minValue": 2700,
+          "maxValue": 3100,
+          "salaryStep": [
+            {
+              "name": "0",
+              "value": 2700
+            },
+            {
+              "name": "1",
+              "value": 2900
+            },
+            {
+              "name": "2",
+              "value": 3100
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring in de sector wordt als volgt meegenomen: Per 2 jaar relevante ervaring in de sector 1 trede hoger, maximaal 3 treden"
+          },
+          "currency": "EUR"
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van een minimale duur dienstverband"
+              }
+            ],
+            "amount": {
+              "value": 1,
+              "unitCode": "SalaryStep",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            }
+          },
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-07-01T00:00:00+02:00"
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van de beoordeling van de werknemer"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ],
+            "amount": {
+              "value": 2.5,
+              "unitCode": "Percentage",
+              "baseAmount": {
+                "unitCode": "YearlyRate"
+              }
+            }
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: Na de jaarlijkse beoordeling in januari"
+              }
+            ],
+            "amount": {
+              "value": 50,
+              "unitCode": "Euro",
+              "baseAmount": {
+                "unitCode": "Fixed"
+              }
+            }
+          }
+        },
+        {
+          "line": {
+            "interval": {
+              "value": 1,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Nee, maar wij geven wel andere verhogingen (niet zijnde initiële / eenmalige verhogingen) aan onze werknemers: Naar beoordeling van de leidinggevende"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ]
+          }
+        }
+      ],
+      "generalSalaryIncrease": [
+        {
+          "amount": {
+            "value": 3,
+            "unitCode": "Percentage"
+          },
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2026-04-01T00:00:00+02:00"
+          },
+          "description": "Structurele loonsverhoging volgens de cao"
+        }
+      ],
+      "conditions": [
+        {
+          "conditionType": "Text",
+          "description": "Drieploegendienst"
+        }
+      ],
+      "origin": {
+        "type": "Unknown"
+      }
+    }
+  ],
+  "positionProfile": [
+    {
+      "positionTitle": "Monteur",
+      "positionId": {
+        "value": "MON"
+      },
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "positionTitle": "Werkvoorbereider",
+      "positionId": {
+        "value": "WVB"
+      },
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "positionTitle": "Oproepkracht productie",
+      "positionId": {
+        "value": "Oproepkracht productie"
+      },
+      "origin": {
+        "type": "Unknown"
+      }
+    }
+  ],
+  "holidayAllowance": [
+    {
+      "name": "Vakantiebijslag",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 8,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate",
+              "baseType": "GrossSalary"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    }
+  ],
+  "sickPay": [
+    {
+      "name": "Loondoorbetaling bij ziekte",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate",
+              "baseType": "BaseWage"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Eerste ziektejaar"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 100,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate",
+              "baseType": "BaseWage"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Tweede ziektejaar"
+            }
+          ]
+        }
+      ],
+      "waitingDays": {
+        "value": 1,
+        "unitCode": "Day",
+        "conditions": [
+          {
+            "conditionType": "Text",
+            "description": "Maximaal 2 wachtdagen per kalenderjaar"
+          }
+        ]
+      }
+    }
+  ],
+  "individualChoiceBudget": [
+    {
+      "name": "Individueel keuze budget",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 16.3,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          }
+        }
+      ],
+      "option": [
+        {
+          "description": "Bovenwettelijke vakantiedagen voor 1.9% van uurloon"
+        },
+        {
+          "description": "ADV dagen voor 4.8% van weekloon"
+        },
+        {
+          "description": "Eindejaarsuitkering voor 1.6% van maandloon"
+        },
+        {
+          "description": "Vakantiebijslag voor 8% van periodeloon"
+        },
+        {
+          "description": "Anders: Vakbondscontributie en fiscaal voordelige fietsregeling"
+        }
+      ]
+    }
+  ],
+  "pension": [
+    {
+      "name": "PMT",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 14.5,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate",
+              "baseType": "Pension"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "contributionSource": "Employer"
+        }
+      ],
+      "franchise": {
+        "description": "Franchise van € 17.545 per jaar (2026)"
+      }
+    }
+  ],
+  "sustainableEmployability": [
+    {
+      "name": "Opleidingen",
+      "typeCode": "Education",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 1000,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            },
+            {
+              "conditionType": "Text",
+              "description": "Opleiding moet functiegericht zijn"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Loopbaancoaching",
+      "typeCode": "CareerCoaching",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 0.5,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit budget wordt uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt, onder de volgende voorwaarden: Het niet gebruikte deel wordt in december uitbetaald"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Outplacementtrajecten",
+      "typeCode": "OutplacementPrograms",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 2,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Voorlichting met betrekking tot het in Nederland werken en verblijven van de niet permanent in Nederland woonachtige werknemer",
+      "typeCode": "InformationProvision",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 50,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Scholing met betrekking tot het in Nederland werken en verblijven van de niet permanent in Nederland woonachtige werknemer",
+      "typeCode": "Education",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 300,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sociale begeleiding met betrekking tot het in Nederland werken en verblijven van de niet permanent in Nederland woonachtige werknemer",
+      "typeCode": "SocialSupport",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 200,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anders, namelijk: Taalcursus Nederlands",
+      "typeCode": "Other",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 400,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regeling ter bevordering van de fysieke gezondheid, namelijk: Sportabonnement",
+      "typeCode": "ArrangementForHealth",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 25,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regeling ter bevordering van de mentale gezondheid, namelijk: Gesprekken met een psycholoog",
+      "typeCode": "ArrangementForMentalHealth",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 500,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regeling ter bevordering van de financiële gezondheid, namelijk: Budgetcoach",
+      "typeCode": "ArrangementForFinancialHealth",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 100,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vitaliteitsbudget",
+      "typeCode": "VitalityBudget",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 300,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Anders, namelijk: Gezonde lunch op kantoor",
+      "typeCode": "Other",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 5,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Week"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Verplichte scholing: VCA-basis en NEN 3140",
+      "typeCode": "Other",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 2,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Item"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Op een ander moment, namelijk: Op zaterdag, met compensatie in vrije tijd"
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 450,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Item"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Duurzame samenleving",
+      "typeCode": "SustainableSociety",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 1,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit budget wordt uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt, onder de volgende voorwaarden: Een niet opgenomen dag wordt aan het eind van het jaar uitbetaald"
+            },
+            {
+              "conditionType": "Text",
+              "description": "Een vrije dag voor vrijwilligerswerk voor een natuurorganisatie"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "supplementaryArrangement": [
+    {
+      "name": "PAWW regeling",
+      "origin": {
+        "type": "Unknown"
+      },
+      "description": "Private aanvulling WW volgens de cao",
+      "typeCode": "PAWW",
+      "line": [
+        {
+          "contributionSource": "Employer"
+        },
+        {
+          "amount": {
+            "value": 0.4,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employee"
+        }
+      ],
+      "coverage": {
+        "value": 38,
+        "unitCode": "Hour",
+        "baseAmount": {
+          "unitCode": "Fixed"
+        }
+      }
+    },
+    {
+      "name": "PAZW regeling",
+      "origin": {
+        "type": "Unknown"
+      },
+      "description": "Aanvulling op de Ziektewet tot 100%",
+      "typeCode": "PAZW",
+      "line": [
+        {
+          "amount": {
+            "value": 0.6,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employer"
+        },
+        {
+          "contributionSource": "Employee"
+        }
+      ],
+      "coverage": {
+        "value": 100,
+        "unitCode": "Percentage",
+        "baseAmount": {
+          "unitCode": "MonthlyRate"
+        }
+      }
+    },
+    {
+      "name": "RVU regeling, generatiepact of regeling om minder te gaan werken richting het pensioen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "description": "Generatiepact: 80% werken, 90% loon, 100% pensioenopbouw",
+      "typeCode": "RVU",
+      "line": [
+        {
+          "amount": {
+            "value": 25,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employer"
+        },
+        {
+          "contributionSource": "Employee"
+        }
+      ]
+    },
+    {
+      "name": "WGA-Hiaat regeling",
+      "origin": {
+        "type": "Unknown"
+      },
+      "description": "WGA-hiaatverzekering via de werkgever",
+      "typeCode": "WGA",
+      "line": [
+        {
+          "amount": {
+            "value": 0.3,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "contributionSource": "Employer"
+        },
+        {
+          "amount": {
+            "value": 0.2,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "contributionSource": "Employee"
+        }
+      ],
+      "coverage": {
+        "value": 70,
+        "unitCode": "Percentage",
+        "baseAmount": {
+          "unitCode": "YearlyRate"
+        }
+      }
+    },
+    {
+      "name": "Ongevallenverzekering",
+      "origin": {
+        "type": "Unknown"
+      },
+      "description": "Collectieve ongevallenverzekering",
+      "typeCode": "AccidentBenefit",
+      "line": [
+        {
+          "amount": {
+            "value": 10,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employer"
+        },
+        {
+          "contributionSource": "Employee"
+        }
+      ],
+      "coverage": {
+        "value": 50000,
+        "unitCode": "Euro",
+        "baseAmount": {
+          "unitCode": "Fixed"
+        }
+      }
+    }
+  ],
+  "otherArrangement": [
+    {
+      "name": "Gereedschapsvergoeding",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 5,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Week"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij gebruik van eigen gereedschap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bedrijfshulpverlening",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 1,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor BHV'ers met geldig certificaat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vrijwilligersuren",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 8,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Voor vrijwilligerswerk in de regio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Andere aanvullende sociale zekerheidsregeling",
+      "description": "Aanvulling bij arbeidsongeschiktheid na het tweede ziektejaar",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 0.25,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employer"
+        },
+        {
+          "amount": {
+            "value": 3,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employee"
+        }
+      ]
+    }
+  ],
+  "baseDefinition": [
+    {
+      "baseType": "GrossSalary",
+      "remunerationIndicator": true,
+      "holidayAllowanceIndicator": true,
+      "paidLeaveDayIndicator": true,
+      "allAllowancesIndicator": false,
+      "referenceDate": {
+        "occurrenceType": "Recurring",
+        "interval": "R/2026-06-01/P1Y"
+      },
+      "allowances": [
+        {
+          "typeCode": "HT320"
+        },
+        {
+          "typeCode": "HT300"
+        }
+      ]
+    },
+    {
+      "baseType": "BaseWage",
+      "remunerationIndicator": true,
+      "holidayAllowanceIndicator": false,
+      "paidLeaveDayIndicator": false,
+      "allAllowancesIndicator": true
+    }
+  ],
+  "__webform_data__": {
+    "appVersion": "2.1.0",
+    "note": "Generated with Wijzerbelonen UGB webformulier v2.1.0. Powered by SETU",
+    "localStorageDataVersion": 4,
+    "date": 1790669263103,
+    "activeSectionIndex": 0,
+    "activeSubSectionIndex": 0,
+    "answers": {
+      "id": "Volledig voorbeeld 2026",
+      "toepassingsperiode-van": 1767222000000,
+      "toepassingsperiode-tot": 1798671600000,
+      "opdrachtgever-naam": "Voorbeeld Techniek B.V.",
+      "opdrachtgever-kvk": "87654321",
+      "opdrachtgever-kvk-type": "KvK",
+      "sector": "Metaal en techniek",
+      "cao-of-regeling": "cao-en-eigen-arbeidsvoorwaardenregeling",
+      "cao-naam": "Cao Metaal & Techniek",
+      "cao-nummer": "1234",
+      "cao-van-toepassing-omdat": "algemeen-verbindend",
+      "cao-van": 1748728800000,
+      "cao-tot": 1811714400000,
+      "beloningen": [
+        {
+          "naam": "Salaristabel dagdienst 2026",
+          "geldig-vanaf": 1767222000000,
+          "geldig-per": 1798671600000,
+          "normale-arbeidsduur": 38,
+          "beloning-vastgesteld": "per-maand",
+          "uurlonen-vastgelegd": "ja",
+          "uurlonen-vastgelegd/ja/namelijk": "0.6",
+          "salarisschalen": [
+            {
+              "naam": "A",
+              "minimaal-bedrag": "2300",
+              "maximaal-bedrag": "2600",
+              "stappen": [
+                {
+                  "naam": "0",
+                  "bedrag": "2300"
+                },
+                {
+                  "naam": "1",
+                  "bedrag": "2450"
+                },
+                {
+                  "naam": "2",
+                  "bedrag": "2600"
+                }
+              ]
+            },
+            {
+              "naam": "B",
+              "minimaal-bedrag": "2700",
+              "maximaal-bedrag": "3100",
+              "stappen": [
+                {
+                  "naam": "0",
+                  "bedrag": "2700"
+                },
+                {
+                  "naam": "1",
+                  "bedrag": "2900"
+                },
+                {
+                  "naam": "2",
+                  "bedrag": "3100"
+                }
+              ]
+            }
+          ],
+          "werkervaring-inschaling": "ja-sector",
+          "werkervaring-inschaling/ja-sector/namelijk": "Per 2 jaar relevante ervaring in de sector 1 trede hoger, maximaal 3 treden",
+          "periodieke-verhogingen": "ja",
+          "periodieke-verhogingen-minimale-duur-dienstverband": true,
+          "periodieke-verhogingen-minimale-duur-dienstverband/wanneer": "vast-moment",
+          "periodieke-verhogingen-minimale-duur-dienstverband/wanneer/vast-moment/namelijk": 1782856800000,
+          "periodieke-verhogingen-minimale-duur-dienstverband/berekening": "treden",
+          "periodieke-verhogingen-minimale-duur-dienstverband/berekening/treden/namelijk": "1",
+          "periodieke-verhogingen-beoordeling-werknemer": true,
+          "periodieke-verhogingen-beoordeling-werknemer/wanneer": "gewerkt-jaar",
+          "periodieke-verhogingen-beoordeling-werknemer/berekening": "vast-percentage",
+          "periodieke-verhogingen-beoordeling-werknemer/berekening/vast-percentage/namelijk": "2.5",
+          "periodieke-verhogingen-ja": true,
+          "periodieke-verhogingen-ja/wanneer": "anders",
+          "periodieke-verhogingen-ja/wanneer/anders/namelijk": "Na de jaarlijkse beoordeling in januari",
+          "periodieke-verhogingen-ja/berekening": "vast-bedrag",
+          "periodieke-verhogingen-ja/berekening/vast-bedrag/namelijk": "50",
+          "periodieke-verhogingen-andere-verhogingen": true,
+          "periodieke-verhogingen-andere-verhogingen/wanneer": "gewerkt-jaar",
+          "periodieke-verhogingen-andere-verhogingen/berekening": "anders",
+          "periodieke-verhogingen-andere-verhogingen/berekening/anders/namelijk": "Naar beoordeling van de leidinggevende",
+          "initiele-eenmalige-verhogingen": "ja",
+          "initiele-eenmalige-verhogingen/ja/type": "Percentage",
+          "initiele-eenmalige-verhogingen/ja/percentage": "3",
+          "initiele-eenmalige-verhogingen/ja/geldig-vanaf": 1774994400000,
+          "initiele-eenmalige-verhogingen/ja/beschrijving": "Structurele loonsverhoging volgens de cao",
+          "afwijkende-arbeidsduur": "ja",
+          "afwijkende-roosters": [
+            {
+              "arbeidsduur": "36",
+              "arbeidsduur-per": "per-week",
+              "in-situatie": "Vijfploegendienst",
+              "uurloon-factor-vastgelegd": "ja",
+              "uurloon-factor": "0.65"
+            },
+            {
+              "arbeidsduur": "152",
+              "arbeidsduur-per": "per-vier-weken",
+              "in-situatie": "Drieploegendienst",
+              "uurloon-factor-vastgelegd": "nee"
+            }
+          ]
+        },
+        {
+          "naam": "Salaristabel oproepkrachten",
+          "geldig-vanaf": 1767222000000,
+          "voorwaarden": "Voor oproepkrachten zonder vaste arbeidsduur",
+          "normale-arbeidsduur": "anders",
+          "normale-arbeidsduur-anders-namelijk": "24",
+          "beloning-vastgesteld": "per-uur",
+          "salarisschalen": [
+            {
+              "naam": "O1",
+              "stappen": [
+                {
+                  "naam": "0",
+                  "bedrag": "14.5"
+                },
+                {
+                  "naam": "1",
+                  "bedrag": "15.25"
+                }
+              ]
+            }
+          ],
+          "werkervaring-inschaling": "ja-als-volgt",
+          "werkervaring-inschaling/ja-als-volgt/namelijk": "Ervaring wordt niet meegeteld bij oproepkrachten",
+          "periodieke-verhogingen": "nee",
+          "initiele-eenmalige-verhogingen": "ja",
+          "initiele-eenmalige-verhogingen/ja/type": "Euro",
+          "initiele-eenmalige-verhogingen/ja/euro": "250",
+          "initiele-eenmalige-verhogingen/ja/geldig-vanaf": 1782856800000,
+          "initiele-eenmalige-verhogingen/ja/beschrijving": "Eenmalige uitkering bij de start",
+          "afwijkende-arbeidsduur": "nee"
+        },
+        {
+          "naam": "Salaristabel stagiairs",
+          "voorwaarden": "Voor stagiairs en leerlingen (BBL)",
+          "normale-arbeidsduur": 36,
+          "beloning-vastgesteld": "per-vier-weken",
+          "uurlonen-vastgelegd": "nee",
+          "salarisschalen": [
+            {
+              "naam": "S1",
+              "stappen": [
+                {
+                  "naam": "0",
+                  "bedrag": "1400"
+                }
+              ]
+            }
+          ],
+          "werkervaring-inschaling": "ja-onderneming",
+          "werkervaring-inschaling/ja-onderneming/namelijk": "Eerdere stages bij onze onderneming tellen mee",
+          "periodieke-verhogingen": "nee",
+          "initiele-eenmalige-verhogingen": "nee",
+          "afwijkende-arbeidsduur": "nee"
+        },
+        {
+          "naam": "Salaristabel weekloners",
+          "voorwaarden": "Voor werknemers met een weekloon",
+          "normale-arbeidsduur": 40,
+          "beloning-vastgesteld": "per-week",
+          "uurlonen-vastgelegd": "nee",
+          "salarisschalen": [
+            {
+              "naam": "W1",
+              "stappen": [
+                {
+                  "naam": "0",
+                  "bedrag": "650"
+                }
+              ]
+            }
+          ],
+          "werkervaring-inschaling": "ja-functie",
+          "werkervaring-inschaling/ja-functie/namelijk": "Ervaring in dezelfde functie telt volledig mee",
+          "periodieke-verhogingen": "nee",
+          "initiele-eenmalige-verhogingen": "nee",
+          "afwijkende-arbeidsduur": "nee"
+        }
+      ],
+      "betaalde-rusttijden-en-pauzes": "ja",
+      "betaalde-rusttijden-en-pauzes/ja/namelijk": "15 minuten betaalde pauze per 4 uur werk",
+      "functie-groepen": [
+        {
+          "titel": "Monteur",
+          "id": "MON",
+          "salarisschalen": "0,0"
+        },
+        {
+          "titel": "Werkvoorbereider",
+          "id": "WVB",
+          "salarisschalen": "0,1"
+        },
+        {
+          "titel": "Oproepkracht productie",
+          "salarisschalen": "1,0"
+        }
+      ],
+      "onregelmatigheids-toeslagen/enabled": true,
+      "ploegentoeslagen/enabled": true,
+      "toeslagen-verschoven-diensten/enabled": true,
+      "toeslagen-fysieke-belasting/enabled": true,
+      "toeslagen-stand-by-consignatie-bereikbaarheidsdiensten/enabled": true,
+      "overwerktoeslag/enabled": true,
+      "waarnemingstoeslag/enabled": true,
+      "performancetoeslag/enabled": true,
+      "anders/enabled": true,
+      "onregelmatigheids-toeslagen": [
+        {
+          "description": "Avond en nacht",
+          "amount-type": "percentage",
+          "percentage/percentage": "25",
+          "percentage/basis": "HourlyRate",
+          "percentage/per": "Hour",
+          "voorwaarden": "Werken tussen 20:00 en 06:00",
+          "cumulatief": "ja-cumulative",
+          "cumulatief/ja-cumulative/namelijk": "Opgeteld bij een eventuele ploegentoeslag",
+          "toepassingsperiodes-type": "bepaald",
+          "toepassingsperiodes": [
+            {
+              "starttijd": "20:00",
+              "eindtijd": "23:59",
+              "weekdagen/Monday": true,
+              "weekdagen/Tuesday": true,
+              "weekdagen/Wednesday": true,
+              "weekdagen/Thursday": true,
+              "weekdagen/Friday": true
+            },
+            {
+              "starttijd": "00:00",
+              "eindtijd": "06:00",
+              "weekdagen/Monday": true,
+              "weekdagen/Tuesday": true,
+              "weekdagen/Wednesday": true,
+              "weekdagen/Thursday": true,
+              "weekdagen/Friday": true
+            }
+          ]
+        },
+        {
+          "description": "Zon- en feestdagen",
+          "amount-type": "percentage",
+          "percentage/percentage": "100",
+          "percentage/basis": "HourlyRate",
+          "percentage/per": "Hour",
+          "cumulatief": "nee",
+          "toepassingsperiodes-type": "bepaald",
+          "toepassingsperiodes": [
+            {
+              "starttijd": "00:00",
+              "eindtijd": "23:59",
+              "weekdagen/Saturday": true,
+              "weekdagen/Sunday": true
+            }
+          ]
+        }
+      ],
+      "ploegentoeslagen": [
+        {
+          "amount-type": "vast-bedrag",
+          "vast-bedrag/bedrag": "12.5",
+          "vast-bedrag/per": "Shift",
+          "voorwaarden": "Drieploegendienst volgens rooster: vroege, late en nachtdienst",
+          "cumulatief": "nee",
+          "afbouwregeling": "ja",
+          "afbouwregeling/ja-namelijk": "Bij stoppen met ploegendienst na 5 jaar: 2 jaar lang 50% van de toeslag"
+        }
+      ],
+      "toeslagen-verschoven-diensten": [
+        {
+          "amount-type": "percentage",
+          "percentage/percentage": "10",
+          "percentage/basis": "HourlyRate",
+          "percentage/per": "Hour",
+          "voorwaarden": "Als de dienst meer dan 2 uur verschoven wordt",
+          "cumulatief": "ja-compounding",
+          "compounding/onregelmatigheids-toeslagen": true,
+          "toepassingsperiodes-type": "altijd"
+        }
+      ],
+      "toeslagen-fysieke-belasting": [
+        {
+          "amount-type": "tijd",
+          "tijd/uur": "0.5",
+          "tijd/per": "Day",
+          "voorwaarden": "Werken in de koelcel of bij extreme hitte",
+          "cumulatief": "nee"
+        }
+      ],
+      "toeslagen-stand-by-consignatie-bereikbaarheidsdiensten": [
+        {
+          "amount-type": "percentage",
+          "percentage/percentage": "20",
+          "percentage/basis": "HourlyRate",
+          "percentage/per": "Hour",
+          "voorwaarden": "Werken tijdens een bereikbaarheidsdienst",
+          "cumulatief": "nee",
+          "toepassingsperiodes-type": "altijd"
+        }
+      ],
+      "overwerktoeslag": [
+        {
+          "amount-type": "percentage",
+          "percentage/percentage": "125",
+          "percentage/basis": "HourlyRate",
+          "percentage/per": "Hour",
+          "voorwaarden": "Voor elk uur boven de 38 uur per week",
+          "cumulatief": "nee",
+          "toepassingsperiodes-type": "altijd"
+        }
+      ],
+      "waarnemingstoeslag": [
+        {
+          "amount-type": "vast-bedrag",
+          "vast-bedrag/bedrag": "150",
+          "vast-bedrag/per": "Month",
+          "voorwaarden": "Bij waarneming van een hogere functie langer dan 2 weken",
+          "cumulatief": "nee",
+          "afbouwregeling": "nee"
+        }
+      ],
+      "performancetoeslag": [
+        {
+          "amount-type": "percentage",
+          "percentage/percentage": "5",
+          "percentage/basis": "MonthlyRate",
+          "percentage/per": "Month",
+          "voorwaarden": "Bij een beoordeling 'goed' of hoger",
+          "cumulatief": "nee",
+          "afbouwregeling": "nee"
+        }
+      ],
+      "anders": [
+        {
+          "name": "Vuilwerktoeslag",
+          "amount-type": "vast-bedrag",
+          "vast-bedrag/bedrag": "2",
+          "vast-bedrag/per": "Hour",
+          "voorwaarden": "Werkzaamheden in sterk vervuilde ruimtes",
+          "cumulatief": "nee",
+          "toepassingsperiodes-type": "bepaald",
+          "toepassingsperiodes": [
+            {
+              "startdatum": 1772319600000,
+              "einddatum": 1793401200000
+            }
+          ],
+          "afbouwregeling": "nee"
+        }
+      ],
+      "vakantiebijslag/ja-nee": "ja",
+      "vakantiebijslag/amount-type": "percentage",
+      "vakantiebijslag/percentage/percentage": "8",
+      "vakantiebijslag/percentage/basis": "YearlyRate",
+      "vakantiebijslag/percentage/per": "Year",
+      "vakantiebijslag/percentage/grondslag": "GrossSalary",
+      "welke-reiskostenvergoedingen-kent-jouw-onderneming/eigen-vervoer": true,
+      "welke-reiskostenvergoedingen-kent-jouw-onderneming/ov": true,
+      "welke-reiskostenvergoedingen-kent-jouw-onderneming/zakelijke-kilometers": true,
+      "welke-reiskostenvergoedingen-kent-jouw-onderneming/zakelijke-kilometers-ov": true,
+      "welke-reiskostenvergoedingen-kent-jouw-onderneming/andere-reiskostenvergoeding": true,
+      "reiskostenvergoeding-eigen-vervoer": [
+        {
+          "type": "standaard-tarief",
+          "/voorwaarden": "Auto, vanaf 10 km enkele reis"
+        },
+        {
+          "type": "ander-tarief-per-km",
+          "/ander-tarief-per-km/bedrag": "0.19",
+          "/voorwaarden": "Fiets"
+        },
+        {
+          "type": "per-tijdvak",
+          "/per-tijdvak/bedrag": "60",
+          "/per-tijdvak/type": "Month",
+          "/voorwaarden": "Bromfiets"
+        },
+        {
+          "type": "anders",
+          "/anders/namelijk": "Carpoolvergoeding volgens regeling",
+          "/voorwaarden": "Bij carpoolen"
+        }
+      ],
+      "reiskostenvergoeding-ov-type": "volledige-vergoeding",
+      "reiskostenvergoeding-ov-voorwaarden": "Op basis van het tweede-klas-tarief",
+      "reiskostenvergoeding-zakelijke-kilometers": [
+        {
+          "type": "ander-tarief-per-km",
+          "/ander-tarief-per-km/bedrag": "0.25",
+          "/voorwaarden": "Met eigen auto voor klantbezoek"
+        }
+      ],
+      "reiskostenvergoeding-zakelijke-kilometers-ov-type": "per-kilometer",
+      "reiskostenvergoeding-zakelijke-kilometers-ov-type/per-kilometer/bedrag": "0.15",
+      "reiskostenvergoeding-zakelijke-kilometers-ov-voorwaarden": "Tussen projectlocaties",
+      "andere-reiskostenvergoeding-namelijk": "Parkeerkosten bij projectlocaties worden vergoed op declaratiebasis",
+      "vergoeding-reistijd": "percentage",
+      "vergoeding-reistijd/percentage/percentage": "100",
+      "vergoeding-reistijd/percentage/van": "HourlyRate",
+      "vergoeding-reistijd/percentage/tijdvak": "Hour",
+      "vergoeding-reistijd_voorwaarden": "Reistijd boven 1 uur per dag naar een projectlocatie",
+      "vergoeding-stand-by-piket-consignatie-bereikbaarheidsdiensten": "ja",
+      "type-vergoeding-stand-by": "vergoeding-per-tijdvak",
+      "type-vergoeding-stand-by/vergoeding-per-tijdvak/bedrag": "35",
+      "type-vergoeding-stand-by/vergoeding-per-tijdvak/tijdvak": "Shift",
+      "voorwaarden-vergoeding-stand-by": "Per piketdienst van 24 uur",
+      "vergoeding-zorgverzekering": "ja",
+      "vergoeding-zorgverzekering-type": "vergoeding-per-tijdseenheid",
+      "vergoeding-zorgverzekering-type/vergoeding-per-tijdseenheid/bedrag": "10",
+      "vergoeding-zorgverzekering-type/vergoeding-per-tijdseenheid/tijdvak": "Month",
+      "vergoeding-zorgverzekering-min-max": "ja",
+      "vergoeding-zorgverzekering-min-max/ja/minimum": "5",
+      "vergoeding-zorgverzekering-min-max/ja/maximum": "15",
+      "vergoeding-zorgverzekering-naar-rato": "ja",
+      "vergoeding-zorgverzekering-voorwaarden": "Alleen bij deelname aan de collectieve zorgverzekering",
+      "thuiswerkvergoeding": "ja",
+      "thuiswerkvergoeding/ja/vergoeding-tijdseenheid": "2.35",
+      "thuiswerkvergoeding/ja/tijdvak": "Day",
+      "thuiswerkvergoeding/ja/voorwaarden": "Per volledige thuiswerkdag",
+      "thuiswerkvergoeding/ja/naar-rato": "nee",
+      "thuiswerkvergoeding/ja/internetvergoeding-inbegrepen": "nee",
+      "thuiswerkvergoeding/ja/extra-internetvergoeding": "ja",
+      "thuiswerkvergoeding/ja/extra-internetvergoeding/ja/vergoeding-tijdseenheid": "20",
+      "thuiswerkvergoeding/ja/extra-internetvergoeding/ja/tijdvak": "Month",
+      "thuiswerkvergoeding/ja/extra-internetvergoeding/ja/voorwaarden": "Bij minimaal 2 thuiswerkdagen per week",
+      "thuiswerkvergoeding/ja/extra-internetvergoeding/ja/naar-rato": "ja",
+      "mobiliteit/mobiliteitsvergoeding": true,
+      "mobiliteit/mobiliteitsvergoeding/bedrag": "100",
+      "mobiliteit/mobiliteitsvergoeding/tijdvak": "Month",
+      "mobiliteit/mobiliteitsvergoeding/voorwaarden": "Vrij te besteden aan vervoer",
+      "mobiliteit/mobiliteitsvergoeding/naar-rato": "ja",
+      "mobiliteit/regeling-leaseauto": true,
+      "mobiliteit/regeling-leaseauto/bedrag": "550",
+      "mobiliteit/regeling-leaseauto/tijdvak": "Month",
+      "mobiliteit/regeling-leaseauto/voorwaarden": "Vanaf functiegroep Werkvoorbereider",
+      "mobiliteit/regeling-leaseauto/naar-rato": "nee",
+      "mobiliteit/regeling-leaseauto/alternatief": true,
+      "mobiliteit/regeling-leaseauto/alternatief/bedrag": "400",
+      "mobiliteit/regeling-leaseauto/alternatief/tijdvak": "Month",
+      "mobiliteit/regeling-leaseauto/alternatief/voorwaarden": "Bruto vergoeding bij afzien van een leaseauto",
+      "mobiliteit/regeling-leaseauto/alternatief/naar-rato": "nee",
+      "mobiliteit/regeling-leasefiets": true,
+      "mobiliteit/regeling-leasefiets/bedrag": "40",
+      "mobiliteit/regeling-leasefiets/tijdvak": "Month",
+      "mobiliteit/regeling-leasefiets/voorwaarden": "Via fietsleasepartner",
+      "mobiliteit/regeling-leasefiets/naar-rato": "nee",
+      "mobiliteit/regeling-ov-vergoeding": true,
+      "mobiliteit/regeling-ov-vergoeding/bedrag": "90",
+      "mobiliteit/regeling-ov-vergoeding/tijdvak": "Month",
+      "mobiliteit/regeling-ov-vergoeding/voorwaarden": "NS-Business Card",
+      "mobiliteit/regeling-ov-vergoeding/naar-rato": "nee",
+      "mobiliteit/fietsregeling": true,
+      "mobiliteit/fietsregeling/bedrag": "750",
+      "mobiliteit/fietsregeling/tijdvak": "Once",
+      "mobiliteit/fietsregeling/voorwaarden": "Eens per 3 jaar",
+      "mobiliteit/fietsregeling/naar-rato": "nee",
+      "kostenvergoedingen/koffiegeld": true,
+      "kostenvergoedingen/koffiegeld/per-tijdvak/bedrag": "1.5",
+      "kostenvergoedingen/koffiegeld/tijdvak": "Day",
+      "kostenvergoedingen/koffiegeld/voorwaarden": "Op werkdagen buiten kantoor",
+      "kostenvergoedingen/koffiegeld/naar-rato": "nee",
+      "kostenvergoedingen/maaltijdvergoeding": true,
+      "kostenvergoedingen/maaltijdvergoeding/per-tijdvak/bedrag": "15",
+      "kostenvergoedingen/maaltijdvergoeding/tijdvak": "Item",
+      "kostenvergoedingen/maaltijdvergoeding/voorwaarden": "Bij overwerk van meer dan 2 uur",
+      "kostenvergoedingen/maaltijdvergoeding/naar-rato": "nee",
+      "kostenvergoedingen/wasvergoeding": true,
+      "kostenvergoedingen/wasvergoeding/per-tijdvak/bedrag": "5",
+      "kostenvergoedingen/wasvergoeding/tijdvak": "Week",
+      "kostenvergoedingen/wasvergoeding/voorwaarden": "Voor werkkleding",
+      "kostenvergoedingen/wasvergoeding/naar-rato": "ja",
+      "kostenvergoedingen/vergoeding-bedrijfskleding-schoenen": true,
+      "kostenvergoedingen/vergoeding-bedrijfskleding-schoenen/per-tijdvak/bedrag": "150",
+      "kostenvergoedingen/vergoeding-bedrijfskleding-schoenen/tijdvak": "Year",
+      "kostenvergoedingen/vergoeding-bedrijfskleding-schoenen/voorwaarden": "Veiligheidsschoenen S3",
+      "kostenvergoedingen/vergoeding-bedrijfskleding-schoenen/naar-rato": "nee",
+      "kostenvergoedingen/arbo-vergoeding": true,
+      "kostenvergoedingen/arbo-vergoeding/per-tijdvak/bedrag": "250",
+      "kostenvergoedingen/arbo-vergoeding/tijdvak": "Year",
+      "kostenvergoedingen/arbo-vergoeding/voorwaarden": "Voor een ergonomische werkplek thuis",
+      "kostenvergoedingen/arbo-vergoeding/naar-rato": "nee",
+      "kostenvergoedingen/byod-vergoeding": true,
+      "kostenvergoedingen/byod-vergoeding/per-tijdvak/bedrag": "15",
+      "kostenvergoedingen/byod-vergoeding/tijdvak": "Month",
+      "kostenvergoedingen/byod-vergoeding/voorwaarden": "Gebruik van eigen telefoon",
+      "kostenvergoedingen/byod-vergoeding/naar-rato": "nee",
+      "kostenvergoedingen/anders": true,
+      "kostenvergoedingen/anders/namelijk": "Vergoeding voor het behalen van een rijbewijs C",
+      "eenmalige-uitkeringen-bekend": "ja",
+      "eenmalige-uitkeringen": [
+        {
+          "namelijk": "Eenmalige cao-uitkering",
+          "voorwaarden/min-duur-dienstverband": true,
+          "voorwaarden/dienstverband-op-datum": true,
+          "voorwaarden/anders": true,
+          "voorwaarden_min-duur_namelijk": "Minimaal 3 maanden in dienst",
+          "voorwaarden_dienstverband-datum_namelijk": "In dienst op 1 juni 2026",
+          "voorwaarden_anders_namelijk": "Niet voor stagiairs",
+          "toekenning-datum": 1782770400000,
+          "hoe-toegekend": "vast-bedrag",
+          "vast-bedrag_namelijk": "500",
+          "naar-rato-deeltijd": "ja",
+          "naar-rato-duur-dienstverband": "nee",
+          "min-max": "ja",
+          "min-max/ja/minimum": "250",
+          "min-max/ja/maximum": "500"
+        },
+        {
+          "namelijk": "Koopkrachtuitkering",
+          "toekenning-datum": 1796079600000,
+          "hoe-toegekend": "percentage-loon",
+          "type_ander-percentage_percentage": "1",
+          "type_ander-percentage_van": "YearlyRate",
+          "min-max": "nee"
+        },
+        {
+          "namelijk": "Uitkering bij afronden project",
+          "toekenning-datum": 1788213600000,
+          "hoe-toegekend": "anders",
+          "anders": "Bedrag afhankelijk van de projectomvang",
+          "min-max": "nee"
+        }
+      ],
+      "vaste-uitkering-van-toepassing": "ja",
+      "vaste-uitkeringen": [
+        {
+          "namelijk": "Dertiende maand",
+          "toekenning-datum": 1797289200000,
+          "hoe-toegekend": "dertiende-maand"
+        },
+        {
+          "namelijk": "Eindejaarsuitkering",
+          "voorwaarden/min-duur-dienstverband": true,
+          "voorwaarden_min-duur_namelijk": "Minimaal 1 jaar in dienst",
+          "toekenning-datum": 1797289200000,
+          "hoe-toegekend": "vast-bedrag",
+          "vast-bedrag_namelijk": "750",
+          "naar-rato": "ja"
+        },
+        {
+          "namelijk": "Vakantie-extra",
+          "voorwaarden/dienstverband-op-datum": true,
+          "voorwaarden/anders": true,
+          "voorwaarden_dienstverband-datum_namelijk": "In dienst op 1 mei",
+          "voorwaarden_anders_namelijk": "Niet tijdens onbetaald verlof",
+          "toekenning-datum": 1780178400000,
+          "hoe-toegekend": "percentage-loon",
+          "type_ander-percentage_percentage": "1",
+          "type_ander-percentage_van": "YearlyRate"
+        },
+        {
+          "namelijk": "Kerstpakket",
+          "toekenning-datum": 1797721200000,
+          "hoe-toegekend": "anders",
+          "anders": "Kerstpakket ter waarde van ongeveer € 75"
+        }
+      ],
+      "jubileumuitkering-van-toepassing": "ja",
+      "jubileumuitkeringen": [
+        {
+          "namelijk": "12,5-jarig dienstjubileum",
+          "hoe-toegekend": "vast-bedrag",
+          "vast-bedrag_namelijk": "500",
+          "naar-rato": "nee",
+          "dienstverband-duur/jaren": "12",
+          "dienstverband-duur/maanden": "6",
+          "dienstverband-duur/referentiedatum": "HireDate",
+          "voorwaarden": "Onafgebroken dienstverband"
+        },
+        {
+          "namelijk": "25-jarig dienstjubileum",
+          "hoe-toegekend": "percentage-loon",
+          "type_ander-percentage_percentage": "100",
+          "type_ander-percentage_van": "MonthlyRate",
+          "dienstverband-duur/jaren": "25",
+          "dienstverband-duur/referentiedatum": "SeniorityDate",
+          "toekenning-datum": 1767222000000
+        },
+        {
+          "namelijk": "40-jarig dienstjubileum",
+          "hoe-toegekend": "anders",
+          "anders": "Een extra vrije week en een cadeaubon",
+          "dienstverband-duur/jaren": "40",
+          "dienstverband-duur/referentiedatum": "ContractStartDate"
+        }
+      ],
+      "variabele-uitkering-van-toepassing": "ja",
+      "variabele-uitkeringen": [
+        {
+          "soort": "winst",
+          "voorwaarden/resultaat": true,
+          "voorwaarden/dienstverband-op-datum": true,
+          "voorwaarden_resultaat_namelijk": "Bij een nettowinst boven 1 miljoen euro",
+          "voorwaarden_dienstverband-datum_namelijk": "In dienst op 31 december",
+          "toekenning-datum": 1774994400000,
+          "hoe-toegekend": "percentage-loon",
+          "type_ander-percentage_percentage": "2",
+          "type_ander-percentage_van": "YearlyRate",
+          "min-max": "ja",
+          "min-max/ja/minimum": "500",
+          "min-max/ja/maximum": "2500"
+        },
+        {
+          "soort": "performance",
+          "voorwaarden/prestatie": true,
+          "voorwaarden/min-duur-dienstverband": true,
+          "voorwaarden/anders": true,
+          "voorwaarden_prestatie_namelijk": "Bij het behalen van de persoonlijke doelen",
+          "voorwaarden_min-duur_namelijk": "Minimaal 6 maanden in dienst",
+          "voorwaarden_anders_namelijk": "Vast te stellen door de directie",
+          "hoe-toegekend": "vast-bedrag",
+          "vast-bedrag_namelijk": "1000",
+          "naar-rato": "ja",
+          "min-max": "nee"
+        },
+        {
+          "soort": "anders",
+          "soort_anders_namelijk": "Aanbrengpremie voor nieuwe collega's",
+          "hoe-toegekend": "anders",
+          "anders": "€ 500 na afloop van de proeftijd van de nieuwe collega",
+          "min-max": "nee"
+        }
+      ],
+      "loondoorbetaling-bij-ziekte": [
+        {
+          "percentage": "100",
+          "percentage_bedrag": "MonthlyRate",
+          "grondslag": "BaseWage",
+          "percentage_per_tijdvak": "Year",
+          "voorwaarden": "Eerste ziektejaar"
+        },
+        {
+          "percentage": "70",
+          "percentage_bedrag": "MonthlyRate",
+          "grondslag": "BaseWage",
+          "percentage_per_tijdvak": "Year",
+          "voorwaarden": "Tweede ziektejaar"
+        }
+      ],
+      "wachtdagen": "ja",
+      "wachtdagen_ja_namelijk": "1",
+      "wachtdagen_voorwaarden": "ja",
+      "wachtdagen_voorwaarden_ja_namelijk": "Maximaal 2 wachtdagen per kalenderjaar",
+      "wachtdagcompensatie": "ja",
+      "wachtdagcompensatie/amount-type": "percentage",
+      "wachtdagcompensatie/amount-type/percentage/percentage": "100",
+      "wachtdagcompensatie/amount-type/percentage/basis": "DailyRate",
+      "adv-regeling": "ja",
+      "adv-regeling_ja_namelijk": "ADV volgens de cao",
+      "adv-regeling/toekenning": "tijd-dagen",
+      "adv-regeling/toekenning/tijd-dagen/aantal": "13",
+      "adv-regeling/toekenning/tijd-dagen/tijdvak": "Year",
+      "adv-aanvullende-regeling": "ja",
+      "adv-aanvullende-ouderen": true,
+      "adv-aanvullende-ouderen_namelijk": "Vanaf 60 jaar",
+      "adv-aanvullende-duur-dienstverband": true,
+      "adv-aanvullende-duur-dienstverband_namelijk": "Na 10 jaar dienstverband",
+      "adv-aanvullende-anders": true,
+      "adv-aanvullende-anders-namelijk": "Voor werknemers in de nachtdienst",
+      "adv-aanvullende-ouderen/toekenning": "tijd-uren",
+      "adv-aanvullende-ouderen/toekenning/tijd-uren/aantal": "4",
+      "adv-aanvullende-ouderen/toekenning/tijd-uren/tijdvak": "Month",
+      "adv-aanvullende-duur-dienstverband/toekenning": "tijd-dagen",
+      "adv-aanvullende-duur-dienstverband/toekenning/tijd-dagen/aantal": "2",
+      "adv-aanvullende-duur-dienstverband/toekenning/tijd-dagen/tijdvak": "Year",
+      "adv-aanvullende-anders/toekenning": "geld",
+      "adv-aanvullende-anders/toekenning/geld/percentage": "2",
+      "adv-aanvullende-anders/toekenning/geld/van": "YearlyRate",
+      "vakantiedagen/aantal": "25",
+      "vakantiedagen/type": "Day",
+      "vakantiedagen/tijdvak": "Year",
+      "extra-vakantiedagen-specifiek/dagen-leeftijd": true,
+      "extra-vakantiedagen/leeftijd": [
+        {
+          "leeftijd": "55",
+          "dagen": "27"
+        },
+        {
+          "leeftijd": "60",
+          "dagen": "29"
+        }
+      ],
+      "extra-vakantiedagen-specifiek/duur-dienstverband": true,
+      "extra-vakantiedagen/duur-dienstverband": [
+        {
+          "jaar": "10",
+          "dagen": "26"
+        },
+        {
+          "jaar": "25",
+          "dagen": "28"
+        }
+      ],
+      "extra-vakantiedagen-specifiek/anders": true,
+      "extra-vakantiedagen/anders": [
+        {
+          "dagen": "26",
+          "namelijk": "Werknemers in de volcontinudienst"
+        }
+      ],
+      "bijzonder-verlof-aanwezig": "ja",
+      "bijzonder-verlof": [
+        {
+          "hoeveel": "1",
+          "wat": "Day",
+          "voorwaarden": "Bij verhuizing"
+        },
+        {
+          "hoeveel": "2",
+          "wat": "Day",
+          "voorwaarden": "Bij eigen huwelijk"
+        },
+        {
+          "hoeveel": "4",
+          "wat": "Hour",
+          "voorwaarden": "Bij bezoek aan huisarts of tandarts"
+        }
+      ],
+      "tijd-voor-tijd": "ja",
+      "tijd-voor-tijd/ja/namelijk": "Overuren kunnen worden opgenomen als vrije tijd, 1 op 1",
+      "wazo-aanvulling": "ja",
+      "wazo/betaald-ouderschapsverlof": true,
+      "wazo/betaald-ouderschapsverlof/namelijk": "Aanvulling tot 90% van het loon",
+      "wazo/onbetaald-ouderschapsverlof": true,
+      "wazo/onbetaald-ouderschapsverlof/namelijk": "25% doorbetaling gedurende 6 weken",
+      "wazo/geboorteverlof": true,
+      "wazo/geboorteverlof/namelijk": "Aanvulling tot 100% van het loon",
+      "wazo/kortdurend-zorgverlof": true,
+      "wazo/kortdurend-zorgverlof/namelijk": "Aanvulling tot 100% van het loon",
+      "wazo/langdurend-zorgverlof": true,
+      "wazo/langdurend-zorgverlof/namelijk": "50% doorbetaling gedurende 2 weken",
+      "wazo/langere-verlofduur": true,
+      "wazo/langere-verlofduur/namelijk": "2 extra weken geboorteverlof",
+      "wazo/anders": true,
+      "wazo/anders/namelijk": "Adoptieverlof: 1 extra week",
+      "verplichte-aanwending-verlof": "ja",
+      "verplichte-aanwending-verlof/ja/periode-dagen-uren": "Collectieve vrije dagen tussen kerst en oud en nieuw",
+      "verplichte-aanwending-verlof_welk-verlof": "ADV-dagen, en anders vakantiedagen",
+      "aantal-feestdagen": "9",
+      "welke-feestdagen": "Nieuwjaarsdag\nGoede Vrijdag\nTweede paasdag\nKoningsdag\nBevrijdingsdag\nHemelvaartsdag\nTweede pinksterdag\nEerste kerstdag\nTweede kerstdag",
+      "voorwaarden-feestdagen": "Als de feestdag op een roostervrije dag valt, vervalt de dag",
+      "feestdagen-niet-elk-jaar": "ja",
+      "feestdagen-niet-elk-jaar_voorwaarden": "Bevrijdingsdag alleen in lustrumjaren",
+      "persoonlijke-feestdagen": "ja",
+      "persoonlijke-feestdagen/aantal": "1",
+      "persoonlijke-feestdagen/namelijk": "Een zelf te kiezen religieuze feestdag",
+      "persoonlijke-feestdagen/voorwaarden": "Minimaal 4 weken van tevoren aanvragen",
+      "waarde-verlofdag": "ja",
+      "waarde-verlofdag_ja_percentage": "0.44",
+      "individueel-keuzebudget": "ja",
+      "individueel-keuzebudget/amount-type": "percentage",
+      "individueel-keuzebudget/percentage/percentage": "16.3",
+      "individueel-keuzebudget/percentage/basis": "MonthlyRate",
+      "individueel-keuzebudget/percentage/per": "Month",
+      "ikb-arbeidsvoorwaarden-opgenomen": "ja",
+      "ikb-opgenomen-arbeidsvoorwaarden/bovenwettelijke-vakantiedagen": true,
+      "ikb-opgenomen-arbeidsvoorwaarden/bovenwettelijke-vakantiedagen/percentage": "1.9",
+      "ikb-opgenomen-arbeidsvoorwaarden/bovenwettelijke-vakantiedagen/van": "uurloon",
+      "ikb-opgenomen-arbeidsvoorwaarden/adv-dagen": true,
+      "ikb-opgenomen-arbeidsvoorwaarden/adv-dagen/percentage": "4.8",
+      "ikb-opgenomen-arbeidsvoorwaarden/adv-dagen/van": "weekloon",
+      "ikb-opgenomen-arbeidsvoorwaarden/eindejaarsuitkering": true,
+      "ikb-opgenomen-arbeidsvoorwaarden/eindejaarsuitkering/percentage": "1.6",
+      "ikb-opgenomen-arbeidsvoorwaarden/eindejaarsuitkering/van": "maandloon",
+      "ikb-opgenomen-arbeidsvoorwaarden/vakantiebijslag": true,
+      "ikb-opgenomen-arbeidsvoorwaarden/vakantiebijslag/percentage": "8",
+      "ikb-opgenomen-arbeidsvoorwaarden/vakantiebijslag/van": "periodeloon",
+      "ikb-opgenomen-arbeidsvoorwaarden/anders": true,
+      "ikb-opgenomen-arbeidsvoorwaarden/anders/namelijk": "Vakbondscontributie en fiscaal voordelige fietsregeling",
+      "pensioenregeling/van-toepassing": "ja",
+      "pensioenregeling/pensioenfonds/naam": "PMT",
+      "pensioenregeling/werkgeverspremie/percentage": "14.5",
+      "pensioenregeling/franchise/van-toepassing": "ja",
+      "pensioenregeling/franchise/namelijk": "Franchise van € 17.545 per jaar (2026)",
+      "duurzame-inzetbaarheid-regelingen/opleidingen": true,
+      "duurzame-inzetbaarheid-regelingen/opleidingen/budget": "ja",
+      "duurzame-inzetbaarheid-regelingen/opleidingen/budget/type": "vast-bedrag",
+      "duurzame-inzetbaarheid-regelingen/opleidingen/budget/vast-bedrag/bedrag": "1000",
+      "duurzame-inzetbaarheid-regelingen/opleidingen/budget/vast-bedrag/tijdvak": "Year",
+      "duurzame-inzetbaarheid-regelingen/opleidingen/naar-rato": "ja",
+      "duurzame-inzetbaarheid-regelingen/opleidingen/uitgekeerd": "nee",
+      "duurzame-inzetbaarheid-regelingen/opleidingen/voorwaarden": "ja",
+      "duurzame-inzetbaarheid-regelingen/opleidingen/voorwaarden/ja/namelijk": "Opleiding moet functiegericht zijn",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching": true,
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/budget": "ja",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/budget/type": "percentage",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/budget/percentage/percentage": "0.5",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/budget/percentage/van": "YearlyRate",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/budget/percentage/tijdvak": "Year",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/naar-rato": "nee",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/uitgekeerd": "ja",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/uitgekeerd/ja/namelijk": "Het niet gebruikte deel wordt in december uitbetaald",
+      "duurzame-inzetbaarheid-regelingen/loopbaancoaching/voorwaarden": "nee",
+      "duurzame-inzetbaarheid-regelingen/outplacementtrajecten": true,
+      "duurzame-inzetbaarheid-regelingen/outplacementtrajecten/budget": "ja",
+      "duurzame-inzetbaarheid-regelingen/outplacementtrajecten/budget/type": "aantal-dagen-per-jaar",
+      "duurzame-inzetbaarheid-regelingen/outplacementtrajecten/budget/aantal-dagen-per-jaar/aantal": "2",
+      "duurzame-inzetbaarheid-regelingen/outplacementtrajecten/naar-rato": "nee",
+      "duurzame-inzetbaarheid-regelingen/outplacementtrajecten/uitgekeerd": "nee",
+      "duurzame-inzetbaarheid-regelingen/outplacementtrajecten/voorwaarden": "nee",
+      "duurzame-inzetbaarheid-regelingen/voorlichting-nederland": true,
+      "duurzame-inzetbaarheid-regelingen/voorlichting-nederland/budget": "nee-gemiddeld",
+      "duurzame-inzetbaarheid-regelingen/voorlichting-nederland/gemiddeld/vast-bedrag/bedrag": "50",
+      "duurzame-inzetbaarheid-regelingen/voorlichting-nederland/gemiddeld/vast-bedrag/tijdvak": "Year",
+      "duurzame-inzetbaarheid-regelingen/voorlichting-nederland/naar-rato": "nee",
+      "duurzame-inzetbaarheid-regelingen/voorlichting-nederland/uitgekeerd": "nee",
+      "duurzame-inzetbaarheid-regelingen/voorlichting-nederland/voorwaarden": "nee",
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland": true,
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland/budget": "ja",
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland/budget/type": "vast-bedrag",
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland/budget/vast-bedrag/bedrag": "300",
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland/budget/vast-bedrag/tijdvak": "Year",
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland/naar-rato": "nee",
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland/uitgekeerd": "nee",
+      "duurzame-inzetbaarheid-regelingen/scholing-nederland/voorwaarden": "nee",
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland": true,
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland/budget": "ja",
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland/budget/type": "vast-bedrag",
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland/budget/vast-bedrag/bedrag": "200",
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland/budget/vast-bedrag/tijdvak": "Year",
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland/naar-rato": "nee",
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland/uitgekeerd": "nee",
+      "duurzame-inzetbaarheid-regelingen/sociale-begeleiding-nederland/voorwaarden": "nee",
+      "duurzame-inzetbaarheid-regelingen/anders": true,
+      "duurzame-inzetbaarheid-regelingen/anders/namelijk": "Taalcursus Nederlands",
+      "duurzame-inzetbaarheid-regelingen/anders/budget": "ja",
+      "duurzame-inzetbaarheid-regelingen/anders/budget/type": "vast-bedrag",
+      "duurzame-inzetbaarheid-regelingen/anders/budget/vast-bedrag/bedrag": "400",
+      "duurzame-inzetbaarheid-regelingen/anders/budget/vast-bedrag/tijdvak": "Year",
+      "duurzame-inzetbaarheid-regelingen/anders/naar-rato": "nee",
+      "duurzame-inzetbaarheid-regelingen/anders/uitgekeerd": "nee",
+      "duurzame-inzetbaarheid-regelingen/anders/voorwaarden": "nee",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid": true,
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/namelijk": "Sportabonnement",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/budget": "ja",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/budget/type": "vast-bedrag",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/budget/vast-bedrag/bedrag": "25",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/budget/vast-bedrag/tijdvak": "Month",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/naar-rato": "nee",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/uitgekeerd": "nee",
+      "vitaliteit-gezondheid-regelingen/fysieke-gezondheid/voorwaarden": "nee",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid": true,
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/namelijk": "Gesprekken met een psycholoog",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/budget": "ja",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/budget/type": "vast-bedrag",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/budget/vast-bedrag/bedrag": "500",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/budget/vast-bedrag/tijdvak": "Year",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/naar-rato": "nee",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/uitgekeerd": "nee",
+      "vitaliteit-gezondheid-regelingen/mentale-gezondheid/voorwaarden": "nee",
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid": true,
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid/namelijk": "Budgetcoach",
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid/budget": "nee-gemiddeld",
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid/gemiddeld/vast-bedrag/bedrag": "100",
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid/gemiddeld/vast-bedrag/tijdvak": "Year",
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid/naar-rato": "nee",
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid/uitgekeerd": "nee",
+      "vitaliteit-gezondheid-regelingen/financiele-gezondheid/voorwaarden": "nee",
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget": true,
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget/budget": "ja",
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget/budget/type": "vast-bedrag",
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget/budget/vast-bedrag/bedrag": "300",
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget/budget/vast-bedrag/tijdvak": "Year",
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget/naar-rato": "ja",
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget/uitgekeerd": "nee",
+      "vitaliteit-gezondheid-regelingen/vitaliteitsbudget/voorwaarden": "nee",
+      "vitaliteit-gezondheid-regelingen/anders": true,
+      "vitaliteit-gezondheid-regelingen/anders/namelijk": "Gezonde lunch op kantoor",
+      "vitaliteit-gezondheid-regelingen/anders/budget": "nee-gemiddeld",
+      "vitaliteit-gezondheid-regelingen/anders/gemiddeld/vast-bedrag/bedrag": "5",
+      "vitaliteit-gezondheid-regelingen/anders/gemiddeld/vast-bedrag/tijdvak": "Week",
+      "vitaliteit-gezondheid-regelingen/anders/naar-rato": "nee",
+      "vitaliteit-gezondheid-regelingen/anders/uitgekeerd": "nee",
+      "vitaliteit-gezondheid-regelingen/anders/voorwaarden": "nee",
+      "verplichte-scholing": "ja",
+      "verplichte-scholing/ja/namelijk": "VCA-basis en NEN 3140",
+      "verplichte-scholing-tijd": "2",
+      "verplichte-scholing-tijd-type": "Day",
+      "verplichte-scholing-wanneer": "ander-moment",
+      "verplichte-scholing-wanneer/ander-moment/namelijk": "Op zaterdag, met compensatie in vrije tijd",
+      "verplichte-scholing-kosten": "450",
+      "duurzame-samenleving-regeling": "ja",
+      "duurzame-samenleving-budget": "ja",
+      "duurzame-samenleving-budget-hoogte": "uren-of-dagen",
+      "duurzame-samenleving-budget-hoogte/uren-of-dagen/aantal": "1",
+      "duurzame-samenleving-budget-hoogte/uren-of-dagen/type": "Day",
+      "duurzame-samenleving-budget-hoogte/dagen-per/per": "Year",
+      "duurzame-samenleving-budget-naar-rato": "ja",
+      "duurzame-samenleving-budget-uitgekeerd": "ja",
+      "duurzame-samenleving-budget-uitgekeerd/ja/voorwaarden": "Een niet opgenomen dag wordt aan het eind van het jaar uitbetaald",
+      "duurzame-samenleving-budget-voorwaarden": "ja",
+      "duurzame-samenleving-budget-voorwaarden/ja/namelijk": "Een vrije dag voor vrijwilligerswerk voor een natuurorganisatie",
+      "aanvullende-sociale-zekerheidsregelingen/paww": "ja",
+      "aanvullende-sociale-zekerheidsregelingen/paww/omschrijving": "Private aanvulling WW volgens de cao",
+      "aanvullende-sociale-zekerheidsregelingen/paww/werkgeverspremie/amount-type": "n/a",
+      "aanvullende-sociale-zekerheidsregelingen/paww/werknemerspremie/amount-type": "percentage",
+      "aanvullende-sociale-zekerheidsregelingen/paww/werknemerspremie/percentage/percentage": "0.4",
+      "aanvullende-sociale-zekerheidsregelingen/paww/werknemerspremie/percentage/basis": "MonthlyRate",
+      "aanvullende-sociale-zekerheidsregelingen/paww/werknemerspremie/percentage/per": "Month",
+      "aanvullende-sociale-zekerheidsregelingen/paww/dekkingswaarde/amount-type": "tijd",
+      "aanvullende-sociale-zekerheidsregelingen/paww/dekkingswaarde/tijd/uur": "38",
+      "aanvullende-sociale-zekerheidsregelingen/pazw": "ja",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/omschrijving": "Aanvulling op de Ziektewet tot 100%",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/werkgeverspremie/amount-type": "percentage",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/werkgeverspremie/percentage/percentage": "0.6",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/werkgeverspremie/percentage/basis": "MonthlyRate",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/werkgeverspremie/percentage/per": "Month",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/werknemerspremie/amount-type": "n/a",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/dekkingswaarde/amount-type": "percentage",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/dekkingswaarde/percentage/percentage": "100",
+      "aanvullende-sociale-zekerheidsregelingen/pazw/dekkingswaarde/percentage/basis": "MonthlyRate",
+      "aanvullende-sociale-zekerheidsregelingen/rvu-regeling": "ja",
+      "aanvullende-sociale-zekerheidsregelingen/rvu-regeling/omschrijving": "Generatiepact: 80% werken, 90% loon, 100% pensioenopbouw",
+      "aanvullende-sociale-zekerheidsregelingen/rvu-regeling/werkgeverspremie/amount-type": "vast-bedrag",
+      "aanvullende-sociale-zekerheidsregelingen/rvu-regeling/werkgeverspremie/vast-bedrag/bedrag": "25",
+      "aanvullende-sociale-zekerheidsregelingen/rvu-regeling/werkgeverspremie/vast-bedrag/per": "Month",
+      "aanvullende-sociale-zekerheidsregelingen/rvu-regeling/werknemerspremie/amount-type": "n/a",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat": "ja",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/omschrijving": "WGA-hiaatverzekering via de werkgever",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werkgeverspremie/amount-type": "percentage",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werkgeverspremie/percentage/percentage": "0.3",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werkgeverspremie/percentage/basis": "YearlyRate",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werkgeverspremie/percentage/per": "Year",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werknemerspremie/amount-type": "percentage",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werknemerspremie/percentage/percentage": "0.2",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werknemerspremie/percentage/basis": "YearlyRate",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/werknemerspremie/percentage/per": "Year",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/dekkingswaarde/amount-type": "percentage",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/dekkingswaarde/percentage/percentage": "70",
+      "aanvullende-sociale-zekerheidsregelingen/wga-hiaat/dekkingswaarde/percentage/basis": "YearlyRate",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering": "ja",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering/omschrijving": "Collectieve ongevallenverzekering",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering/werkgeverspremie/amount-type": "vast-bedrag",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering/werkgeverspremie/vast-bedrag/bedrag": "10",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering/werkgeverspremie/vast-bedrag/per": "Month",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering/werknemerspremie/amount-type": "n/a",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering/dekkingswaarde/amount-type": "vast-bedrag",
+      "aanvullende-sociale-zekerheidsregelingen/ongevallenverzekering/dekkingswaarde/vast-bedrag/bedrag": "50000",
+      "andere-sociale-regelingen/ja-nee": "ja",
+      "andere-sociale-regelingen": [
+        {
+          "omschrijving": "Aanvulling bij arbeidsongeschiktheid na het tweede ziektejaar",
+          "werkgeverspremie": [
+            {
+              "amount-type": "percentage",
+              "percentage/percentage": "0.25",
+              "percentage/basis": "MonthlyRate",
+              "percentage/per": "Month"
+            }
+          ],
+          "werknemerspremie": [
+            {
+              "amount-type": "vast-bedrag",
+              "vast-bedrag/bedrag": "3",
+              "vast-bedrag/per": "Month"
+            }
+          ]
+        }
+      ],
+      "overige-regelingen-ja-nee": "ja",
+      "overige-regelingen": [
+        {
+          "naam": "Gereedschapsvergoeding",
+          "voorwaarden": "Bij gebruik van eigen gereedschap",
+          "amount-type": "vast-bedrag",
+          "vast-bedrag/bedrag": "5",
+          "vast-bedrag/per": "Week"
+        },
+        {
+          "naam": "Bedrijfshulpverlening",
+          "voorwaarden": "Voor BHV'ers met geldig certificaat",
+          "amount-type": "percentage",
+          "percentage/percentage": "1",
+          "percentage/basis": "MonthlyRate",
+          "percentage/per": "Month"
+        },
+        {
+          "naam": "Vrijwilligersuren",
+          "voorwaarden": "Voor vrijwilligerswerk in de regio",
+          "amount-type": "tijd",
+          "tijd/uur": "8",
+          "tijd/per": "Year"
+        }
+      ],
+      "grondslag/GrossSalary/salaris": true,
+      "grondslag/GrossSalary/vakantietoeslag": true,
+      "grondslag/GrossSalary/betaald-verlof": true,
+      "grondslag/GrossSalary/toeslagen": "some",
+      "grondslag/GrossSalary/toeslag-onregelmatigheids-toeslagen": true,
+      "grondslag/GrossSalary/toeslag-ploegentoeslagen": true,
+      "grondslag/GrossSalary/peildatum": 1780264800000,
+      "grondslag/BaseWage/salaris": true,
+      "grondslag/BaseWage/toeslagen": "all",
+      "contactpersonen": [
+        {
+          "naam": "J. Jansen",
+          "email": "hr@voorbeeld.nl",
+          "telefoon": "+31201234567",
+          "functie": "HR-adviseur"
+        },
+        {
+          "naam": "P. de Vries",
+          "email": "salaris@voorbeeld.nl",
+          "telefoon": "+31207654321",
+          "functie": "Salarisadministrateur"
+        }
+      ],
+      "ondertekening-akkoord": true
+    }
+  }
+}

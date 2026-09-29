@@ -1,0 +1,196 @@
+remuneration
+InquiryPayEquity
+/
+remuneration
+Definition
+Details about the remuneration package, including salary tables based on the work duration. It includes one or more salary tables for a specific work duration or characteristics.
+Type
+RemunerationPackage
+https://ontology.setu.nl/inquiry-pay-equity#RemunerationPackage
+Usage notes
+The remuneration block provides the ability to define a salary table, including the associated scales, steps, the conditions under which an employee becomes eligible, and salary increases.
+
+For example:
+
+A salary table based on a 40‑hour work week with two salary scales, each containing three different steps. The scales apply to one or more roles within the organisation. Compensation is determined on a monthly basis.
+
+In this example, work experience is also considered when determining the appropriate scale. Additionally, there is a one‑time salary increase of 5 percent on 01‑01‑2026, applied to the annual salary based on performance.
+
+Example data
+Example JSON message Remuneration block for youth minimum wage.
+Expand
+Copy
+{
+  "remuneration": [
+    {
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2025-05-09",
+        "validTo": "2026-05-09"
+      },
+      "workDuration": {
+        "amount": {
+          "value": 40.0,
+          "unitCode": "Hour"
+        },
+        "intervalCode": {
+          "unitCode": "Week",
+          "value": 1.0
+        },
+        "valuePerWeek": 40.0
+      },
+      "interval": {
+        "value": "1",
+        "unitCode": "fourWeeks"
+      },
+      "hourlyWageConversion": {
+        "hourlyWageFactor": 173.33
+      },
+      "salaryScale": [
+        {
+          "name": "Minimum wage youth",
+          "minValue": 2000.0,
+          "maxValue": 2500.0,
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "Pay for youth: Age 18",
+              "value": 1850.75,
+              "minimumWage": true,
+               "conditions": [
+                {
+                    "conditionType": "Age", // Condition based on employee age.
+                    "operator": "eq", // Greater than or equal to.
+                    "age": 18 // Age value in years.
+                }
+
+            ]
+            }
+          ],
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "POS-YOUTH"
+              }
+            }
+          ]
+        }
+      ],
+  ]
+}
+Example JSON message Remuneration block for standard 40 hour workweek.
+Expand
+Copy
+"remuneration": [ // Details about the remuneration package, including salary tables and increase rates.
+    {
+        "origin": { // Specifies the origin of the arrangement.
+            "type": "CollectiveLabourAgreement"
+        },
+        "effectivePeriod": { // The period indicating the validity of this regulation.
+            "validFrom": "2025-05-09",
+            "validTo": "2026-05-09"
+        },
+        "workDuration": { // Specifies the work duration to which the salary table applies.
+            "amount": {
+                "value": 40.0,  // Value in hours.
+                "unitCode": "hour",
+                },
+            "interval": {
+                "unitCode": "Week", // The unit for the interval of the duration.
+                "value": 1.0 // e.g., 40 hours per 1 week.
+            },
+            "valuePerWeek": 40.0 // Equivalent number of hours per week, used for leave entitlement calculations.
+        },
+        "intervalCode": { // Defines the interval at which the remuneration is determined.
+            "value": "fourWeeks", // Options: fourWeeks, hour, month, week.
+            "unitCode": 1.0 // Every "1 four weeks", so every four weeks.
+        },
+        "hourlyWageConversion": { // Information about the conversion to regular hourly wages.
+            "hourlyWageFactor": 173.33 // Factor used to divide the periodic salary to determine hourly wage.
+        },
+        "salaryScale": [
+            {
+                "name": "Scale 1", // The name or label of the salary scale.
+                "maxValue": 2500.0, // The maximum value of the salary scale.
+                "minValue": 2000.0, // The minimum value of the salary scale.
+                "salaryStep": [
+                    { "name": "Stap 1", "value": 2000.0 },
+                    { "name": "Stap 2", "value": 2150.0 },
+                    { "name": "Stap 3", "value": 2300.0 }
+                  ],
+                "careerLevel": { // Indicates if work experience is considered in this scale.
+                    "indicator": true,
+                    "description": "Based on years of relevant experience."
+                },
+                "positionProfileReference": [
+                 {"positionProfileId": "POS-MAGAZIJN" },
+                 ]
+                },
+            {
+                "name": "Scale 2",
+                "minValue": 2400.0,
+                "maxValue": 3100.0,
+                "currency": "EUR",
+                "salaryStep": [
+                    { "name": "Stap 1", "value": 2400.0 },
+                    { "name": "Stap 2", "value": 2650.0 },
+                    { "name": "Stap 3", "value": 2900.0 }
+                ],
+                "careerLevel": {
+                    "indicator": true,
+                    "description": "Ervaring in senioriteit meegewogen."
+                },
+                "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "POS-TEAMLEIDER"
+              }
+            }
+          ]
+        }
+      ],
+        "individualSalaryIncreaseRate": [ // Specs for increase rates based on performance or other individual criteria.
+            {
+                "effectiveDate": {  // The specific date on which the salary increase takes effect.
+                    "occurenceType": "Recuring",
+                    "date": "R/2026-01-01/P1Y" // Recurring each year at the first of January
+                 },
+                "line": {
+                    "lineId": { "value": "INC-001" }, // Unique identifier for this increase line.
+                    "amount": {
+                        "value": 1, // Numeric value of the increase.
+                        "unitCode": "SalaryStep", // Must be "Euro", "Hour", "Percentage", or "SalaryStep".
+                        "baseAmount": {
+                            "unitCode": "fixed", // The type of base.
+                        }
+                    },
+                    "intervalCode": {
+                        "value": "1",
+                        "unitCode": "Year"
+                    },
+                    "conditions": [
+                        {
+                            "conditionType": "Text", // Fallback for unstructured conditions.
+                            "description": "Based on individual performance review results." // Human-readable explanation.
+                        }
+                    ]
+                }
+            }
+        ],
+        "generalSalaryIncreaseRate": [ // Uniform increases applied to the entire salary table (e.g., CAO indexation).
+            {
+                "effectiveDate": {  // The specific date on which the salary increase takes effect.
+                    "occurenceType": "Single",
+                    "date": "2026-01-01"
+                 }, // The effective start date of this initial increase.
+                "amount": {
+                    "value": 200.0,
+                    "unitCode": "Euro" // Must be "Euro", "Hour", or "Percentage".
+                },
+                "description": "Initial increase applicable to the entire table."
+            }
+        ],
+    }
+]

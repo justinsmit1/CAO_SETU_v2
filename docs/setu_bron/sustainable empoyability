@@ -1,0 +1,62 @@
+sustainable employability
+InquiryPayEquity
+/
+sustainable employability
+Definition
+Sustainable employability allows for the employer to add information regarding sustainable employability arrangement that the employer might have (e.g. study budget for the employee).
+Type
+SustainableEmployabilityArrangement
+https://ontology.setu.nl/inquiry-pay-equity#SustainableEmployabilityArrangement
+Example data
+Example JSON message
+Expand
+Copy
+{
+  "sustainableEmployability": [
+    {
+      "id": {
+        /* Unique identifier for this sustainability scheme */
+        "value": "4ea88b6d2d6",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Personal Development Budget",
+      "origin": {
+        /* Source of the budget, e.g., a specific CLA provision */
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2026-12-31"
+      },
+      "typeCode": {
+        "value": "Education"
+      },
+      "line": [
+        {
+          "lineId": {
+            /* Unique ID for this rate line */
+            "value": "LINE-SUST-01"
+          },
+          "amount": {
+            /* The budget amount is e.g., 10 days. But it could also be 100% hourly rate for each hou that you work. */
+            "value": 10,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "intervalCode": {
+            /* Budget is granted per 1 Year */
+            "value": "1",
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+position profile
+InquiryPayEquity
+/
+position profile
+Definition
+These are the position profiles for which the inquiry pay equity applies. From the salary table and other arrangements, you can also use these positions for the conditions of those arrangements.
+Type
+PositionProfile
+https://hropenstandards.org/schema/xml/PositionProfile
+Example data
+Example JSON message of a position profile.
+Expand
+Copy
+ "positionProfile": [ // Defines the job positions covered by this pay equity specification.
+    {
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "positionId": { // Unique identifier for this position profile within the customer's system.
+        "value": "POS123"
+      },
+      "positionTitle": "Recruitment Specialist", // The job title used by the customer.
+      "referenceTitle": "HR Functions", // The corresponding job title or group from the applicable CAO framework, if any.
+      "workDescription": "Responsible for sourcing and hiring candidates." // Brief description of the main tasks/responsibilities.
+    }
+  ],

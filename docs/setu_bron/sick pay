@@ -1,0 +1,78 @@
+sick pay
+InquiryPayEquity
+/
+sick pay
+Definition
+This element refers to the method in which the employer continues to compensate an employee when the employee has fallen ill.
+Type
+SickPayArrangement
+https://ontology.setu.nl/inquiry-pay-equity#SickPayArrangement
+Example data
+Example JSON message for sick pay
+Expand
+Copy
+{
+  "sickPay": [
+    {
+      "id": {
+        "value": "9c36cb78897",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Continued sick pay - First Year",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2027-01-01"
+      },
+      "waitingDays": {
+        /* Waiting days are defined here, outside of the calculation lines */
+        "value": 1.0,
+        "unitCode": "Day",
+        "conditions": [
+          {
+            "conditionType": "Text",
+            "description": "..."
+          }
+        ]
+      },
+      "line": [
+        {
+          "lineId": {
+            "value": "LINE-SICK-01"
+          },
+          "amount": {
+            /* 100% of the base salary */
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate",
+              "baseType": "RegularSalary",
+            },
+            "proportional": {
+              /* Sick pay is calculated based on the employee's part-time factor */
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Payment based on contracted hours."
+            }
+          },
+          "intervalCode": { // 100% of your monthly salary per month
+            "value": "1",
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Occurence",
+              "occurrence": {
+                "occurrenceType": "Relative", // Timing relative to an event.
+                "event": "SickLeave", // The triggering event (e.g., start of illness).
+                "offset": "P1Y" // The relative time offset (1 year).
+            }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

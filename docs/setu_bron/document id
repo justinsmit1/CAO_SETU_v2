@@ -1,0 +1,17 @@
+document id
+InquiryPayEquity
+/
+document id
+Definition
+Provides the Identifier(s) of the document being communicated. Uniquely identifies a Document within an organization. Also referred to as the functional business identifier of this document.
+Type
+Identifier
+https://hropenstandards.org/schema/xml/Identifier
+Example data
+Example JSON message
+Expand
+Copy
+    "documentId": { // Identifier for this specific message instance.
+        "value": "233a94d5d8c", // The unique ID value for this document.
+        "schemeAgencyId": "Customer" // Indicates the party that assigned the document ID (Customer or Supplier).
+    },

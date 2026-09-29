@@ -1,0 +1,188 @@
+leave
+InquiryPayEquity
+/
+leave
+Definition
+A container that contains the details of the leave arrangement, such as the type of leave, the amount of the leave, as well as any conditions.
+Type
+LeaveArrangement
+https://ontology.setu.nl/inquiry-pay-equity#LeaveArrangement
+Example data
+Example JSON message for leave entitlements
+Expand
+Copy
+{
+  "leave": [
+    {
+      "id": {
+        "value": "37605f8e84f",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Standard Leave & ADV Policy 2026",
+      "origin": {
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2023-01-01",
+        "validTo": "2028-01-01"
+      },
+      "paidLeave": [
+        {
+          /* General vacation hours (e.g., 25 days * 8 hours = 200 hours) */
+          "amount": {
+            "value": 200.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              /* Vacation is always proportional to the part-time factor */
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Vacation hours are calculated based on contract hours."
+            }
+          },
+          "intervalCode": {
+            "value": "1",
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "..." //Any ConditionType
+            }
+          ],
+          "leaveDayValue": {
+            /* The financial value of one full leave day. This could also be a percentage of the Salary */
+            "value": 133.00,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          }
+        }
+      ],
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 4.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "intervalCode": {
+            "value": "1",
+            "unitCode": "Week"
+          },
+          "conditions": [
+            {
+              "conditionType": ".Text",
+              "description": "Full time only"
+            }
+          ]
+        }
+      ],
+      "holidays": [
+        {
+          "name": " All Public Holidays",
+          "amount": {
+            "value": 7.0,
+            "unitCode": "Days",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "intervalCode": {
+            "value": "1",
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "List of all the seven holidays: ...."
+            }
+          ]
+        },
+        {
+          "name": "Liberation day",
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Days",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "intervalCode": {
+            "value": "1",
+            "unitCode": "Year"
+          },
+          "conditions": [
+          {
+              "conditionType": "Occurrence",
+              "occurrence": {
+                  "occurrenceType": "Recurring", // An event that repeats.
+                  "recurringInterval": "R/2026-5/P1Y" // Every year recurring in May (ISO 8601-1 repeating interval).
+              }
+          }
+    ]
+        }
+      ],
+      "specialLeave": [
+        {
+          "name": "Bereavement Leave",
+          "amount": {
+            "value": 2.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": false,
+              "employmentDuration": false
+            }
+          },
+          "intervalCode": {
+            "value": "1",
+            "unitCode": "..."
+          }
+        }
+      ],
+      "additional parental leave": [
+        {
+          /* Additional WAZO (Parental leave) arrangements */
+          "name": "Extra Parental Leave",
+          "amount": {
+            "value": 9.0,
+            "unitCode": "Week",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "intervalCode": {
+            "value": "1",
+            "unitCode": "Year"
+          }
+        }
+      ],
+      "mandatoryLeaveAllocation": {
+        "description": "Statutory leave days must be used within 6 months after the accrual year."
+      }
+    }
+  ]
+}

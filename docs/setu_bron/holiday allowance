@@ -1,0 +1,68 @@
+holiday allowance
+InquiryPayEquity
+/
+holiday allowance
+Definition
+A container that contains the details of the holiday allowance arrangement.
+Type
+HolidayAllowanceArrangement
+https://ontology.setu.nl/inquiry-pay-equity#HolidayAllowanceArrangement
+Example data
+Example JSON message holiday allowance
+Expand
+Copy
+{
+  "holidayAllowance": [
+    {
+      "id": {
+        /* Unique identifier for the holiday pay regulation */
+        "value": "sadf3dvaa3",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Standard Holiday Allowance (8%)",
+      "origin": {
+        /* Source of the arrangement, e.g., CLA */
+        "type": "CollectiveLabourAgreement"
+      },
+      "effectivePeriod": {
+        /* The overall period this specific calculation rule is valid */
+        "validFrom": "2026-01-01",
+        "validTo": "2027-12-31"
+      },
+      "line": [
+        {
+          "lineId": {
+            /* Unique identifier for this specific rate line */
+            "value": "LINE-HOL-01"
+          },
+          "amount": {
+            /* The accrual rate: 8% */
+            "value": 8.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              /* Holiday pay is calculated over the hourly rate/gross salary */
+              "unitCode": "HourlyRate",
+              "baseType": "GrossSalary"
+            },
+            "proportional": {
+              /* Holiday pay is intrinsically proportional to hours worked and duration */
+              "partTimePercentage": true,
+              "employmentDuration": true,
+              "description": "Accrual is proportional to actual hours worked."
+            }
+          },
+          "intervalCode": {
+            /* Accrued and/or determined over a 1 Year interval */
+            "value": "1",
+            "unitCode": "Year"
+          }
+        }
+      ],
+      "payDate": {
+        /* According to schema, only occurenceType is allowed here */
+        "occurrenceType": "Recurring", // An event that repeats.
+        "recurringInterval": "R/2026-5/P1Y" // Every year recurring in May (ISO 8601-1 repeating interval).
+      }
+    }
+  ]
+}

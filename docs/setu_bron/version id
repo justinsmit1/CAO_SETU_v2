@@ -1,0 +1,19 @@
+version id
+InquiryPayEquity
+/
+version id
+Definition
+The version identifier is a customer-specific identifier used to distinguish one version of the SETU Inquiry Pay Equity message from another.
+Type
+Identifier
+https://hropenstandards.org/schema/xml/Identifier
+Usage notes
+It is important not to confuse this with the document number, which is the identifier of this message.
+
+Example data
+Example JSON message
+Expand
+Copy
+    "versionId": {
+        "value": "f5afe7a19d0"
+    },

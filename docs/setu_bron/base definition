@@ -1,0 +1,34 @@
+base definition
+InquiryPayEquity
+/
+base definition
+Definition
+Definitions of the bases (in Dutch: 'Grondslagen') that can be used to calculate the different rates.
+Type
+BaseDefinition
+https://ontology.setu.nl/inquiry-pay-equity#BaseDefinition
+Usage notes
+This block allows for explicit definition of what components (remuneration, holiday allowance, specific allowances) are included in base salary calculations. These base definitions are used in the pay equity structure to define how each component is calculated. For example, holiday allowance is 8% of the annual salary, with the base definitions specifying what the annual salary includes. Optionally, a referenceDate (peildatum) can be added to specify the reference date for the calculation.
+
+Example data
+example
+Expand
+Copy
+ "baseDefinition": [
+    {
+      "baseType": "BaseWage",
+      "remunerationIndicator": true,
+      "holidayAllowanceIndicator": true,
+      "paidLeaveDayIndicator": true,
+      "allAllowancesIndicator": false,
+      "allowances": [
+        {
+          "typeCode": "ORT"
+        }
+      ],
+      "referenceDate": {
+        "occurrenceType": "Recurring",
+        "date": "2026-06-02"
+      }
+    }
+  ],

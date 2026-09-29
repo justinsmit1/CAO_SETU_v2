@@ -1,0 +1,1534 @@
+{
+  "documentId": {
+    "value": "adecco-koppert b.v.",
+    "schemeAgencyId": "Customer"
+  },
+  "issued": "2026-09-29T08:01:19.705000Z",
+  "effectivePeriod": {
+    "validFrom": "2026-06-01"
+  },
+  "customer": {
+    "name": "koppert nederland b.v.",
+    "legalId": [
+      {
+        "value": "Veilingweg 48, 2651BE Berkel en Rodenrijs",
+        "schemeAgencyId": "KvK"
+      }
+    ],
+    "personContacts": [
+      {
+        "name": {
+          "formattedName": "John Doe"
+        }
+      }
+    ]
+  },
+  "labourAgreements": {
+    "industryIdentifier": [
+      {
+        "value": "insectensector"
+      }
+    ],
+    "customLabourAgreement": false
+  },
+  "positionProfile": [
+    {
+      "positionId": {
+        "value": "productie medewerker"
+      },
+      "positionTitle": "productie medewerker",
+      "origin": {
+        "type": "Unknown"
+      }
+    },
+    {
+      "positionId": {
+        "value": "verpakkings medewerker"
+      },
+      "positionTitle": "verpakkings medewerker",
+      "origin": {
+        "type": "Unknown"
+      }
+    }
+  ],
+  "remuneration": [
+    {
+      "origin": {
+        "type": "Unknown"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-05-01"
+      },
+      "workDuration": {
+        "amount": {
+          "value": 1.0,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1.0,
+          "unitCode": "Week"
+        },
+        "valuePerWeek": 40.0
+      },
+      "interval": {
+        "value": 1.0,
+        "unitCode": "Month"
+      },
+      "hourlyWageConversion": {
+        "hourlyWagePercentage": 0.5769
+      },
+      "salaryScale": [
+        {
+          "name": "periodiek 0",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "0.1",
+              "value": 2886.54
+            },
+            {
+              "name": "0.2",
+              "value": 2886.54
+            },
+            {
+              "name": "0.3",
+              "value": 2886.54
+            },
+            {
+              "name": "0.4",
+              "value": 3028.24
+            },
+            {
+              "name": "0.5",
+              "value": 3291.02
+            },
+            {
+              "name": "0.7",
+              "value": 3576.63
+            },
+            {
+              "name": "0.9",
+              "value": 3989.82
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring bij onze onderneming wordt als volgt meegenomen: alleen ervaringsjaren opgedaan binnen Koppert"
+          },
+          "positionProfileReference": [
+            {
+              "positionId": {
+                "value": "productie medewerker"
+              }
+            },
+            {
+              "positionId": {
+                "value": "verpakkings medewerker"
+              }
+            }
+          ]
+        },
+        {
+          "name": "periodiek 1",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "1.1",
+              "value": 3145.58
+            },
+            {
+              "name": "1.2",
+              "value": 3418.54
+            },
+            {
+              "name": "1.3",
+              "value": 3715.22
+            },
+            {
+              "name": "1.4",
+              "value": 4037.67
+            },
+            {
+              "name": "1.5",
+              "value": 4388.05
+            },
+            {
+              "name": "1.7",
+              "value": 4768.83
+            },
+            {
+              "name": "1.9",
+              "value": 5319.74
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring bij onze onderneming wordt als volgt meegenomen: alleen ervaringsjaren opgedaan binnen Koppert"
+          }
+        },
+        {
+          "name": "periodiek 2",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "2.1",
+              "value": 3460.14
+            },
+            {
+              "name": "2.2",
+              "value": 3760.4
+            },
+            {
+              "name": "2.3",
+              "value": 4086.73
+            },
+            {
+              "name": "2.4",
+              "value": 4441.44
+            },
+            {
+              "name": "2.5",
+              "value": 4826.85
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring bij onze onderneming wordt als volgt meegenomen: alleen ervaringsjaren opgedaan binnen Koppert"
+          }
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "line": {
+            "interval": {
+              "value": 1.0,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van een minimale duur dienstverband: Per ervaringsjaar binnen de organisatie schuift de werknemer een periodiek op (trede 0 → 1 → 2). Alleen dienstjaren bij Koppert tellen mee"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ]
+          }
+        }
+      ],
+      "generalSalaryIncrease": [
+        {
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2025-01-01T00:00:00+01:00"
+          },
+          "amount": {
+            "value": 3.5,
+            "unitCode": "Percentage"
+          },
+          "description": "Jaarlijkse structurele loonontwikkeling per 1 mei; verhoging van 3,5% per 01-05-2027 (nieuwe salaristabel toegevoegd)."
+        }
+      ]
+    },
+    {
+      "origin": {
+        "type": "Unknown"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-05-01"
+      },
+      "workDuration": {
+        "amount": {
+          "value": 40.0,
+          "unitCode": "Hour"
+        },
+        "interval": {
+          "value": 1.0,
+          "unitCode": "Week"
+        },
+        "valuePerWeek": 40.0
+      },
+      "interval": {
+        "value": 1.0,
+        "unitCode": "Month"
+      },
+      "hourlyWageConversion": {
+        "hourlyWagePercentage": 0.5769
+      },
+      "salaryScale": [
+        {
+          "name": "periodiek 0",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "0.1",
+              "value": 2886.54
+            },
+            {
+              "name": "0.2",
+              "value": 2886.54
+            },
+            {
+              "name": "0.3",
+              "value": 2886.54
+            },
+            {
+              "name": "0.4",
+              "value": 3028.24
+            },
+            {
+              "name": "0.5",
+              "value": 3291.02
+            },
+            {
+              "name": "0.7",
+              "value": 3576.63
+            },
+            {
+              "name": "0.9",
+              "value": 3989.82
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring bij onze onderneming wordt als volgt meegenomen: alleen ervaringsjaren opgedaan binnen Koppert"
+          }
+        },
+        {
+          "name": "periodiek 1",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "1.1",
+              "value": 3145.58
+            },
+            {
+              "name": "1.2",
+              "value": 3418.54
+            },
+            {
+              "name": "1.3",
+              "value": 3715.22
+            },
+            {
+              "name": "1.4",
+              "value": 4037.67
+            },
+            {
+              "name": "1.5",
+              "value": 4388.05
+            },
+            {
+              "name": "1.7",
+              "value": 4768.83
+            },
+            {
+              "name": "1.9",
+              "value": 5319.74
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring bij onze onderneming wordt als volgt meegenomen: alleen ervaringsjaren opgedaan binnen Koppert"
+          }
+        },
+        {
+          "name": "periodiek 2",
+          "currency": "EUR",
+          "salaryStep": [
+            {
+              "name": "2.1",
+              "value": 3460.14
+            },
+            {
+              "name": "2.2",
+              "value": 3760.4
+            },
+            {
+              "name": "2.3",
+              "value": 4086.73
+            },
+            {
+              "name": "2.4",
+              "value": 4441.44
+            },
+            {
+              "name": "2.5",
+              "value": 4826.85
+            }
+          ],
+          "careerLevel": {
+            "indicator": true,
+            "description": "Relevante werkervaring bij onze onderneming wordt als volgt meegenomen: alleen ervaringsjaren opgedaan binnen Koppert"
+          }
+        }
+      ],
+      "individualSalaryIncrease": [
+        {
+          "line": {
+            "interval": {
+              "value": 1.0,
+              "unitCode": "Year"
+            },
+            "conditions": [
+              {
+                "conditionType": "Text",
+                "description": "Ja, deze zijn afhankelijk van een minimale duur dienstverband: Per ervaringsjaar binnen de organisatie schuift de werknemer een periodiek op (trede 0 → 1 → 2). Alleen dienstjaren bij Koppert tellen mee"
+              },
+              {
+                "conditionType": "Text",
+                "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
+              }
+            ]
+          }
+        }
+      ],
+      "generalSalaryIncrease": [
+        {
+          "effectiveDate": {
+            "occurrenceType": "Single",
+            "date": "2025-01-01T00:00:00+01:00"
+          },
+          "amount": {
+            "value": 3.5,
+            "unitCode": "Percentage"
+          },
+          "description": "Jaarlijkse structurele loonontwikkeling per 1 mei; verhoging van 3,5% per 01-05-2027 (nieuwe salaristabel toegevoegd)."
+        }
+      ],
+      "conditions": [
+        {
+          "conditionType": "Text",
+          "description": "3 ploegendiensten"
+        }
+      ]
+    }
+  ],
+  "allowance": [
+    {
+      "name": "Betaalde rusttijden en pauzes",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "HT400",
+      "line": [
+        {
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "in het drieploegenrooster worden pauzes doorbetaald"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer OV",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA103",
+      "line": [
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": " volledige vergoeding op declaratiebasis met akkoord leidinggevende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding werk-werk verkeer OV",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA103",
+      "line": [
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "volledige vergoeding op declaratiebasis met akkoord leidinggevende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Vergoeding voor stand-by-, piket-, consignatie- of bereikbaarheidsdiensten: € 40,- bruto per etmaal (maandag t/m vrijdag) en € 60,- bruto per etmaal (zaterdag, zondag en feestdagen).",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "HT602"
+    },
+    {
+      "name": "Kostenvergoeding anders: BHV-vergoeding — eenmalig bruto bedrag van € 150 of € 250 (afhankelijk van de rol als BHV'er). Per 01-05-2026: +7,5% → € 161,25 of € 268,75. Voorwaarde: aangewezen en ingedeeld als BHV'er door het HSE-team. Niet naar rato.",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA100"
+    },
+    {
+      "name": "Mobiliteitsvergoeding",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA100",
+      "line": [
+        {
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": false
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Mobiliteitsvergoeding: 70% van de bruto leasenorm, uitsluitend voor medewerkers die recht hebben op een leaseauto en daarvan afzien. Naar rato bij parttime."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Toeslagen voor (fysieke) belasting",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA301",
+      "line": [
+        {
+          "amount": {
+            "value": 0.62,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Geldt voor fysiek zwaar werk of het dragen van een volgelaatsmasker, zolang de taken worden uitgevoerd. Bij fulltime verrichten is de ongemakkentoeslag € 107,50 per maand; parttime naar rato. Doet de medewerker zowel fysiek zwaar werk én draagt hij een volgelaatsmasker, dan ontvangt hij de dubbele toeslag."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Toeslagen voor (fysieke) belasting",
+      "description": " de dubbele toeslag.",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA301",
+      "line": [
+        {
+          "amount": {
+            "value": 1.24,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Geldt wanneer de medewerker zowel fysiek zwaar werk verricht én een volgelaatsmasker draagt.."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Overwerk",
+      "description": "Variatie 1 — 25% (eerste 2 uur doordeweeks)",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "HT200",
+      "line": [
+        {
+          "amount": {
+            "value": 25.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Wanneer meer wordt gewerkt dan de overeengekomen arbeidsomvang. Geldt voor de eerste 2 overuren doordeweeks. Alleen van toepassing op schalen t/m Hay 14."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Overwerk",
+      "description": "Variatie 2 — 50% (na 2 uur of op zaterdag)",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "HT200",
+      "line": [
+        {
+          "amount": {
+            "value": 50.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Overwerk",
+      "description": "Variatie 3 — 100% (zondag of feestdagen)",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "HT200",
+      "line": [
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Waarnemingstoeslag",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA300",
+      "line": [
+        {
+          "amount": {
+            "value": 4.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bij waarneming/vervanging van meer dan 50% van de werktijd gedurende meer dan 1 maand."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding woon- werk verkeer eigen auto / fiets / bromfiets / anders.",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA103",
+      "line": [
+        {
+          "amount": {
+            "value": 0.23,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Maximaal 30 kilometer enkele reis, berekend op basis van de ANWB kortste route."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reiskostenvergoeding zakelijke kilometers (werk – werk) eigen vervoer",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA103",
+      "line": [
+        {
+          "amount": {
+            "value": 0.23,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Kilometer"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "€ 0,23/km op declaratiebasis met akkoord leidinggevende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Jubileumuitkering: jubileum",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA903",
+      "line": [
+        {
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Anders toegekend, namelijk: 1 bruto maandsalaris netto uitgekeerd. Berekening op basis van datum in dienst Variabele (voorwaardelijke)"
+            }
+          ]
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-06-01T00:00:00+02:00"
+      }
+    },
+    {
+      "name": "Jubileumuitkering: jubileum",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA903",
+      "line": [
+        {
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Anders toegekend, namelijk: 1 bruto maandsalaris netto uitgekeerd. Berekening op basis van datum in dienst Variabele (voorwaardelijke)"
+            }
+          ]
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-06-01T00:00:00+02:00"
+      }
+    },
+    {
+      "name": "Variabele uitkering: bonus: parttime decemberloon × 12; het percentage is afhankelijk van de functieschaal van de medewerker",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "EA903",
+      "line": [
+        {
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bepaalde prestatie (performance), namelijk: Het individuele deel, uitgekeerd in april, is gebaseerd op de individuele performance van de medewerker."
+            },
+            {
+              "conditionType": "Text",
+              "description": "Bepaald resultaat (winst), namelijk: Het collectieve deel, uitgekeerd in juli, is gebaseerd op de organisatieresultaten (winst)."
+            },
+            {
+              "conditionType": "Text",
+              "description": "Afhankelijk minimale duur dienstverband, namelijk: Minimaal 6 maanden dienstverband in hetzelfde kalenderjaar."
+            }
+          ]
+        }
+      ],
+      "payDate": {
+        "occurrenceType": "Single",
+        "date": "2026-04-01T00:00:00+02:00"
+      }
+    }
+  ],
+  "holidayAllowance": [
+    {
+      "name": "Vakantiebijslag",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 8.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          }
+        }
+      ]
+    }
+  ],
+  "sickPay": [
+    {
+      "name": "Loondoorbetaling bij ziekte",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "In het eerste jaar van ziekte worden de uren voor 100% doorbetaald."
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "In het tweede jaar van ziekte worden de uren voor 70% doorbetaald."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "leave": [
+    {
+      "name": "ADV / ATV regeling: ADV wordt in geld uitbetaald: een ADV-toeslag van 1,15% (op basis van 3 ADV-dagen per jaar bij een fulltime dienstverband).",
+      "origin": {
+        "type": "Unknown"
+      },
+      "workingHoursReduction": [
+        {
+          "amount": {
+            "value": 1.15,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "HourlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vakantiedagen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "paidLeave": [
+        {
+          "amount": {
+            "value": 25.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        },
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "EmploymentDuration",
+              "operator": "gte",
+              "duration": "P10Y",
+              "referenceDateType": "HireDate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wazo aanvulling: Anders, namelijk:",
+      "origin": {
+        "type": "Unknown"
+      },
+      "additionalParentalLeave": [
+        {
+          "name": "Namelijk: aanvullend partnerverlof aangevuld tot 100% van het gebruikelijke maandsalaris",
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Feestdagen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "holidays": [
+        {
+          "name": "Nieuwjaarsdag, Eerste Paasdag, Tweede Paasdag, Koningsdag, Hemelvaartsdag, Eerste Pinksterdag, Tweede Pinksterdag, Eerste Kerstdag, Tweede Kerstdag, Bevrijdingsdag (alleen in lustrumjaren)",
+          "amount": {
+            "value": 10.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Feestdagen die niet elk jaar worden toegekend, en hun voorwaarden: bevrijdingsdag"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Ondertrouw",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Ondertrouw"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 2 dagen in het geval van: Eigen huwelijk",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 2.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Eigen huwelijk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 5 dagen in het geval van: Bevalling echtgenote/partner",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 5.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Bevalling echtgenote/partner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Huwelijk kind, ouder, broer/zus, zwager/schoonzus",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Huwelijk kind, ouder, broer/zus, zwager/schoonzus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Huwelijksjubileum 25 en 40 jaar ",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Huwelijksjubileum 25 en 40 jaar "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 2 uren in het geval van: Overlijden partner, kind of ouder (2× de arbeidsduur per week)",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 2.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Overlijden partner, kind of ouder (2× de arbeidsduur per week)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Overlijden broer/zus/zwager/schoonzus",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Overlijden broer/zus/zwager/schoonzus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Uitvaart ouder, grootouder, broer/zus/zwager/schoonzus",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Uitvaart ouder, grootouder, broer/zus/zwager/schoonzus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 1 dagen in het geval van: Eigen verhuizing",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 1.0,
+            "unitCode": "Day",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Day"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Eigen verhuizing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bijzonder verlof: 2 uren in het geval van: 2 uur eerder vrij op je verjaardag",
+      "origin": {
+        "type": "Unknown"
+      },
+      "specialLeave": [
+        {
+          "amount": {
+            "value": 2.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Hour"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "2 uur eerder vrij op je verjaardag"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pension": [
+    {
+      "name": "nvt",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 19.09,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "YearlyRate",
+              "baseType": "Pension"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "contributionSource": "Employer"
+        }
+      ],
+      "franchise": {
+        "description": "o.b.v. AOW-bedrag"
+      }
+    }
+  ],
+  "sustainableEmployability": [
+    {
+      "name": "Opleidingen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "Education",
+      "line": [
+        {
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            },
+            {
+              "conditionType": "Text",
+              "description": "welke regelingen kent e onderneming die de duurzame inzetbaarheid van de werknemer bevorderen?\nOpleidingen\nLoopbaancoaching\nOutplacementtrajecten\nWordt dit budget uitgekeerd als er geen gebruik van wordt gemaakt?\nNee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Loopbaancoaching",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "CareerCoaching",
+      "line": [
+        {
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            },
+            {
+              "conditionType": "Text",
+              "description": "welke regelingen kent e onderneming die de duurzame inzetbaarheid van de werknemer bevorderen?\nOpleidingen\nLoopbaancoaching\nOutplacementtrajecten\nWordt dit budget uitgekeerd als er geen gebruik van wordt gemaakt?\nNee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Outplacementtrajecten",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "OutplacementPrograms",
+      "line": [
+        {
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Year"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            },
+            {
+              "conditionType": "Text",
+              "description": "welke regelingen kent e onderneming die de duurzame inzetbaarheid van de werknemer bevorderen?\nOpleidingen\nLoopbaancoaching\nOutplacementtrajecten\nWordt dit budget uitgekeerd als er geen gebruik van wordt gemaakt?\nNee"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Regeling ter bevordering van de fysieke gezondheid, namelijk: Bijdrage aan een sportabonnement van € 7,50 netto per maand.",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "ArrangementForHealth",
+      "line": [
+        {
+          "amount": {
+            "value": 7.5,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            },
+            "proportional": {
+              "partTimePercentage": true,
+              "employmentDuration": true
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Dit bedrag wordt NIET uitgekeerd als er geen of niet geheel gebruik van wordt gemaakt."
+            },
+            {
+              "conditionType": "Text",
+              "description": "De bijdrage geldt als tegemoetkoming in de kosten van een sportabonnement; de medewerker dient dus een sportabonnement te hebben."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Verplichte scholing: alle veiligheidstrainingen",
+      "origin": {
+        "type": "Unknown"
+      },
+      "typeCode": "Other",
+      "line": [
+        {
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Hour",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Item"
+          },
+          "conditions": [
+            {
+              "conditionType": "Text",
+              "description": "Op een ander moment, namelijk: De veiligheidstrainingen worden tijdens werktijd gevolgd en door de werkgever betaald."
+            }
+          ]
+        },
+        {
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Item"
+          }
+        }
+      ]
+    }
+  ],
+  "otherArrangement": [
+    {
+      "name": "Andere aanvullende sociale zekerheidsregeling",
+      "description": "De WGA-premie wordt per 1 mei 2026 volledig door de werkgever betaald; het werknemersdeel wordt niet op het loon van de medewerker ingehouden.",
+      "origin": {
+        "type": "Unknown"
+      },
+      "line": [
+        {
+          "amount": {
+            "value": 0.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employer"
+        },
+        {
+          "amount": {
+            "value": 100.0,
+            "unitCode": "Percentage",
+            "baseAmount": {
+              "unitCode": "MonthlyRate"
+            }
+          },
+          "interval": {
+            "value": 1.0,
+            "unitCode": "Month"
+          },
+          "contributionSource": "Employee"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+supplementary arrangement
+InquiryPayEquity
+/
+supplementary arrangement
+Definition
+A container that specifies the supplementary arrangement(s) (In Dutch: 'aanvullende regelingen').
+Type
+SupplementaryArrangement
+https://ontology.setu.nl/inquiry-pay-equity#SupplementaryArrangement
+Example data
+Example supplementaryArrangements
+Expand
+Copy
+"supplementaryArrangements": [ // Supplementary arrangements (Dutch: Aanvullende regelingen).
+    {
+        "name": "Generatiepact 80-90-100", // The name of the supplementary arrangement.
+        "origin": {
+            "type": "CollectiveLabourAgreement"
+        },
+        "type_code": { "Generatiepact" // Classification of the arrangement. Allowed values: 'Generatiepact' or 'RVU'.
+        "description": "Scheme for older employees to work 80%, receive 90% salary, and build 100% pension.", // The description of the arrangement.
+
+        }
+    }
+]

@@ -1,0 +1,65 @@
+other arrangement
+InquiryPayEquity
+/
+other arrangement
+Definition
+This element can be used to provide any additional arrangements that have not been covered by the other elements.
+Type
+OtherArrangement
+https://ontology.setu.nl/inquiry-pay-equity#OtherArrangement
+Example data
+Example JSON message
+Expand
+Copy
+{
+  "other": [
+    {
+      "id": {
+        /* Unique identifier for this custom arrangement */
+        "value": "0c64038d805",
+        "schemeAgencyId": "Customer"
+      },
+      "name": "Free Lunch Allowance Regulation",
+      "origin": {
+        /* Specifies the source; in this case, a custom company policy */
+        "type": "CustomLabourAgreement"
+      },
+      "effectivePeriod": {
+        "validFrom": "2026-01-01",
+        "validTo": "2027-01-01"
+      },
+      "description": "Provision of a daily allowance for lunch expenses during office days.",
+      "line": [
+        {
+          "lineId": {
+            /* Unique identifier for this rate line */
+            "value": "LINE-LUNCH-01"
+          },
+          "amount": {
+            /* The value of the lunch benefit: € 5.30 */
+            "value": 5.30,
+            "unitCode": "Euro",
+            "baseAmount": {
+              "unitCode": "Fixed"
+          },
+          "intervalCode": {
+            /* Applied per 1 Day */
+            "value": "1",
+            "unitCode": "Day"
+          }
+        }
+      ]
+    }
+  ]
+}
+Free text for other arrangement
+Expand
+Copy
+{
+  "other": [
+    {
+      "name": "Tijd voor tijd",
+      "description": "...."
+    }
+  ]
+}

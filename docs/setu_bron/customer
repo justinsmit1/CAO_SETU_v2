@@ -1,0 +1,49 @@
+customer
+InquiryPayEquity
+/
+customer
+Definition
+The customer/hirer of the worker.
+Type
+Party
+https://ontology.setu.nl#Party
+Example data
+Example JSON message of a customer
+Expand
+Copy
+"customer": { // The customer/hirer of the worker.
+    "id": [ // Unique identifiers for the customer (max 2).
+        {
+            "value": "9b184323200", // The identifier value.
+            "schemeAgencyId": "Customer" // The agency that manages the identifier scheme (Customer or Supplier).
+        }
+    ],
+    "name": "ABC Staffing Solutions", // The name of the customer.
+    "legalId": [ // Government-assigned identifiers to distinguish the legal entity.
+        {
+            "value": "35fe8a245e3", // The identifier value.
+            "schemeAgencyId": "KvK" // The agency managing the scheme (KvK, OIN, or RSIN).
+        }
+    ],
+    "personContacts": [ // Contact details of people at the organization.
+        {
+            "name": {
+                "formattedName": "John Doe" // The formatted name of the person as it would be written out.
+            },
+            "communication": { // The channels used to reach the contact person.
+                "phone": [
+                {
+                    "formattedNumber": "+31201234567" // The phone number according to the E.164 standard.
+                }
+                ],
+                "email": [
+                    {
+                    "address": "john.doe@abcstaffing.com" // The actual email address.
+                    }
+                ]
+            },
+            "roleCode": "Authorized by", // The role of the contact person; primarily 'Authorized by' for this message.
+            "positionTitle": "Recruitment Specialist" // The title of the position of the contact person.
+        }
+    ]
+},
