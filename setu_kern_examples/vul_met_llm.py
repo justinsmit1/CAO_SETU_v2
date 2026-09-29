@@ -9,6 +9,9 @@ Draaien vanuit de projectmap:
     .venv\\Scripts\\python.exe -m setu_kern.bronnen.cao_pdf.pijplijn.cli ingest data\\cao.pdf --index-dir index
     .venv\\Scripts\\python.exe setu_kern_examples\\vul_met_llm.py --index index --parameters organisatie.toml
 
+    # Met de SETU-velden die de webform niet kent (geldigheid, uitbetaling, minimum/maximum, naar rato, voorwaarden)
+    .venv\\Scripts\\python.exe setu_kern_examples\\vul_met_llm.py --index index --basis-voorbeeld --setu
+
     # Proef tot in het kernmodel: algemeen, salaristabel en contactpersoon uit het voorbeeld in maak_upload.py,
     # de vakantiebijslag van het LLM
     .venv\\Scripts\\python.exe setu_kern_examples\\vul_met_llm.py --index index --basis-voorbeeld
@@ -22,17 +25,18 @@ Nu vult het LLM alleen 05 Vakantiebijslag in; de andere secties staan in het rap
 """
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT / "src"))
 
-from setu_kern.bronnen.cao_pdf import IndexZoeker, MistralLLM, Parameters, vul_formulier  # noqa: E402
+from setu_kern.bronnen.cao_pdf import BLOKKEN, BLOKKEN_SETU, IndexZoeker, MistralLLM, Parameters, vul_formulier  # noqa: E402
+from setu_kern.bronnen.cao_pdf.adapter import kern_uit_formulier  # noqa: E402
 from setu_kern.bronnen.cao_pdf.llm import GeenModelGekozen  # noqa: E402
 from setu_kern.bronnen.cao_pdf.nep import LijstZoeker, NepLLM  # noqa: E402
 from setu_kern.bronnen.cao_pdf.zoeken import Fragment  # noqa: E402
-from setu_kern.bronnen.wijzerbelonen import van_formulier  # noqa: E402
 
 UITVOER = PROJECT / "uitvoer" / "setu_kern"
 
@@ -51,6 +55,35 @@ _DEMO_ANTWOORD = {
     ],
     "niet_gevonden": [],
 }
+
+
+class LoggendeLLM:
+    """Geeft alles door aan ``llm`` en print direct wat er gevraagd en geantwoord wordt (exact zoals verstuurd)."""
+
+    def __init__(self, llm):
+        self.llm = llm
+        self.gesprek: list[dict] = []
+
+    def vraag_json(self, berichten, schema, naam):
+        nummer = len(self.gesprek) + 1
+        print()
+        print("=" * 100)
+        print(f"AANROEP {nummer} - schema '{naam}'")
+        print("=" * 100)
+        for bericht in berichten:
+            print()
+            print(f"--- {bericht['role'].upper()} ---")
+            print(bericht["content"])
+        antwoord = None
+        try:
+            antwoord = self.llm.vraag_json(berichten, schema, naam)
+            return antwoord
+        finally:
+            print()
+            print(f"--- ANTWOORD VAN HET LLM (aanroep {nummer}) ---")
+            print(json.dumps(antwoord, indent=2, ensure_ascii=False) if antwoord is not None else "(geen antwoord: fout bij de aanroep)")
+            self.gesprek.append({"aanroep": nummer, "schema_naam": naam, "berichten": berichten, "schema": schema, "antwoord": antwoord})
+
 
 
 def _demo():
@@ -77,6 +110,7 @@ def main() -> None:
     parser.add_argument("--index", default="index", help="map met de FAISS-index van de cao")
     parser.add_argument("--parameters", help="TOML met gegevens die niet in de cao staan (naam, KvK, ...)")
     parser.add_argument("--model", help="model voor het invullen (anders [invullen] model in config.toml)")
+    parser.add_argument("--setu", action="store_true", help="ook de SETU-velden die de webform niet kent (BLOKKEN_SETU)")
     parser.add_argument(
         "--basis-voorbeeld",
         action="store_true",
@@ -88,6 +122,8 @@ def main() -> None:
     basis = _basis_voorbeeld() if args.basis_voorbeeld else None
     if args.nep:
         llm, zoeker = _demo()
+        if args.setu:
+            raise SystemExit("--nep werkt alleen met het standaardblok; --setu heeft een echt LLM nodig")
     else:
         try:
             llm = MistralLLM(args.model) if args.model else MistralLLM.uit_config()
@@ -95,15 +131,26 @@ def main() -> None:
             raise SystemExit(str(fout)) from fout
         zoeker = IndexZoeker.laad(args.index)
 
-    formulier, rapport = vul_formulier(llm, zoeker, parameters, basis=basis)
+    blokken = BLOKKEN_SETU if args.setu else BLOKKEN
+    llm = LoggendeLLM(llm)
     UITVOER.mkdir(parents=True, exist_ok=True)
+    try:
+        formulier, rapport = vul_formulier(llm, zoeker, parameters, blokken, basis=basis)
+    finally:  # ook bij een fout van de API blijft het gesprek bewaard
+        (UITVOER / "llm_gesprek.json").write_text(json.dumps(llm.gesprek, indent=2, ensure_ascii=False), encoding="utf-8")
+        print()
+        print(f"Gesprek (met het volledige JSON-schema) geschreven: {UITVOER / 'llm_gesprek.json'}")
+    print()
+    print("=" * 100)
+    print("RAPPORT")
+    print("=" * 100)
     (UITVOER / "llm_formulier.json").write_text(formulier.model_dump_json(indent=2, exclude_defaults=True), encoding="utf-8")
     rapport.schrijf(UITVOER)
     print(rapport.naar_markdown())
     print(f"Geschreven: {UITVOER / 'llm_formulier.json'} en {UITVOER / 'llm_rapport.md'}")
 
     try:
-        resultaat = van_formulier(formulier)
+        resultaat = kern_uit_formulier(formulier, rapport, blokken)
     except ValueError as fout:
         print(f"\nNog geen kernmodel: {fout}")
         return
@@ -113,6 +160,9 @@ def main() -> None:
         print(f"\nVakantiebijslag in het kernmodel: {bedrag.value if bedrag else '?'} {bedrag.unit_code if bedrag else ''}")
     if not bericht.holiday_allowance:
         print("\nGeen vakantiebijslag in het kernmodel (zie het rapport).")
+    for m in resultaat.meldingen:
+        if m.startswith("vakantiebijslag:"):
+            print(f"Melding: {m}")
     print(f"Geldig volgens het officiële schema: {'ja' if not bericht.valideer() else 'nee'}")
     bericht.schrijf(UITVOER / "setu_kernmodel_llm.json", met_extensies=False)
     print(f"Kernmodel geschreven: {UITVOER / 'setu_kernmodel_llm.json'}")

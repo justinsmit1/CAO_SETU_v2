@@ -8,6 +8,9 @@ De CAO-pdf is de bron; het LLM vult per blok het wijzerbelonen-``Formulier`` in 
 wijzerbelonen-adapter brengt dat naar de kern. Zo komen een LLM-resultaat en een handmatig ingevulde
 wijzerbelonen-download langs dezelfde weg in de kern, en zijn ze te vergelijken.
 
+Een *uitgebreid* blok (``BLOKKEN_SETU``) vraagt ook de SETU-velden die de webform niet kent. Het Formulier krijgt dan
+alleen de webform-vragen; de volledige regeling komt uit ``rapport.uitbreidingen`` en vervangt de regeling in de kern.
+
 ``llm`` is elk object met ``vraag_json`` (zie ``llm.py``): ``MistralLLM(model=...)`` of in tests ``nep.NepLLM``.
 ``zoeker`` zoekt in de cao: ``IndexZoeker.laad("index")`` of in tests ``nep.LijstZoeker``.
 """
@@ -48,7 +51,7 @@ def vul_formulier(
     if parameters:
         rapport.uit_parameters = parameters.toepassen(formulier)
     for blok in blokken:
-        rapport.blokken.append(vul_blok(blok, formulier, llm, zoeker, top_k=top_k))
+        rapport.blokken.append(vul_blok(blok, formulier, llm, zoeker, top_k=top_k, uitbreidingen=rapport.uitbreidingen))
     gedekt = {b.sectie for b in blokken} | set(UIT_PARAMETERS) | set(rapport.uit_basis)
     rapport.niet_ondersteund = [s for s in Formulier.model_fields if s not in gedekt]
     rapport.controle = formulier.controleer()
@@ -66,5 +69,15 @@ def van_cao_pdf(
     """Het kernmodel uit de cao. ``ValueError`` als SETU-verplichte onderdelen ontbreken (bijv. een salaristabel
     zolang 02 Beloning nog niet door het LLM wordt ingevuld; geef die dan mee in ``basis``)."""
     formulier, rapport = vul_formulier(llm, zoeker, parameters, blokken, top_k, basis)
+    return kern_uit_formulier(formulier, rapport, blokken)
+
+
+def kern_uit_formulier(formulier: Formulier, rapport: Rapport, blokken: tuple[Blok, ...] = BLOKKEN) -> Resultaat:
+    """Het kernmodel van een ingevuld formulier plus de uitbreidingen uit ``rapport`` (zie ``vul_formulier``).
+    Zo hoeft het LLM niet opnieuw aangeroepen te worden als je het rapport al hebt."""
     omgezet = van_formulier(formulier)
-    return Resultaat(omgezet.bericht, rapport.meldingen() + omgezet.meldingen, BRON_CAO_PDF)
+    meldingen = rapport.meldingen() + omgezet.meldingen
+    for blok in blokken:
+        if blok.naar_kern and blok.sectie in rapport.uitbreidingen:
+            meldingen += blok.naar_kern(rapport.uitbreidingen[blok.sectie], omgezet.bericht, formulier)
+    return Resultaat(omgezet.bericht, meldingen, BRON_CAO_PDF)

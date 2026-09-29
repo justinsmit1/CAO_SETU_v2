@@ -9,7 +9,7 @@
 """
 
 from .adapter import BRON_CAO_PDF, van_cao_pdf, vul_formulier
-from .invullen.blokken import BLOKKEN, Blok
+from .invullen.blokken import BLOKKEN, BLOKKEN_SETU, Blok
 from .invullen.rapport import Rapport
 from .llm import LLM, MistralLLM
 from .parameters import Parameters
@@ -17,6 +17,7 @@ from .zoeken import Fragment, IndexZoeker, Zoeker
 
 __all__ = [
     "BLOKKEN",
+    "BLOKKEN_SETU",
     "BRON_CAO_PDF",
     "Blok",
     "Fragment",

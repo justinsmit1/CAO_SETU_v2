@@ -39,6 +39,7 @@ class Rapport:
     niet_ondersteund: list[str] = field(default_factory=list)  # secties zonder blok
     uit_basis: list[str] = field(default_factory=list)  # secties die uit het basisformulier komen, niet uit de cao
     controle: list[str] = field(default_factory=list)  # Formulier.controleer() na het invullen
+    uitbreidingen: dict[str, Any] = field(default_factory=dict)  # sectie → ingevuld uitgebreid model (SETU-velden)
 
     def meldingen(self) -> list[str]:
         """Korte meldingen voor het Resultaat van de adapter."""
@@ -53,7 +54,9 @@ class Rapport:
         return uit
 
     def naar_dict(self) -> dict[str, Any]:
-        return json.loads(json.dumps(asdict(self), default=str))
+        uit = asdict(self)
+        uit["uitbreidingen"] = {k: v.model_dump(mode="json") for k, v in self.uitbreidingen.items()}
+        return json.loads(json.dumps(uit, default=str))
 
     def naar_markdown(self) -> str:
         regels = ["# Rapport LLM-invullen", ""]

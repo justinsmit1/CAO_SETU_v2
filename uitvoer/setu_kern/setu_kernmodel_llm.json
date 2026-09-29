@@ -3,7 +3,7 @@
     "value": "Voorbeeld Bouw 2026",
     "schemeAgencyId": "Customer"
   },
-  "issued": "2026-09-29T08:48:08.283000Z",
+  "issued": "2026-09-29T11:35:26.920000Z",
   "effectivePeriod": {
     "validFrom": "2026-01-01",
     "validTo": "2026-12-31"
@@ -133,29 +133,6 @@
                 "description": "Wanneer wordt de verhoging toegekend: per gewerkt jaar"
               }
             ]
-          }
-        }
-      ]
-    }
-  ],
-  "holidayAllowance": [
-    {
-      "name": "Vakantiebijslag",
-      "origin": {
-        "type": "Unknown"
-      },
-      "line": [
-        {
-          "amount": {
-            "value": 8.0,
-            "unitCode": "Percentage",
-            "baseAmount": {
-              "unitCode": "YearlyRate"
-            }
-          },
-          "interval": {
-            "value": 1.0,
-            "unitCode": "Year"
           }
         }
       ]

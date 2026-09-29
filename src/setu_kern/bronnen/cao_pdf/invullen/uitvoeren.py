@@ -30,9 +30,18 @@ MAX_WEGGOOIEN = 25
 
 
 def vul_blok(
-    blok: Blok, formulier: Formulier, llm: LLM, zoeker: Zoeker, top_k: int = 8, citaat_controle: bool = True
+    blok: Blok,
+    formulier: Formulier,
+    llm: LLM,
+    zoeker: Zoeker,
+    top_k: int = 8,
+    citaat_controle: bool = True,
+    uitbreidingen: dict[str, BaseModel] | None = None,
 ) -> BlokVerslag:
-    """Vult één blok in ``formulier`` in (in place) en geeft het verslag terug."""
+    """Vult één blok in ``formulier`` in (in place) en geeft het verslag terug.
+
+    Bij een uitgebreid blok komt het ingevulde uitgebreide model in ``uitbreidingen[blok.sectie]`` en krijgt het
+    formulier alleen de webform-vragen daaruit (``blok.naar_formulier``)."""
     verslag = BlokVerslag(blok.naam)
     model, velden = blok.model, blok.veldnamen()
     vragen = [v for v in alle_vragen(model) if re.split(r"[.\[{]", v.pad)[0] in velden]
@@ -44,7 +53,8 @@ def vul_blok(
         {"role": "system", "content": SYSTEEM},
         {"role": "user", "content": blok_bericht(blok, vragen, fragmenten)},
     ]
-    huidig = getattr(formulier, blok.sectie)
+    uitbreidingen = uitbreidingen if uitbreidingen is not None else {}
+    huidig = (uitbreidingen.get(blok.sectie) or model()) if blok.uitgebreid else getattr(formulier, blok.sectie)
 
     uitkomst = None
     for poging in (1, 2):
@@ -56,7 +66,7 @@ def vul_blok(
         else:
             try:
                 nieuw = _valideer(model, huidig, velden, uitkomst["waarden"])
-                _vastleggen(formulier, blok, nieuw, uitkomst, verslag)
+                _vastleggen(formulier, blok, nieuw, uitkomst, verslag, uitbreidingen)
                 return verslag
             except ValidationError as fout:
                 fouten = _foutteksten(fout)
@@ -70,7 +80,7 @@ def vul_blok(
     if uitkomst is None or uitkomst["structuurfouten"]:
         verslag.meldingen.append("antwoord volgt het schema niet, ook niet na de herkansing: blok niet ingevuld")
         return verslag
-    return _weggooien_tot_geldig(formulier, blok, model, huidig, velden, uitkomst, verslag)
+    return _weggooien_tot_geldig(formulier, blok, model, huidig, velden, uitkomst, verslag, uitbreidingen)
 
 
 def _verwerk(antwoord: Any, schema: dict, fragmenten: list[Fragment], citaat_controle: bool) -> dict[str, Any]:
@@ -119,7 +129,12 @@ def _valideer(model: type[BaseModel], huidig: BaseModel, velden: list[str], waar
     return model.model_validate({**behouden, **van_waarden(model, waarden, velden)})
 
 
-def _vastleggen(formulier: Formulier, blok: Blok, nieuw: BaseModel, uitkomst: dict, verslag: BlokVerslag) -> None:
+def _vastleggen(
+    formulier: Formulier, blok: Blok, nieuw: BaseModel, uitkomst: dict, verslag: BlokVerslag, uitbreidingen: dict[str, BaseModel]
+) -> None:
+    if blok.uitgebreid:
+        uitbreidingen[blok.sectie] = nieuw
+        nieuw = blok.naar_formulier(nieuw)
     try:
         setattr(formulier, blok.sectie, nieuw)
     except ValidationError as fout:
@@ -132,7 +147,14 @@ def _vastleggen(formulier: Formulier, blok: Blok, nieuw: BaseModel, uitkomst: di
 
 
 def _weggooien_tot_geldig(
-    formulier: Formulier, blok: Blok, model, huidig, velden: list[str], uitkomst: dict, verslag: BlokVerslag
+    formulier: Formulier,
+    blok: Blok,
+    model,
+    huidig,
+    velden: list[str],
+    uitkomst: dict,
+    verslag: BlokVerslag,
+    uitbreidingen: dict[str, BaseModel],
 ) -> BlokVerslag:
     """Na de herkansing: velden met een fout één voor één leeg maken, tot het model het accepteert."""
     waarden = uitkomst["waarden"]
@@ -150,7 +172,7 @@ def _weggooien_tot_geldig(
                 uitkomst["ingevuld"] = [i for i in uitkomst["ingevuld"] if not valt_onder(i.pad, veld)]
             continue
         uitkomst["waarden"] = waarden
-        _vastleggen(formulier, blok, nieuw, uitkomst, verslag)
+        _vastleggen(formulier, blok, nieuw, uitkomst, verslag, uitbreidingen)
         return verslag
     verslag.weggegooid += uitkomst["weggegooid"]
     verslag.meldingen.append("antwoord bleef ongeldig na de herkansing: blok niet ingevuld")

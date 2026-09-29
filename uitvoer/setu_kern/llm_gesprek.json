@@ -1,0 +1,576 @@
+[
+  {
+    "aanroep": 1,
+    "schema_naam": "blok_05_vakantiebijslag__setu_",
+    "berichten": [
+      {
+        "role": "system",
+        "content": "Je vult een vragenlijst over arbeidsvoorwaarden in op basis van fragmenten uit een Nederlandse cao.\n\nRegels:\n1. Gebruik ALLEEN de gegeven fragmenten. Verzin niets en vul niets in op basis van algemene kennis.\n2. Elke ingevulde waarde heeft een onderbouwing: het pad van het veld, document, pagina, artikel en een LETTERLIJK\n   citaat uit een fragment. Eén onderbouwing mag een heel blok velden dekken (bijv. pad \"bedrag\").\n3. Staat iets niet in de fragmenten, laat het veld dan null en zet het pad in \"niet_gevonden\". \"Niet gevonden\" is\n   iets anders dan \"nee\": kies \"nee\" alleen als de cao dat uitdrukkelijk zegt, met citaat.\n4. Gebruik bij keuzes precies een van de toegestane waarden. Getallen zonder eenheid of procentteken (8 voor 8%),\n   met een punt als decimaalteken. Datums als JJJJ-MM-DD.\n5. Vul een vraag met \"Alleen invullen als: ...\" alleen in als die voorwaarde klopt; laat hem anders null.\n6. Een bedragregel: kies eerst \"soort\" en vul dan alleen het bijbehorende deel in (vast_bedrag, percentage of tijd).\n7. Herhaalbare blokken (lijsten): maak alleen rijen die echt in de cao staan, elk met een eigen onderbouwing.\n"
+      },
+      {
+        "role": "user",
+        "content": "Blok: 05 Vakantiebijslag (SETU)\nVakantiebijslag heet ook vakantietoeslag of vakantiegeld; meestal een percentage van het (jaar)loon.\nVul ook de details in als de cao ze noemt: geldigheid, uitbetaalmaand, minimum en maximum, naar rato en voorwaarden. Maak een aparte regel per tarief. Laat een detail dat niet genoemd wordt null.\n\nVragen (pad: vraag):\n- ja_nee: Is er een vakantiebijslag? | keuzes: 'ja' = Ja; 'nee' = Nee\n- geldig_van: Vanaf welke datum geldt deze regeling voor de vakantiebijslag, als de cao dat noemt? | alleen als: ja_nee = ja\n- geldig_tot: Tot en met welke datum geldt deze regeling voor de vakantiebijslag, als de cao dat noemt? | alleen als: ja_nee = ja\n- uitbetaling_maand: In welke maand wordt de vakantiebijslag uitbetaald (1 = januari, 12 = december)? Alleen als het één vaste maand is. | alleen als: ja_nee = ja\n- toelichting: Zijn er uitzonderingen of beperkingen die nergens anders passen (bijv. peildatum, uitbetaling bij einde dienstverband)? Kort, dicht bij de tekst van de cao. | alleen als: ja_nee = ja\n- regels[].bedrag: Hoeveel bedraagt de vakantiebijslag in deze regel? | keuzes: 'vast-bedrag' = Vast bedrag; 'percentage' = Percentage van loon\n- regels[].bedrag.soort: (vraagtekst verschilt per aanroep) | keuzes: 'vast-bedrag' = Vast bedrag; 'percentage' = Percentage van loon\n- regels[].bedrag.vast_bedrag.bedrag: Bedrag [€]\n- regels[].bedrag.vast_bedrag.per: per | keuzes: 'Hour' = Uur; 'Day' = Dag; 'Week' = Week; 'Month' = Maand; 'Quarter' = Kwartaal; 'Year' = Jaar; 'DayPart' = Dagdeel; 'Shift' = Dienst; 'Once' = Eenmalig; 'WorkedDay' = Gewerkte dag; 'Item' = Item; 'Kilometer' = Kilometer; 'Night' = Nacht; 'OnExpenseBasis' = Op declaratie basis; 'Trip' = Rit; 'Route' = Route; 'WorkFromHomeDay' = Thuiswerkdag; 'Relocation' = Verhuizing; 'WeeklyTravelDay' = Wekelijkse reisdag\n- regels[].bedrag.percentage.percentage: Percentage [%]\n- regels[].bedrag.percentage.basis: van | keuzes: 'HourlyRate' = Uurloon; 'DailyRate' = Dagloon; 'FourWeeklyRate' = 4-weken loon; 'MonthlyRate' = Maandloon; 'YearlyRate' = Jaarloon\n- regels[].bedrag.percentage.per: per | keuzes: 'Hour' = Uur; 'Day' = Dag; 'Week' = Week; 'Month' = Maand; 'Quarter' = Kwartaal; 'Year' = Jaar; 'DayPart' = Dagdeel; 'Shift' = Dienst; 'Once' = Eenmalig; 'WorkedDay' = Gewerkte dag; 'Item' = Item; 'Kilometer' = Kilometer; 'Night' = Nacht; 'OnExpenseBasis' = Op declaratie basis; 'Trip' = Rit; 'Route' = Route; 'WorkFromHomeDay' = Thuiswerkdag; 'Relocation' = Verhuizing; 'WeeklyTravelDay' = Wekelijkse reisdag\n- regels[].bedrag.percentage.grondslag: grondslag | keuzes: 'BaseWage' = Basisloon grondslag; 'GrossSalary' = Bruto loon grondslag; 'SocialInsuranceWage' = SVLoon grondslag; 'HolidayAllowance' = Vakantiebijslag grondslag; 'Pension' = Pensioen grondslag; '13thMonth' = 13e maand grondslag; 'UsualWage' = Gebruikelijk loon grondslag\n- regels[].minimum_bedrag: Is er een minimumbedrag aan vakantiebijslag (bijv. 'ten minste € 500')? Het bedrag dat de werknemer dan minimaal krijgt. [€]\n- regels[].maximum_bedrag: Is er een maximumbedrag aan vakantiebijslag? Het bedrag dat de werknemer dan maximaal krijgt. [€]\n- regels[].loon_minimum: Is er een ondergrens voor het loon waarover de vakantiebijslag berekend wordt? Het loonbedrag, in dezelfde periode als 'van'. [€]\n- regels[].loon_maximum: Is er een bovengrens voor het loon waarover de vakantiebijslag berekend wordt (bijv. het maximumdagloon)? Het loonbedrag, in dezelfde periode als 'van'. [€]\n- regels[].naar_rato_deeltijd: Wordt de vakantiebijslag naar rato van het deeltijdpercentage (de arbeidsduur) toegekend? | keuzes: 'ja' = Ja; 'nee' = Nee\n- regels[].naar_rato_dienstverband: Wordt de vakantiebijslag naar rato van de duur van het dienstverband toegekend (bijv. bij korter dan een jaar in dienst)? | keuzes: 'ja' = Ja; 'nee' = Nee\n- regels[].voorwaarden[].soort: Soort voorwaarde | keuzes: 'leeftijd' = Leeftijd; 'dienstverband' = Duur van het dienstverband; 'salarisschaal' = Salarisschaal (en eventueel trede); 'tekst' = Andere voorwaarde, in eigen woorden\n- regels[].voorwaarden[].vergelijking: Vergelijking (bijv. 'vanaf' bij 'vanaf 21 jaar') | keuzes: 'eq' = is gelijk aan; 'gt' = meer dan; 'gte' = vanaf / ten minste; 'lt' = minder dan; 'lte' = tot en met / ten hoogste | alleen als: soort = leeftijd of dienstverband of salarisschaal\n- regels[].voorwaarden[].leeftijd: Leeftijd [jaar] | alleen als: soort = leeftijd\n- regels[].voorwaarden[].duur_jaren: Duur van het dienstverband [jaar] | alleen als: soort = dienstverband\n- regels[].voorwaarden[].peildatum: Vanaf welk moment wordt de duur van het dienstverband geteld? Alleen invullen als de cao dat zegt. | keuzes: 'SeniorityDate' = Anciënniteitsdatum; 'HireDate' = Datum indiensttreding; 'ContractStartDate' = Startdatum contract; 'AssignmentStartDate' = Startdatum plaatsing | alleen als: soort = dienstverband\n- regels[].voorwaarden[].salarisschaal: Naam van de salarisschaal | alleen als: soort = salarisschaal\n- regels[].voorwaarden[].trede: Trede in de salarisschaal, als de cao die noemt | alleen als: soort = salarisschaal\n- regels[].voorwaarden[].tekst: De voorwaarde in eigen woorden, dicht bij de tekst van de cao | alleen als: soort = tekst\n\nFragmenten uit de cao:\n[F1] cao_test.pdf, pagina 7, Artikel 17 - *B. Werknemers in dienst op of na 1 januari 2016*\nIn de maand mei wordt 8% vakantietoeslag over de periode van 1 juni van het voorgaande kalenderjaar tot en met 31 mei van het lopende kalenderjaar uitbetaald over de daadwerkelijk in die periode verdiende maandsalarissen. Daarbij geldt het volgende:\n\n- a. Als de werknemer slechts een gedeelte van de hierboven aangegeven periode of op basis van deeltijd in dienst is van de werkgever, heeft hij recht op een evenredig deel.\n- b. Jaarlijks wordt in de maand mei over de totaal ontvangen Toeslag Onregelmatige Werktijden van het vorige kalenderjaar 8% vakantietoeslag uitbetaald.\n- c. Jaarlijks wordt in de maand mei, in geval van een deeltijd dienstverband, over de meeruren van het vorige kalenderjaar 8% vakantietoeslag uitbetaald.\n- d. De werknemer met een voltijd dienstverband heeft recht op een minimum vakantietoeslag gelijk aan 115% van het voor de betreffende leeftijd in mei geldende minimumloon.\n\n[F2] cao_test.pdf, pagina 7, Artikel 17 - *A. Werknemers in dienst voor 1 januari 2016*\nIn de maand mei wordt 8% vakantietoeslag over het kalenderjaar (de periode van 1 januari – 31 december) uitbetaald tegen het in mei geldende maandsalaris. Daarbij geldt het volgende:\n\n- a. Bij indiensttreding na 1 januari, maar voor mei, ontvangt de werknemer in mei een evenredig deel van de vakantietoeslag. Bij indiensttreding op of na 1 mei of in geval de proeftijd op 1 mei nog niet is beëindigd, ontvangt de werknemer in december een evenredig deel van de vakantietoeslag.\n- b. Als de werknemer slechts een gedeelte van het kalenderjaar of op basis van deeltijd in dienst is van de werkgever, heeft hij recht\n\nop een evenredig deel. Bij beëindiging van het dienstverband op of na 1 juni wordt de te veel ontvangen vakantietoeslag\n\n- verrekend.\n- c. Jaarlijks wordt in de maand mei over de totaal ontvangen Toeslag Onregelmatige Werktijden van het vorige kalenderjaar 8% vakantietoeslag uitbetaald.\n- d. Jaarlijks wordt in de maand mei, in geval van een deeltijd dienstverband, over de meeruren van het vorige kalenderjaar 8% vakantietoeslag uitbetaald.\n- e. De werknemer met een voltijd dienstverband heeft recht op een minimum vakantietoeslag gelijk aan 115% van het voor de betreffende leeftijd in mei geldende minimumloon.\n\n[F3] cao_test.pdf, pagina 6, Artikel 15 - Flexibiliteit**\net het niet altijd structurele karakter van deze vergoeding wordt het berekende bedrag als hierboven bedoeld maandelijks afgetopt op 22,75% van het maandsalaris; De jaarlijkse uitbetaling vindt plaats in de maand februari van elk jaar.; De uitbetaling voor de medewerker die gedurende het jaar uit dienst gaat vindt plaats bij de eindafrekening waarbij een referteperiode van 12 maanden in acht wordt genomen.\n\n[F4] cao_test.pdf, pagina 9, Artikel 21 - Vakantie**\nanden verstaan, alsmede gedeelten van kalendermaanden, die op de eerste dag aanvangen en op of na de 15e dag eindigen, dan wel voor de 15e dag aanvangen en op de laatste dag van de maand eindigen.\n- 7. De werkgever kan voor groepen werknemers (bijv. vestiging, afdeling) twee vakantiedagen per kalenderjaar als verplichte vakantiedagen aanmerken. In overleg met de Ondernemingsraad kan dit aantal uitgebreid worden met nog eens twee vakantiedagen.\n- 8. De werknemer heeft het recht om tenminste 3 weken aaneengesloten vakantie op te nemen, als het aantal vakantiedagen dit mogelijk maakt. De werkgever is verplicht de werknemer ieder kalenderjaar in de gelegenheid te stellen tenminste de wettelijke vakantiedagen van dat jaar op te nemen.\n- 9. De vakanties worden tijdig na overleg met de werknemer door de werkgever vastgesteld.\n- 10. Vakantiedagen dienen in principe in het lopende kalenderjaar te worden opgenomen, of een bestemming in het kader van de CAO à la Carte (hoofdstuk 8) te hebben gekregen.\n- 11. Een vakantiedag dient tenminste 2 werkdagen van tevoren te worden aangevraagd.\n- 12. De resterende vakantiedagen kunnen behalve in dagen ook in uren worden verleend, tenzij gewichtige redenen zich daartegen verzetten.\n- 13. Opgenomen vakantiedagen dienen door de werkgever geregistreerd te worden.\n- 14. Bij uitdiensttreding wordt het eventuele teveel of nog niet genoten aantal vakantiedagen met het salaris verrekend.\n- 15. Als de bedrijfsvoering dat noodzakelijk maakt, kan de werkgever, nadat de Ondernemingsraad instemming heeft verleend, een vakantieregeling invoeren om de voortgan\n\n[F5] cao_test.pdf, pagina 9, Artikel 21 - Vakantie**\n- 1. Het aantal wettelijke vakantiedagen voor een voltijd werknemer bedraagt op jaarbasis 20 dagen (160 uur)\n- 2. Het standaard aantal bovenwettelijke vakantiedagen voor een voltijd werknemer bedraagt 5 dagen (40 uur)\n- 3. Het aantal extra bovenwettelijke vakantiedagen voor een voltijd werknemer bedraagt op jaarbasis bij een leeftijd van: 50 jaar tot 55 jaar: 3 werkdagen (= 24 uur) 55 jaar tot 60 jaar: 4 werkdagen (= 32 uur) 60 jaar: 5 werkdagen (= 40 uur) 61 jaar: 6 werkdagen (= 48 uur) 62 jaar: 7 werkdagen (= 56uur) 63 jaar: 8 werkdagen (= 64 uur) 64 jaar en ouder: 9 werkdagen (= 72 uur) Voor de bepaling van de vakantierechten geldt als peildatum de in het kalenderjaar te bereiken leeftijd\n- 4. De wettelijke vakantiedagen van enig kalenderjaar, moeten voor 1 juli van het daarop volgende kalenderjaar worden opgenomen. Bovenwettelijke vakantiedagen zijn 5 jaar geldig, gerekend vanaf de laatste dag van het jaar waarin zij zijn toegekend. De vakantiedagen die niet tijdig worden opgenomen, komen te vervallen.\n- 5. Aan het begin van ieder jaar wordt aan de werknemer een overzicht van de verlofaanspraken verstrekt.\n- 6. Als het dienstverband na 1 januari aanvangt of vóór of op 31 december eindigt heeft de werknemer in dat jaar recht op een aantal vakantiedagen dat wordt bepaald in evenredigheid tot het aantal volle maanden dat men in dienst was. Onder volle maanden worden kalendermaanden verstaan, alsmede gedeelten van kalendermaanden, die op de eerste dag aanvangen en op of na de 15e dag eindigen, dan wel voor de 15e dag aanvangen en op de laatste dag van de maand eindigen.\n- 7\n\n[F6] cao_test.pdf, pagina 17, Hoofdstuk 5 > Artikel 21 - Vakantie**\n- 1. Het aantal wettelijke vakantiedagen voor een voltijdwerknemer bedraagt op jaarbasis 20 dagen (160 uur)\n- 2. Het standaard aantal bovenwettelijke vakantiedagen voor een voltijd werknemer bedraagt 5 dagen (40 uur)\n\n[F7] cao_test.pdf, pagina 27, Hoofdstuk 5 > Artikel 4 lid 2 - **Vakantiedagen - leeftijdsdagen**\nVoor werknemers in de categorie vanaf 50 jaar (peildatum 31 december 2008) geldt dat het oude VGL CAO recht op de vakantiedagen behouden blijft.\n\n| 50 t/m 54 jaar: | 23 dagen + 3 ATV dagen |\n|-----------------|------------------------|\n| 55 jaar:        | 27 dagen + 4 ATV dagen |\n| 56 jaar:        | 28 dagen + 4 ATV dagen |\n| 57 jaar:        | 29 dagen + 4 ATV dagen |\n| 58 jaar:        | 30 dagen + 4 ATV dagen |\n| > 59 jaar:      | 31 dagen + 4 ATV dagen |\n\n[F8] cao_test.pdf, pagina 17, Hoofdstuk 5 > Artikel 21 - **Artikel cao à la carte**\nWerknemers worden in het kader van de CAO à la Carte in\n\n- de gelegenheid gesteld op jaarbasis:\n- a. Hun CAO à la Carte budget, bestaande uit de geldelijke waarde van 2,56% van jaarsalaris (excl vakantiegeld). Dit budget wordt in 12 gelijke maandelijkse delen uitbetaald. De werknemer kan ervoor kiezen dit budget geheel of gedeeltelijk in dagen om te zetten. De uitbetaling vindt plaats met in achtneming van de fiscale regelgeving.\n- b. Het in lid a genoemd budget kan op basis van individuele overgangsrechten uit een CAO protocol, worden aangevuld met de waarde van extra vakantiedagen. Leeftijdsdagen en ATV/ADV dagen zijn van uitbetaling uitgezonderd. Werknemer kan het CAO à la carte budget tevens (geheel of gedeeltelijk) aanwenden voor deelname aan bedrijfsfitness of fietsplan en/of voor aanvulling van het DI-budget.\n- c. Maximaal 8 extra vakantiedagen te kopen. Echter, wanneer het resterende verlofsaldo (wettelijk en bovenwettelijk) aan het einde van het lopende kalenderjaar meer dan 5 dagen bedraagt, zal het kopen van extra dagen voor het nieuwe jaar niet worden toegestaan. Uiterlijk medio januari wordt schriftelijk bevestigd of het verzoek kan worden uitgevoerd.\n"
+      }
+    ],
+    "schema": {
+      "type": "object",
+      "properties": {
+        "waarden": {
+          "type": "object",
+          "properties": {
+            "ja_nee": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "ja",
+                "nee",
+                null
+              ],
+              "description": "Is er een vakantiebijslag? Keuzes: 'ja' = Ja; 'nee' = Nee."
+            },
+            "geldig_van": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Vanaf welke datum geldt deze regeling voor de vakantiebijslag, als de cao dat noemt? Datum als JJJJ-MM-DD. Alleen invullen als: ja_nee = ja."
+            },
+            "geldig_tot": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Tot en met welke datum geldt deze regeling voor de vakantiebijslag, als de cao dat noemt? Datum als JJJJ-MM-DD. Alleen invullen als: ja_nee = ja."
+            },
+            "uitbetaling_maand": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "description": "In welke maand wordt de vakantiebijslag uitbetaald (1 = januari, 12 = december)? Alleen als het één vaste maand is. Alleen invullen als: ja_nee = ja."
+            },
+            "toelichting": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "Zijn er uitzonderingen of beperkingen die nergens anders passen (bijv. peildatum, uitbetaling bij einde dienstverband)? Kort, dicht bij de tekst van de cao. Alleen invullen als: ja_nee = ja."
+            },
+            "regels": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "bedrag": {
+                    "anyOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "soort": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "enum": [
+                              "vast-bedrag",
+                              "percentage",
+                              null
+                            ],
+                            "description": "(vraagtekst verschilt per aanroep) Keuzes: 'vast-bedrag' = Vast bedrag; 'percentage' = Percentage van loon."
+                          },
+                          "vast_bedrag": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "bedrag": {
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ],
+                                    "description": "Bedrag Eenheid: €."
+                                  },
+                                  "per": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "enum": [
+                                      "Hour",
+                                      "Day",
+                                      "Week",
+                                      "Month",
+                                      "Quarter",
+                                      "Year",
+                                      "DayPart",
+                                      "Shift",
+                                      "Once",
+                                      "WorkedDay",
+                                      "Item",
+                                      "Kilometer",
+                                      "Night",
+                                      "OnExpenseBasis",
+                                      "Trip",
+                                      "Route",
+                                      "WorkFromHomeDay",
+                                      "Relocation",
+                                      "WeeklyTravelDay",
+                                      null
+                                    ],
+                                    "description": "per Keuzes: 'Hour' = Uur; 'Day' = Dag; 'Week' = Week; 'Month' = Maand; 'Quarter' = Kwartaal; 'Year' = Jaar; 'DayPart' = Dagdeel; 'Shift' = Dienst; 'Once' = Eenmalig; 'WorkedDay' = Gewerkte dag; 'Item' = Item; 'Kilometer' = Kilometer; 'Night' = Nacht; 'OnExpenseBasis' = Op declaratie basis; 'Trip' = Rit; 'Route' = Route; 'WorkFromHomeDay' = Thuiswerkdag; 'Relocation' = Verhuizing; 'WeeklyTravelDay' = Wekelijkse reisdag."
+                                  }
+                                },
+                                "required": [
+                                  "bedrag",
+                                  "per"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "description": "Vast bedrag Alleen invullen als: soort = vast-bedrag."
+                          },
+                          "percentage": {
+                            "anyOf": [
+                              {
+                                "type": "object",
+                                "properties": {
+                                  "percentage": {
+                                    "type": [
+                                      "number",
+                                      "null"
+                                    ],
+                                    "description": "Percentage Eenheid: %."
+                                  },
+                                  "basis": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "enum": [
+                                      "HourlyRate",
+                                      "DailyRate",
+                                      "FourWeeklyRate",
+                                      "MonthlyRate",
+                                      "YearlyRate",
+                                      null
+                                    ],
+                                    "description": "van Keuzes: 'HourlyRate' = Uurloon; 'DailyRate' = Dagloon; 'FourWeeklyRate' = 4-weken loon; 'MonthlyRate' = Maandloon; 'YearlyRate' = Jaarloon."
+                                  },
+                                  "per": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "enum": [
+                                      "Hour",
+                                      "Day",
+                                      "Week",
+                                      "Month",
+                                      "Quarter",
+                                      "Year",
+                                      "DayPart",
+                                      "Shift",
+                                      "Once",
+                                      "WorkedDay",
+                                      "Item",
+                                      "Kilometer",
+                                      "Night",
+                                      "OnExpenseBasis",
+                                      "Trip",
+                                      "Route",
+                                      "WorkFromHomeDay",
+                                      "Relocation",
+                                      "WeeklyTravelDay",
+                                      null
+                                    ],
+                                    "description": "per Keuzes: 'Hour' = Uur; 'Day' = Dag; 'Week' = Week; 'Month' = Maand; 'Quarter' = Kwartaal; 'Year' = Jaar; 'DayPart' = Dagdeel; 'Shift' = Dienst; 'Once' = Eenmalig; 'WorkedDay' = Gewerkte dag; 'Item' = Item; 'Kilometer' = Kilometer; 'Night' = Nacht; 'OnExpenseBasis' = Op declaratie basis; 'Trip' = Rit; 'Route' = Route; 'WorkFromHomeDay' = Thuiswerkdag; 'Relocation' = Verhuizing; 'WeeklyTravelDay' = Wekelijkse reisdag."
+                                  },
+                                  "grondslag": {
+                                    "type": [
+                                      "string",
+                                      "null"
+                                    ],
+                                    "enum": [
+                                      "BaseWage",
+                                      "GrossSalary",
+                                      "SocialInsuranceWage",
+                                      "HolidayAllowance",
+                                      "Pension",
+                                      "13thMonth",
+                                      "UsualWage",
+                                      null
+                                    ],
+                                    "description": "grondslag Keuzes: 'BaseWage' = Basisloon grondslag; 'GrossSalary' = Bruto loon grondslag; 'SocialInsuranceWage' = SVLoon grondslag; 'HolidayAllowance' = Vakantiebijslag grondslag; 'Pension' = Pensioen grondslag; '13thMonth' = 13e maand grondslag; 'UsualWage' = Gebruikelijk loon grondslag."
+                                  }
+                                },
+                                "required": [
+                                  "percentage",
+                                  "basis",
+                                  "per",
+                                  "grondslag"
+                                ],
+                                "additionalProperties": false
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ],
+                            "description": "Percentage van loon Alleen invullen als: soort = percentage."
+                          }
+                        },
+                        "required": [
+                          "soort",
+                          "vast_bedrag",
+                          "percentage"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ],
+                    "description": "Hoeveel bedraagt de vakantiebijslag in deze regel?"
+                  },
+                  "minimum_bedrag": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Is er een minimumbedrag aan vakantiebijslag (bijv. 'ten minste € 500')? Het bedrag dat de werknemer dan minimaal krijgt. Eenheid: €."
+                  },
+                  "maximum_bedrag": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Is er een maximumbedrag aan vakantiebijslag? Het bedrag dat de werknemer dan maximaal krijgt. Eenheid: €."
+                  },
+                  "loon_minimum": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Is er een ondergrens voor het loon waarover de vakantiebijslag berekend wordt? Het loonbedrag, in dezelfde periode als 'van'. Eenheid: €."
+                  },
+                  "loon_maximum": {
+                    "type": [
+                      "number",
+                      "null"
+                    ],
+                    "description": "Is er een bovengrens voor het loon waarover de vakantiebijslag berekend wordt (bijv. het maximumdagloon)? Het loonbedrag, in dezelfde periode als 'van'. Eenheid: €."
+                  },
+                  "naar_rato_deeltijd": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "ja",
+                      "nee",
+                      null
+                    ],
+                    "description": "Wordt de vakantiebijslag naar rato van het deeltijdpercentage (de arbeidsduur) toegekend? Keuzes: 'ja' = Ja; 'nee' = Nee."
+                  },
+                  "naar_rato_dienstverband": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "enum": [
+                      "ja",
+                      "nee",
+                      null
+                    ],
+                    "description": "Wordt de vakantiebijslag naar rato van de duur van het dienstverband toegekend (bijv. bij korter dan een jaar in dienst)? Keuzes: 'ja' = Ja; 'nee' = Nee."
+                  },
+                  "voorwaarden": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "soort": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "enum": [
+                            "leeftijd",
+                            "dienstverband",
+                            "salarisschaal",
+                            "tekst",
+                            null
+                          ],
+                          "description": "Soort voorwaarde Keuzes: 'leeftijd' = Leeftijd; 'dienstverband' = Duur van het dienstverband; 'salarisschaal' = Salarisschaal (en eventueel trede); 'tekst' = Andere voorwaarde, in eigen woorden."
+                        },
+                        "vergelijking": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "enum": [
+                            "eq",
+                            "gt",
+                            "gte",
+                            "lt",
+                            "lte",
+                            null
+                          ],
+                          "description": "Vergelijking (bijv. 'vanaf' bij 'vanaf 21 jaar') Keuzes: 'eq' = is gelijk aan; 'gt' = meer dan; 'gte' = vanaf / ten minste; 'lt' = minder dan; 'lte' = tot en met / ten hoogste. Alleen invullen als: soort = leeftijd of dienstverband of salarisschaal."
+                        },
+                        "leeftijd": {
+                          "type": [
+                            "number",
+                            "null"
+                          ],
+                          "description": "Leeftijd Eenheid: jaar. Alleen invullen als: soort = leeftijd."
+                        },
+                        "duur_jaren": {
+                          "type": [
+                            "number",
+                            "null"
+                          ],
+                          "description": "Duur van het dienstverband Eenheid: jaar. Alleen invullen als: soort = dienstverband."
+                        },
+                        "peildatum": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "enum": [
+                            "SeniorityDate",
+                            "HireDate",
+                            "ContractStartDate",
+                            "AssignmentStartDate",
+                            null
+                          ],
+                          "description": "Vanaf welk moment wordt de duur van het dienstverband geteld? Alleen invullen als de cao dat zegt. Keuzes: 'SeniorityDate' = Anciënniteitsdatum; 'HireDate' = Datum indiensttreding; 'ContractStartDate' = Startdatum contract; 'AssignmentStartDate' = Startdatum plaatsing. Alleen invullen als: soort = dienstverband."
+                        },
+                        "salarisschaal": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Naam van de salarisschaal Alleen invullen als: soort = salarisschaal."
+                        },
+                        "trede": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "Trede in de salarisschaal, als de cao die noemt Alleen invullen als: soort = salarisschaal."
+                        },
+                        "tekst": {
+                          "type": [
+                            "string",
+                            "null"
+                          ],
+                          "description": "De voorwaarde in eigen woorden, dicht bij de tekst van de cao Alleen invullen als: soort = tekst."
+                        }
+                      },
+                      "required": [
+                        "soort",
+                        "vergelijking",
+                        "leeftijd",
+                        "duur_jaren",
+                        "peildatum",
+                        "salarisschaal",
+                        "trede",
+                        "tekst"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "description": "Onder welke voorwaarden geldt dit tarief (leeftijd, duur dienstverband, salarisschaal, of iets anders)? Leeg laten als het tarief voor iedereen geldt."
+                  }
+                },
+                "required": [
+                  "bedrag",
+                  "minimum_bedrag",
+                  "maximum_bedrag",
+                  "loon_minimum",
+                  "loon_maximum",
+                  "naar_rato_deeltijd",
+                  "naar_rato_dienstverband",
+                  "voorwaarden"
+                ],
+                "additionalProperties": false
+              },
+              "description": "De tarieven van de vakantiebijslag. Eén regel per tarief. Alleen invullen als: ja_nee = ja."
+            }
+          },
+          "required": [
+            "ja_nee",
+            "geldig_van",
+            "geldig_tot",
+            "uitbetaling_maand",
+            "toelichting",
+            "regels"
+          ],
+          "additionalProperties": false
+        },
+        "onderbouwing": {
+          "type": "array",
+          "description": "Per ingevuld veld (of per blok van velden): waar het in de cao staat.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pad": {
+                "type": "string",
+                "description": "Pad van het veld in 'waarden', bijv. 'bedrag.percentage.percentage'."
+              },
+              "document": {
+                "type": "string"
+              },
+              "pagina": {
+                "type": "integer"
+              },
+              "artikel": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "Bijv. 'Artikel 12 lid 1'."
+              },
+              "citaat": {
+                "type": "string",
+                "description": "Letterlijk overgenomen uit een van de fragmenten."
+              }
+            },
+            "required": [
+              "pad",
+              "document",
+              "pagina",
+              "artikel",
+              "citaat"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "niet_gevonden": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Paden van vragen waarover de fragmenten niets zeggen (dat is iets anders dan 'nee')."
+        }
+      },
+      "required": [
+        "waarden",
+        "onderbouwing",
+        "niet_gevonden"
+      ],
+      "additionalProperties": false
+    },
+    "antwoord": {
+      "waarden": {
+        "ja_nee": "ja",
+        "geldig_van": "2016-01-01",
+        "geldig_tot": null,
+        "uitbetaling_maand": 5,
+        "toelichting": "Bij korter dan een jaar in dienst of deeltijd wordt de vakantiebijslag naar rato toegekend. Bij beëindiging van het dienstverband op of na 1 juni wordt de te veel ontvangen vakantietoeslag verrekend. Voor werknemers met een voltijd dienstverband geldt een minimum vakantietoeslag van 115% van het minimumloon. Uitbetaling vindt plaats in mei over de periode 1 juni van het voorgaande jaar tot en met 31 mei van het lopende jaar. Voor werknemers in dienst voor 2016 geldt een andere referentieperiode (1 januari - 31 december).",
+        "regels": [
+          {
+            "bedrag": {
+              "soort": "percentage",
+              "vast_bedrag": null,
+              "percentage": {
+                "percentage": 8,
+                "basis": "YearlyRate",
+                "per": "Year",
+                "grondslag": "GrossSalary"
+              }
+            },
+            "minimum_bedrag": 115,
+            "maximum_bedrag": null,
+            "loon_minimum": null,
+            "loon_maximum": null,
+            "naar_rato_deeltijd": "ja",
+            "naar_rato_dienstverband": "ja",
+            "voorwaarden": [
+              {
+                "soort": "tekst",
+                "vergelijking": null,
+                "leeftijd": null,
+                "duur_jaren": null,
+                "peildatum": null,
+                "salarisschaal": null,
+                "trede": null,
+                "tekst": "Werknemers met een voltijd dienstverband hebben recht op een minimum vakantietoeslag gelijk aan 115% van het minimumloon."
+              }
+            ]
+          }
+        ]
+      },
+      "onderbouwing": [
+        {
+          "pad": "ja_nee",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - B",
+          "citaat": "In de maand mei wordt 8% vakantietoeslag uitbetaald..."
+        },
+        {
+          "pad": "geldig_van",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - B",
+          "citaat": "Werknemers in dienst op of na 1 januari 2016"
+        },
+        {
+          "pad": "uitbetaling_maand",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - B",
+          "citaat": "In de maand mei wordt 8% vakantietoeslag uitbetaald..."
+        },
+        {
+          "pad": "toelichting",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - A en B",
+          "citaat": "Als de werknemer slechts een gedeelte van de periode of op basis van deeltijd in dienst is, heeft hij recht op een evenredig deel... Bij indiensttreding na 1 januari, maar voor mei, ontvangt de werknemer een evenredig deel van de vakantietoeslag... Bij beëindiging van het dienstverband op of na 1 juni wordt de te veel ontvangen vakantietoeslag verrekend... De werknemer met een voltijd dienstverband heeft recht op een minimum vakantietoeslag gelijk aan 115% van het minimumloon."
+        },
+        {
+          "pad": "regels.bedrag",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - A en B",
+          "citaat": "In de maand mei wordt 8% vakantietoeslag uitbetaald over de periode van 1 juni van het voorgaande kalenderjaar tot en met 31 mei van het lopende kalenderjaar."
+        },
+        {
+          "pad": "regels.minimum_bedrag",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - A en B",
+          "citaat": "De werknemer met een voltijd dienstverband heeft recht op een minimum vakantietoeslag gelijk aan 115% van het voor de betreffende leeftijd in mei geldende minimumloon."
+        },
+        {
+          "pad": "regels.naar_rato_deeltijd",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - A en B",
+          "citaat": "Als de werknemer slechts een gedeelte van de periode of op basis van deeltijd in dienst is, heeft hij recht op een evenredig deel."
+        },
+        {
+          "pad": "regels.naar_rato_dienstverband",
+          "document": "cao_test.pdf",
+          "pagina": 7,
+          "artikel": "Artikel 17 - A",
+          "citaat": "Bij indiensttreding na 1 januari, maar voor mei, ontvangt de werknemer in mei een evenredig deel van de vakantietoeslag. Bij indiensttreding op of na 1 mei of in geval de proeftijd op 1 mei nog niet is beëindigd, ontvangt de werknemer in december een evenredig deel van de vakantietoeslag."
+        }
+      ],
+      "niet_gevonden": [
+        "geldig_tot",
+        "regels.maximum_bedrag",
+        "regels.loon_minimum",
+        "regels.loon_maximum",
+        "regels.percentage.percentage.per",
+        "regels.percentage.grondslag"
+      ]
+    }
+  }
+]
